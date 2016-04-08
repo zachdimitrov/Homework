@@ -44,9 +44,12 @@ class FallingRocks
     {
         const int cw = 40;  // set wndow width
         const int ch = 30;  // set window height
-        Console.WindowWidth = Console.BufferWidth = cw;
-        Console.WindowHeight = Console.BufferHeight = ch;
-        int Lives = 10;
+        Console.Title = "FALLING ROCKS by ZACH";
+        Console.WindowWidth = cw;
+        Console.BufferWidth = Console.WindowWidth;
+        Console.WindowHeight = ch;
+        Console.BufferHeight = Console.WindowHeight;
+        int Lives = 5;
         int Score = 0;
         Dwarf dwrf = new Dwarf();
         dwrf.x = cw / 4;    // dwarf default x value
@@ -61,7 +64,11 @@ class FallingRocks
             "BE MORE CAREFUL!",
             "CONCENTRATE!",
             "YOU ARE FUCKED!",
-            "WHAT THE FUCK!"
+            "WHAT THE FUCK!",
+            "COME ON!",
+            "THAT WAS STUPID!",
+            "TRY HARDER!",
+            "SEE YOU IN HELL!"
         };
         List<Rock> obj = new List<Rock>();
         while (true)
@@ -125,12 +132,13 @@ class FallingRocks
             if (hitted)
             {
                 obj.Clear();
-                PrintString(5, 10, hit[(int)(rand.Next(0, 7))], ConsoleColor.Red);
+                PrintString(5, 10, hit[(int)(rand.Next(0, 11))], ConsoleColor.Red);
                 Thread.Sleep(800);
                 if (Lives == 0)
                 {
                     Console.Clear();
                     PrintString(cw / 2 - 4, 6, "GAME OVER", ConsoleColor.Red);
+                    Thread.Sleep(2500);
                     break;
                 }
             }
