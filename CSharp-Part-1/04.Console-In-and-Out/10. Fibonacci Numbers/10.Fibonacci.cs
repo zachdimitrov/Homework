@@ -4,13 +4,13 @@ class Fibonacci
 {
     static void Main()
     {
-        int N = int.Parse(Console.ReadLine());
-        int a = 0;
-        int b = 1;
-        for (int i = 0; i < N-1; i++)
+        ulong N = ulong.Parse(Console.ReadLine());
+        ulong a = 0;
+        ulong b = 1;
+        for (ulong i = 0; i < N - 1; i++)
         {
             Console.Write("{0}, ", a);
-            int c = a + b;
+            ulong c = a + b;
             a = b;
             b = c;
         }

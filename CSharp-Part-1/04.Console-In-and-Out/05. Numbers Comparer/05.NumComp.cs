@@ -4,8 +4,8 @@ class NumComp
 {
     static void Main()
     {
-        int A = int.Parse(Console.ReadLine());
-        int B = int.Parse(Console.ReadLine());
+        double A = double.Parse(Console.ReadLine());
+        double B = double.Parse(Console.ReadLine());
         bool greater = A >= B;
         Console.WriteLine(greater?A:B);
     }

@@ -14,21 +14,21 @@ class QuadEquasion
         }
         else if (d==0)
         {
-            Console.WriteLine(-b/(2*a)); 
+            Console.WriteLine("{0:0.00}", -b / (2 * a)); 
         }
         else if (d>0)
         {
             double x1 = (-b + Math.Sqrt(d)) / (2 * a);
             double x2 = (-b - Math.Sqrt(d)) / (2 * a);
-            if (x1<=x2)
+            if (x1<x2)
             {
-                Console.WriteLine("{0:F2}", x1);
-                Console.WriteLine("{0:F2}", x2);
+                Console.WriteLine("{0:0.00}", x1);
+                Console.WriteLine("{0:0.00}", x2);
             }
             else
             {
-                Console.WriteLine("{0:F2}", x2);
-                Console.WriteLine("{0:F2}", x1);
+                Console.WriteLine("{0:0.00}", x2);
+                Console.WriteLine("{0:0.00}", x1);
             }
         }
     }

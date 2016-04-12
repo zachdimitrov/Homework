@@ -13,23 +13,27 @@ class BiggestOf5
         double C = double.Parse(Console.ReadLine());
         double D = double.Parse(Console.ReadLine());
         double E = double.Parse(Console.ReadLine());
-        if (A >= B && A >= C && A >= D && A >= E)
+        if (A > B && A > C && A > D && A > E)
         {
             Console.WriteLine(A);
         }
-        if (B >= A && B >= C && B >= D && B >= E)
+        if (B > A && B > C && B > D && B > E)
         {
             Console.WriteLine(B);
         }
-        if (C >= A && C >= B && C >= D && C >= E)
+        if (C > A && C > B && C > D && C > E)
         {
             Console.WriteLine(C);
         }
-        if (D >= A && D >= B && D >= C && D >= E)
+        if (D > A && D > B && D > C && D > E)
         {
             Console.WriteLine(D);
         }
-        if (E >= A && E >= B && E >= C && E >= D)
+        if (E > A && E > B && E > C && E > D)
+        {
+            Console.WriteLine(E);
+        }
+        if (A==B && B==C && C==D && D==E)
         {
             Console.WriteLine(E);
         }

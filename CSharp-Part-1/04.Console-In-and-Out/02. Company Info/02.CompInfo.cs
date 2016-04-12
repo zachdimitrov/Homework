@@ -8,6 +8,10 @@ class CompInfo
         string compAddr = Console.ReadLine();
         string phoneNum = Console.ReadLine();
         string faxNum = Console.ReadLine();
+        if (faxNum=="")
+        {
+            faxNum = "(no fax)";
+        }
         string webSite = Console.ReadLine();
         string manFirstName = Console.ReadLine();
         string manLastName = Console.ReadLine();
