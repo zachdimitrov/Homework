@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 class HexToDec
 {
@@ -30,6 +26,18 @@ class HexToDec
                 case "E": hexNum = 14;
                     break;
                 case "F": hexNum = 15;
+                    break;
+                case "a": hexNum = 10;
+                    break;
+                case "b": hexNum = 11;
+                    break;
+                case "c": hexNum = 12;
+                    break;
+                case "d": hexNum = 13;
+                    break;
+                case "e": hexNum = 14;
+                    break;
+                case "f": hexNum = 15;
                     break;
                 default: hexNum = long.Parse(hex);
                     break;
