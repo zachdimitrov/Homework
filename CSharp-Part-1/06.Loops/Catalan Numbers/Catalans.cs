@@ -1,15 +1,16 @@
 ﻿using System;
+using System.Numerics;
 
 class Catalans
 {
     static void Main()
     {
-        double N = double.Parse(Console.ReadLine());
-        double factN = 1;
-        double fact2N = 1;
-        double factNplus1 = 1;
-        double NN = 2 * N;
-        double Nplus1 = N + 1;
+        int N = int.Parse(Console.ReadLine());
+        BigInteger factN = 1;
+        BigInteger fact2N = 1;
+        BigInteger factNplus1 = 1;
+        int NN = 2 * N;
+        int Nplus1 = N + 1;
         if (N >= 1 && N <= 100)
         {
             while (true)

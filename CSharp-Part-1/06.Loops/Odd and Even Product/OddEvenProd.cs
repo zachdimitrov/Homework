@@ -7,22 +7,15 @@ class OddEvenProd
     {
         int N = int.Parse(Console.ReadLine());
         string readNumbers = Console.ReadLine();
-        char[] spaces = new char[] { ' ' };
-        string[] numbers = readNumbers.Split(spaces);
-        int evenProduct = 1;
-        int oddProduct = 1;
-        for (int i = 0; i < numbers.Length; i++)
+        ulong evenProduct = 1;
+        ulong oddProduct = 1;
+        for (int i = 0; i <= readNumbers.Length; i=i+4)
         {
-            int number = int.Parse(numbers[i]);
-            if (number % 2 == 0)
-            {
-                evenProduct *= number;
-            }
-            else
-            {
-                oddProduct *= number;
-            }
-            // Console.WriteLine(numbers[i]);
+            evenProduct *= ulong.Parse(readNumbers[i]+"");
+        }
+        for (int i = 2; i <= readNumbers.Length; i=i+4)
+        {
+            oddProduct *= ulong.Parse(readNumbers[i]+"");
         }
         if (evenProduct == oddProduct)
         {
@@ -30,7 +23,7 @@ class OddEvenProd
         }
         else
         {
-            Console.WriteLine("no {0} {1}", oddProduct, evenProduct);
+            Console.WriteLine("no {1} {0}", oddProduct, evenProduct);
         }
     }
 }

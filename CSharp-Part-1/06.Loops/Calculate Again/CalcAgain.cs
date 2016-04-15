@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Numerics;
 
 class CalcAgain
 {
@@ -6,8 +7,8 @@ class CalcAgain
     {
         int N = int.Parse(Console.ReadLine());
         int K = int.Parse(Console.ReadLine());
-        int factN = 1;
-        int factK = 1;
+        BigInteger factN = 1;
+        BigInteger factK = 1;
         while (true)
         {
             if (N==1 && K==1)

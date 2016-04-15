@@ -24,9 +24,10 @@ class PrintDeck
                     {
                         result = result + ", " + (cards[j] + " of " + paints[k]);
                     }
+                    Console.WriteLine(result.Remove(0,2));
+                    result = "";
                 }
             }
         }
-        Console.WriteLine(result.Remove(0, 2));
     }
 }

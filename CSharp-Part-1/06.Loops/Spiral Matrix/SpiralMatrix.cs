@@ -47,7 +47,7 @@ class SpiralMatrix
         {
             for (int j = 0; j <= N-1; j++)
             {
-                Console.Write(a[i, j]);
+                Console.Write(a[i, j]+" ");
             }
             Console.WriteLine("");
         }

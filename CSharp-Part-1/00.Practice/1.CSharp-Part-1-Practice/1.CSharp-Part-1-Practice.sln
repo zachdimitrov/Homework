@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem-4-Cube", "Problem-4
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem-5-BitsToBits", "Problem-5-BitsToBits\Problem-5-BitsToBits.csproj", "{6DBC00B6-FFC4-49EB-9134-3F7753CCA1DB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ternar", "Ternar\Ternar.csproj", "{38AD3F02-3512-4A1E-8177-E368F047E1BE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{6DBC00B6-FFC4-49EB-9134-3F7753CCA1DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6DBC00B6-FFC4-49EB-9134-3F7753CCA1DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6DBC00B6-FFC4-49EB-9134-3F7753CCA1DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38AD3F02-3512-4A1E-8177-E368F047E1BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38AD3F02-3512-4A1E-8177-E368F047E1BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38AD3F02-3512-4A1E-8177-E368F047E1BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38AD3F02-3512-4A1E-8177-E368F047E1BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -10,7 +10,7 @@ class MatrixNumbers
         {
             for (int j = 0; j < N; j++)
             {
-                line = line + (i + j);
+                line = line + (i + j)+" ";
             }
             Console.WriteLine(line);
             line = "";
