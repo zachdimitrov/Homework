@@ -17,7 +17,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem-4-Cube", "Problem-4
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem-5-BitsToBits", "Problem-5-BitsToBits\Problem-5-BitsToBits.csproj", "{6DBC00B6-FFC4-49EB-9134-3F7753CCA1DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ternar", "Ternar\Ternar.csproj", "{38AD3F02-3512-4A1E-8177-E368F047E1BE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem-1-Garden", "Problem-1-Garden\Problem-1-Garden.csproj", "{14432C0E-677A-43FE-AA2A-D71DAF76E847}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem-2-SecretOfNumbers", "Problem-2-SecretOfNumbers\Problem-2-SecretOfNumbers.csproj", "{4251E15D-43FE-4765-A669-414B2B524283}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem-3-CardWarsBatka", "Problem-3-CardWarsBatka\Problem-3-CardWarsBatka.csproj", "{1A7EEE62-214C-4BEA-A7E4-40D6185A2168}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem-4-BatGoikoTower", "Problem-4-BatGoikoTower\Problem-4-BatGoikoTower.csproj", "{B680B623-C85C-47B4-85C0-44F171257B49}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,10 +59,22 @@ Global
 		{6DBC00B6-FFC4-49EB-9134-3F7753CCA1DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6DBC00B6-FFC4-49EB-9134-3F7753CCA1DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6DBC00B6-FFC4-49EB-9134-3F7753CCA1DB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{38AD3F02-3512-4A1E-8177-E368F047E1BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{38AD3F02-3512-4A1E-8177-E368F047E1BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{38AD3F02-3512-4A1E-8177-E368F047E1BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{38AD3F02-3512-4A1E-8177-E368F047E1BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14432C0E-677A-43FE-AA2A-D71DAF76E847}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14432C0E-677A-43FE-AA2A-D71DAF76E847}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14432C0E-677A-43FE-AA2A-D71DAF76E847}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14432C0E-677A-43FE-AA2A-D71DAF76E847}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4251E15D-43FE-4765-A669-414B2B524283}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4251E15D-43FE-4765-A669-414B2B524283}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4251E15D-43FE-4765-A669-414B2B524283}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4251E15D-43FE-4765-A669-414B2B524283}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A7EEE62-214C-4BEA-A7E4-40D6185A2168}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A7EEE62-214C-4BEA-A7E4-40D6185A2168}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A7EEE62-214C-4BEA-A7E4-40D6185A2168}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A7EEE62-214C-4BEA-A7E4-40D6185A2168}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B680B623-C85C-47B4-85C0-44F171257B49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B680B623-C85C-47B4-85C0-44F171257B49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B680B623-C85C-47B4-85C0-44F171257B49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B680B623-C85C-47B4-85C0-44F171257B49}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
