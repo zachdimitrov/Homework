@@ -52,7 +52,7 @@ int num = new int(); int firstValue = 5; int secondValue = firstValue;
 int? num = Null;                                             // use Null value with non nullable types
 ```
 #### operators and expressions
-*category*|*operators*
+**category**|**operators**
 ---|---
 aritmetic| *  -  *  /  %  ++  --
 logical|&&  \|\|  ^  !
@@ -62,7 +62,8 @@ assignment|=  +=  -+  *=  /=  %=  &=  \|=  ^=  <<=  >>=
 concatenation|+
 type convertion|is  as  typeof
 other|.  []  ()  ?:  new
-##### logical operators '\\ represents ||'
+
+##### logical operators *\\\ represents ||*
 
 operation | \\\ | \\\ | \\\ | \\\ | && | && | && | && | ^ | ^ | ^ | ^ 
 ---       |---   |---   |---   |---   |--- |--- |--- |--- |---|---|---|---
@@ -71,12 +72,10 @@ operand 2 |0|1|0|1|0|1|0|1|0|1|0|1
 result    |0|1|1|1|0|0|0|1|0|1|1|0
 
 ###### ! turns *true* to *false* and reverse
-##### bitwise operations '\\ represents ||'
+##### bitwise operations *\\ represents |*
 
 operation | \ | \ | \ | \ | & | & | & | & | ^ | ^ | ^ | ^ 
 ---|---|---|---|---|---|---|---|---|---|---|---|---
 operand 1 |0|0|1|1|0|0|1|1|0|0|1|1
 operand 2 |0|1|0|1|0|1|0|1|0|1|0|1
 result    |0|1|1|1|0|0|0|1|0|1|1|0
-
-###### ! turns *true* to *false* and reverse
