@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Registration</title>
+    <style>
+    body {
+        font-family: sans-serif;
+    }
+       table,th,td {
+           border: 1px solid black;
+           border-collapse: collapse;
+       }
+       input, select, textarea {
+        margin: 5px;
+       }
+       #Birth {
+        width: 18px;
+        margin-left: 2px;
+        margin-right: 2px;
+       }
+       #BirthY {
+        width: 40px;
+        margin-left: 2px;
+        margin-right: 2px;
+       }
+    </style>
+
+</head>
+<body>
+    <form method="get" action="form.php">
+        <table border="1">
+            <colgroup>
+                <col width="150" />
+                <col width="280" />
+            </colgroup>
+            <tr>
+                <th><label for="Lname">Last Name</label></th>
+                <td><input type="text" size="30" name="Lname" id="Lname" /></td>
+            </tr>
+            <tr>
+                <th><label for="Fname">First Name</label></th>
+                <td><input type="text" size="30" name="Fname" id="Fname" /></td>
+            </tr>
+            <tr>
+                <th><label for="Addr">Address</label></th>
+                <td><textarea cols="31" rows="4" name="Addr" id="Addr" > </Textarea></td>
+            </tr>
+            <tr>
+                <th><label for="City">City</label></th>
+                <td>
+                    <input type="text" size="17" name="City" id="City" />
+                    <b>State</b>
+                    <input type="text" size="3" name="State" id="State" />
+                </td>
+            </tr>
+            <tr>
+                <th><label for="Zip">Zip/Postal Code</label></th>
+                <td><input type="text" size="5" name="Zip" id="Zip" /></td>
+            </tr>
+            <tr>
+                <th><label for="Coun">Country</label></th>
+                <td>
+                    <select style="width:200px" id="countries">
+                        <option value="Bul">Bulgaria</option>
+                        <option value="Gre">Greece</option>
+                        <option value="Mak">FYROM</option>
+                        <option value="Ser">Serbia</option>
+                        <option value="Rum">Romania</option>
+                        <option value="Tur">Turkey</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th><label for="Phone">Phone (country code, <br /> area code, number)</label></th>
+                <td>
+                    (+<input type="text" size="3" name="Cd" id="Cd" pattern="^[0-9]{3}$" />)
+                    <input type="text" size="3" name="ACd" id="ACd" pattern="^[0-9]{3}$" />
+                    <input type="text" size="5" name="Ph" id="Ph" pattern="^[0-9]{1,9}$" />
+                </td>
+            <tr>
+                <th><label for="Email">E-mail</label></th>
+                <td><input type="email" size="30" name="Email" id="Email" /></td>
+            </tr>
+            <tr>
+                <th><label for="Birth">Birth date</label></th>
+                <td>
+                    Month<input type="text" size="1" name="Birth" id="Birth" value="дд" />
+                    Day<input type="text" size="1" name="Birth" id="Birth" value="мм" />
+                    Year (4 digit)<input type="text" size="1" name="Birth" id="BirthY" value="гггг" />
+                </td>
+            </tr>
+            <tr>
+                <th><label for="Gend"> Gender </label></th>
+                <td>
+                    <select style="width:100px" id="gend">
+                        <option value="Fem">Female</option>
+                        <option value="Male" selected="selected">Male</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>Starting date</th>
+                <td>
+                    <input type="radio" name="Season" id="Spring" value="1"/>
+                    <label for="Spring">Spring 2016</label>
+                    <input type="radio" name="Season" id="Summ" value="2" />
+                    <label for="Summ">Summer 2016</label>
+                </td>
+            </tr>
+            <tr>
+                <th><label for="Comment">Comments/Questions</label></th>
+                <td><textarea cols="31" rows="6" name="Comment" id="Comment"> </textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="background-color:#83cfe9">
+                    <center>
+                        <input type="submit" name="submit" value="Submit" />
+                        <input type="reset" value="Clear This Form" />
+                    </center>
+                </td>
+            </tr>
+        </table>
+        </form>
+</body>
+</html>
