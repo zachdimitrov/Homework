@@ -86,12 +86,15 @@ Sin, Cos, Log, Ln, POw, Min, Max, Sqrt and other functions
 ##### console in and out
 
 __Console.Read(...)__      - reads single character
+
 __Console.ReadKey(...)__   - reads a combinations of keys
+
 __Console.ReadLine(...)__*  - reads a single line of characters
 
 ---
 
 __Console.Write(...)__       - output the specified argument
+
 __Console.WriteLine(...)__ - outputs the data and moves to next line
 
 ---
