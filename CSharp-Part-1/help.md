@@ -14,7 +14,7 @@ Console.WriteLine("{0}", Convert.ToString(number, 2).PadLeft(32, '0'));
 ##### оператори >> и << и създаване на маски
 ```C#
 int mask = 1 << 4; //10000
-mask = mask >> 4; //10000
+mask = mask >> 4;  //00001
 ```
 създаване на маска с n на брой битове
 ```C#
