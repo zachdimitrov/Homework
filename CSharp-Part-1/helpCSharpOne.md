@@ -82,14 +82,20 @@ result    |0|1|1|1|0|0|0|1|0|1|1|0
 
 ##### Math.class
 Sin, Cos, Log, Ln, POw, Min, Max, Sqrt and other functions
-#### console in and out
-** Console.Read(...) **      - reads single character
-** Console.ReadKey(...) **   - reads a combinations of keys
-** Console.ReadLine(...) **  - reads a single line of characters
+
+##### console in and out
+
+__Console.Read(...)__      - reads single character
+__Console.ReadKey(...)__   - reads a combinations of keys
+__Console.ReadLine(...)__*  - reads a single line of characters
+
 ---
-** Console.Write(...)       - output the specified argument
-** Console.WriteLine(...) ** - outputs the data and moves to next line
+
+__Console.Write(...)__       - output the specified argument
+__Console.WriteLine(...)__ - outputs the data and moves to next line
+
 ---
+
 ##### set culture
 ```C#
 using System.Threading;
