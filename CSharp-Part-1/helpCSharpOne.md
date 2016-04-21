@@ -19,7 +19,7 @@
 ---|--- |---
 **float**|-3.402823 e 38 .. 3.402823 e 38| ```float fl = 1.5f; ```
 **double**|-1.79769313486232 e 308 .. 1.79769313486232 e 308| ```double 2.4d; ```
-**decimal**|-79228162514264337593543950335 .. 79228162514264337593543950335| ```decimal 4.5m; ```
+**decimal**|-79228162514264337593543950335 .. +#| ```decimal 4.5m; ```
 
 ###### other non number types
 
@@ -29,3 +29,54 @@
 **string**|A string of Unicode characters.| ```string s = "string"; ```
 **bool**|True or False.| ```bool b = True; ```
 **object**|An object.| ```object o; ```
+
+##### char
+```C#
+char a = 'a'; char b = 'b'; char someChar = 'a' + 'b';  // perform operations like int
+char a = \u0064;                                        // this will return '@'
+char a = (char) 64                                      // this will also return '@'
+```
+##### string
+```C#
+string test = @"this is "special" \ test \ string"      // use @ to escape everything
+string more = "this is \"test\" \\string\\"             // use \ to escape special characters \n for new line
+string fullName = firstName + " " + lastName;                 // concatenate strings
+string fullName = "my name is {0} {1}.", firstName, lastName; // use placeholders
+int l = fullName.Length;                                      // find length of string
+string s = Convert.ToString(number);                          // convert anything to string
+Console.WriteLine(new string('c', 5);                         // write character c  five times as a string
+```
+##### variables declarating
+```C#
+int num = new int(); int firstValue = 5; int secondValue = firstValue;
+int? num = Null;                                             // use Null value with non nullable types
+```
+#### operators and expressions
+*category*|*operators*
+---|---
+aritmetic| *  -  *  /  %  ++  --
+logical|&&  \|\|  ^  !
+binary|& \| ^  ~  <<  >>
+comparison| ==  !=  <  >  <=  >=
+assignment|=  +=  -+  *=  /=  %=  &=  \|=  ^=  <<=  >>=
+concatenation|+
+type convertion|is  as  typeof
+other|.  []  ()  ?:  new
+##### logical operators '\\ represents ||'
+
+operation | \\\ | \\\ | \\\ | \\\ | && | && | && | && | ^ | ^ | ^ | ^ 
+---       |---   |---   |---   |---   |--- |--- |--- |--- |---|---|---|---
+operand 1 |0     |0     |1     |1     |0   |0   |1   |1   |0  |0  |1  |1
+operand 2 |0|1|0|1|0|1|0|1|0|1|0|1
+result    |0|1|1|1|0|0|0|1|0|1|1|0
+
+###### ! turns *true* to *false* and reverse
+##### bitwise operations '\\ represents ||'
+
+operation | \ | \ | \ | \ | & | & | & | & | ^ | ^ | ^ | ^ 
+---|---|---|---|---|---|---|---|---|---|---|---|---
+operand 1 |0|0|1|1|0|0|1|1|0|0|1|1
+operand 2 |0|1|0|1|0|1|0|1|0|1|0|1
+result    |0|1|1|1|0|0|0|1|0|1|1|0
+
+###### ! turns *true* to *false* and reverse
