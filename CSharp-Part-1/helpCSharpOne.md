@@ -1,7 +1,7 @@
 #### primitive data types
 ###### integer numbers
 
-type | range
+*type* | *range*
 ---|---
 **byte**|0 .. 255
 **sbyte**|-128 .. 127
@@ -15,7 +15,7 @@ type | range
 
 ###### floating point numbers
 
-type| range
+*type*| *range*
 ---|--- 
 **float**|-3.402823 e 38 .. 3.402823 e 38
 **double**|-1.79769313486232 e 308 .. 1.79769313486232 e 308
@@ -23,7 +23,7 @@ type| range
 
 ###### other non number types
 
-type| range
+*type*| *range*
 ---|---
 **char**|A Unicode character.
 **string**|A string of Unicode characters.
