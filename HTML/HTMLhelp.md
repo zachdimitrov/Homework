@@ -132,8 +132,8 @@ attributes:
 </form>
 ```
 ##### frames
-<noframes> - is used for older browsers
-<frameset> - show another website inside html
+```html <noframes>``` - is used for older browsers
+```html <frameset>``` - show another website inside html
 ```html
 <html>
   <head><title>Frames _Example_</title></head>
