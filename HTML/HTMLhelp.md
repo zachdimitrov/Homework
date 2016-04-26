@@ -66,19 +66,91 @@
     <td>     - create a cell in a table
     <th>     - create a header cell (bold and centered)
 
-<table>
-  <colgroup>                                      <-- defines table columns (width) -->
+<table cellspacing="15" cellpadding="0">          <!-- attributes of table
+  <colgroup>                                      <!-- defines table columns (width) -->
     <col style="width:100px" /></col>
   </colgroup>
-  <thead>                                         <-- head containts only th cells -->
+  <thead>                                         <!-- head containts only th cells -->
     <tr><th>Column 1</th><th>Column 2</th></tr>
   </thead>
-  <tfoot>                                         <-- footer - but before the body tag! -->
-    <tr><td>Footer 1</td><td>Footer 2</td></tr>
+  <tfoot>                                         <!-- footer - but before the body tag! -->
+    <tr><td>Footer 1</td><td>Footer 2</td></tr>   <!-- footer is displayed last -->
   </tfoot>
-  <tbody>                                         <-- body - contain the important data -->
+  <tbody>                                         <!-- body - contain the important data -->
     <tr><td>Cell 1.1</td><td>Cell 1.2</td></tr>
     <tr><td>Cell 2.1</td><td>Cell 2.2</td></tr>
   </tbody>
 </table>
+```
+colspan = "2" - merges the cells in 2 neighbour columns
+rowspan = "2" - merges cells in neighbour lines
+##### forms in html
+```html
+<form name="myForm" method="post" action="path/to/some-script.php">
+    <!-- create a form block with attributes -->
+<input type="text" name="FirstName" value="This is a text field" /> <!-- single line text -->
+<textarea name="Comments">  <!--This is a multi-line text field --> </textarea>
+<input type="password" name="pass" /> <!-- a password field -->
+<input type="reset" name="resetBtn" value="Reset the form" /> <!-- resets the form -->
+<input type="submit" src="submit.gif" name="submitBtn" alt="Submit" /> <!-- submit -->
+<input type="image" value="click me" /> 
+<input type="button" value="Apply Now" />
+<input type="checkbox" name="fruit" value="apple" />
+<input type="radio" name="title" value="Mr." />        <!-- "name" groups the buttons -->
+<input type="hidden" name="Account" value="This is a hidden text field" />
+<input type="range" min="0" max="100" />
+<input type="number" min="0" max="100" />
+<input type="email" required="true" pattern="[^ @]*@[^ @].[^ @]"/> <!-- validation -->
+<input type="url" required="true" />  <!-- validation of URL-->
+<input type="tel" required="true" />  <!-- validation of telephpne-->
+
+```
+attributes: 
+*autocomplete, autofocus, required, tabindex *
+###### dropdown
+```html
+<select name="gender">
+  <option value="Value 1"
+    selected="selected">Male</option>
+  <option value="Value 2">Female</option>
+  <option value="Value 3">Other</option>
+</select>
+```
+###### label - explains the form field using ID
+```html
+<label for="fn">First Name</label>
+<input type="text" id="fn" />
+````
+###### fieldset
+```html
+<form method="post" action="form.aspx">
+   <fieldset>
+      <legend>Client Details</legend>
+      <input type="text" id="Name" />
+      <input type="text" id="Phone" />
+   </fieldset>
+</form>
+```
+##### frames
+<noframes> - is used for older browsers
+<frameset> - show another website inside html
+```html
+<html>
+  <head><title>Frames _Example_</title></head>
+  <frameset cols="180px,*,150px">   <!-- for multiple web pages in one -->
+    <frame src="left.html" ></frame>
+    <frame src="middle.html" ></frame>
+    <frame src="right.html" ></frame>
+  </frameset>
+</html>
+```
+###### iframe
+```html
+<iframe name="iframeYoutube"
+        width="600"
+        height="400"
+        src="https://www.youtube.com/"
+        frameborder="yes"
+        scrolling="yes">
+</iframe>
 ```
