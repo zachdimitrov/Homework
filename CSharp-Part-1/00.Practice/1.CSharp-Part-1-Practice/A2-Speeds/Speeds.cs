@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Numerics;
 
 class Speeds
 {
@@ -7,49 +6,50 @@ class Speeds
     {
         int c = int.Parse(Console.ReadLine());
         int count = 1;
-        decimal frontSpeed = decimal.Parse(Console.ReadLine());
-        decimal speedSum = frontSpeed;
+        bool first = true;
+        int finalSpeedSum = 0;
         int finalCount = 1;
-        decimal finalSpeedSum = speedSum;
-        decimal nextSpeed = 0;
-        for (int i = 0; i < c - 1; i++)
+        int frontSpeed = 0;
+        int nextSpeed = 0;
+        int speedSum = 0;
+
+        for (int i = 0; i < c; i++)
         {
-            decimal speed = decimal.Parse(Console.ReadLine());
+            int speed = int.Parse(Console.ReadLine());
             nextSpeed = speed;
-            if (nextSpeed > frontSpeed)
+            if (first)
             {
-                speedSum += nextSpeed;
-                count++;
-                if (count > finalCount)
+                frontSpeed = speed;
+                speedSum = frontSpeed;
+                finalSpeedSum = speedSum;
+                first = false;
+            }
+            else
+            {
+                if (nextSpeed > frontSpeed)
                 {
-                    finalCount = count;
-                    finalSpeedSum = speedSum;
+                    speedSum += nextSpeed;
+                    count++;
                 }
-                else if (count == finalCount)
+                else
                 {
-                    if (speedSum > finalSpeedSum)
-                    {
-                        finalSpeedSum = speedSum;
-                    }
+                    speedSum = nextSpeed;
+                    count = 1;
+                    frontSpeed = nextSpeed;
                 }
             }
-            if (nextSpeed <= frontSpeed)
+            if (count > finalCount)
             {
-                count = 1;
-                if (count > finalCount)
+                finalCount = count;
+                finalSpeedSum = speedSum;
+            }
+            else if (count == finalCount)
+            {
+                if (speedSum > finalSpeedSum)
                 {
                     finalSpeedSum = speedSum;
                 }
-                else if (count == finalCount)
-                {
-                    if (speedSum > finalSpeedSum)
-                    {
-                        finalSpeedSum = speedSum;
-                    }
-                }
-                speedSum = nextSpeed;
             }
-            frontSpeed = nextSpeed;
         }
         Console.WriteLine(finalSpeedSum);
     }
