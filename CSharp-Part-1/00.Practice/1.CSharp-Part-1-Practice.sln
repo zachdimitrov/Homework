@@ -53,6 +53,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem-5-SearchBits", "Pro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem-4-Cube", "Problem-4-Cube\Problem-4-Cube.csproj", "{99085383-A65D-4DF0-B93F-0271C89BD9F7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chef-1-PieceOfCake", "Chef-1-PieceOfCake\Chef-1-PieceOfCake.csproj", "{3115C82D-2917-40A3-8961-F75304CAE195}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chef-2-LifeUniverseEverything", "Chef-2-LifeUniverseEverything\Chef-2-LifeUniverseEverything.csproj", "{8C8EFAB0-A60A-4639-846B-4499B9E38162}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -159,6 +163,14 @@ Global
 		{99085383-A65D-4DF0-B93F-0271C89BD9F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{99085383-A65D-4DF0-B93F-0271C89BD9F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{99085383-A65D-4DF0-B93F-0271C89BD9F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3115C82D-2917-40A3-8961-F75304CAE195}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3115C82D-2917-40A3-8961-F75304CAE195}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3115C82D-2917-40A3-8961-F75304CAE195}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3115C82D-2917-40A3-8961-F75304CAE195}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C8EFAB0-A60A-4639-846B-4499B9E38162}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C8EFAB0-A60A-4639-846B-4499B9E38162}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C8EFAB0-A60A-4639-846B-4499B9E38162}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C8EFAB0-A60A-4639-846B-4499B9E38162}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

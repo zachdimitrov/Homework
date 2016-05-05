@@ -1,0 +1,94 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: sans-serif;
+	font-size: 11px;
+}
+#wrap {
+	background: #595959;
+	width: 304px;
+	height: 208px;
+}
+header, main {
+	width: 304px;
+}
+dl {
+	padding: 0px;
+	margin: 0px;
+}
+h1 {
+	font-weight: normal;
+	font-size: 16px;
+	display: inline-block;
+	margin-left: 3px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-bottom: 8px;
+	padding-top: 10px;
+	color: #B3B4B4;
+}
+dt {
+    float: left;
+    margin: 0;
+    width: 100px;
+    margin: 7px 3px 7px 3px; 
+    color: #E0E0E0;
+    font-style: italic;
+}
+dd {
+	   margin: 0px;
+}
+dd + dt, dd + dd {
+    clear: left
+}
+#last {
+	margin-bottom: 20px;
+}
+#name {
+	margin-bottom: 21px;
+}
+#dott {
+	    display: inline-block;
+      width: 10px;
+      height: 10px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      background: #71B47A;
+    }
+.grey {
+	color: #A3A9A8;
+}
+#orange {
+	color: #D56824;
+	position: relative;
+	top: 80px
+}
+#link {
+  position: relative;
+	top: 65px
+}
+#red {
+	color: red;
+  position: relative;
+	top: 8px
+}
+#parker, #mail, #link {
+	color: #D8D597;
+}
+#parker, #dott {
+  position: relative;
+	top: 8px
+}
+#mail {
+  position: relative;
+	top: 25px
+}
+#response {
+  position: relative;
+	top: 37px
+}
+#never {
+	position: relative;
+	top: 51px;
+}

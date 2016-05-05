@@ -1,0 +1,41 @@
+body {
+    background-color: #a9a9a9;
+}
+header {
+    text-align: center;
+}
+ul {
+    list-style: none;
+}
+nav {
+    margin-left: -30px;
+}
+.light {
+    color: #fafad2;
+}
+a:link {
+    text-decoration: none;
+    color: #fafad2;
+}
+a:hover {
+    text-decoration: underline;
+    color: #fafad2;
+}
+a:visited {
+    background-color: #d3d3d3;
+    color: #fafad2;
+}
+section>footer {
+    font-size: 12px;
+    margin-top: 20px;
+}
+#foot {
+    text-align: center;
+    margin-top: 20px
+}
+#hovered {
+    background-color: #d3d3d3;
+}
+#visited {
+    text-decoration: underline;
+}
