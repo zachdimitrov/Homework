@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Calculator</title>
+    <link href="Calculator-Style.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <a href="" class="menu">View</a>
+        <a href="" class="menu">Edit</a>
+        <a href="" class="menu">Help</a>
+    </header>
+    <main>
+        <table>
+            <tr>
+                <td colspan="9">
+                    <input id="result" type="text" value="8854455" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="9">
+                    <p class="test">
+                        0000 0000 0000 0000 0000 0000 0000 0000 <br />
+                        63 47 32 <br />
+                        0000 0000 1000 0111 0001 1011 1011 1011 <br />
+                        31 15 04
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td class="leftbox" rowspan="3">   
+                    <div>
+                        <input id="hex" type="radio" value="hex" />
+                        <label for="hex">Hex</label>
+                    </div>
+                    <div>
+                        <input id="dec" type="radio" value="dec" />
+                        <label for="dec">Dec</label>
+                    </div>
+                    <div>
+                        <input id="oct" type="radio" value="oct" />
+                        <label for="oct">Oct</label>
+                    </div>
+                    <div>
+                        <input id="bin" type="radio" value="bin" />
+                        <label for="bin">Bin</label>
+                    </div>
+</td>
+                <td></td>
+                <td><input type="button" id="Mod" value="mod" /></td>
+                <td>A</td>
+                <td>MC</td>
+                <td>MR</td>
+                <td>MS</td>
+                <td>M+</td>
+                <td>M-</td>
+            </tr>
+            <tr>
+                <td><input type="button" name="brl" value="(" /></td>
+                <td><input type="button" name="brr" value=")" /></td>
+                <td>B</td>
+                <td><input type="button" name="arrowl" value="&larr;" /></td>
+                <td><input type="button" name="CE" value="CE" /></td>
+                <td><input type="button" name="C" value="C" /></td>
+                <td><input type="button" name="plusminus" value="&plusmn;" /></td>
+                <td>&radic;</td>
+            </tr>
+            <tr>
+                <td><input type="button" name="RoL" value="RoL" /></td>
+                <td><input type="button" name="RoR" value="RoR" /></td>
+                <td>C</td>
+                <td><input type="button" name="7" value="7" /></td>
+                <td><input type="button" name="8" value="8" /></td>
+                <td><input type="button" name="9" value="9" /></td>
+                <td><input type="button" name="/" value="/" /></td>
+                <td>%</td>
+            </tr>
+            <tr>
+                <td class="leftbox" rowspan="3">
+                    <div>
+                        <input id="qord" type="radio" value="1" />
+                        <label for="qord">Qword</label>
+                    </div>
+                    <div>
+                        <input id="dword" type="radio" value="2" />
+                        <label for="dword">Dword</label>
+                    </div>
+                    <div>
+                        <input id="word" type="radio" value="3" />
+                        <label for="word">Word</label>
+                    </div>
+                    <div>
+                        <input id="byte" type="radio" value="4" />
+                        <label for="byte">Byte</label>
+                    </div>
+                </td>
+                <td><input type="button" name="Or" value="Or" /></td>
+                <td><input type="button" name="Xor" value="Xor" /></td>
+                <td>D</td>
+                <td><input type="button" name="4" value="4" /></td>
+                <td><input type="button" name="5" value="5" /></td>
+                <td><input type="button" name="6" value="6" /></td>
+                <td><input type="button" name="*" value="*" /></td>
+                <td><input type="button" name="1/x" value="1/x" /></td>
+            </tr>
+            <tr>
+                <td><input type="button" name="Lsh" value="Lsh" /></td>
+                <td><input type="button" name="Rsh" value="Rsh" /></td>
+                <td>E</td>
+                <td><input type="button" name="1" value="1" /></td>
+                <td><input type="button" name="2" value="2" /></td>
+                <td><input type="button" name="3" value="3" /></td>
+                <td><input type="button" name="-" value="-" /></td>
+                <td rowspan="2"><input type="button" name="=" value="=" /></td>
+            </tr>
+            <tr>
+                <td><input type="button" name="Not" value="Not" /></td>
+                <td><input type="button" name="And" value="And" /></td>
+                <td>F</td>
+                <td colspan="2"><input type="button" name="0" value="0" /></td>
+                <td>,</td>
+                <td><input type="button" name="+" value="+" /></td>
+            </tr>
+        </table>
+    </main>
+</body>
+</html>
