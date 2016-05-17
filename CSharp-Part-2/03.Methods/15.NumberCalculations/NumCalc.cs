@@ -4,91 +4,83 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GenericApplication
+
+class NumCalc
 {
-    public class GerenicArray<T>
+    static void Main()
     {
-        private T[] array;
-        public void MyGenArray(int size)
-        {
-            array = new T[size + 1];
-        }
-        public T getItem(int index)
-        {
-            return array[index];
-        }
-        public void setItem(int index, T value)
-        {
-            array[index] = value;
-        }
-    } 
-    999+-888-
-    class NumCalc
+        int[] arr = ReceiveIntArray();
+        Console.WriteLine(Minimum(arr));
+        Console.WriteLine(Maximum(arr));
+        Console.WriteLine("{0:F2}", Average(arr));
+        Console.WriteLine(Sum(arr));
+        Console.WriteLine(Product(arr));
+    }
+
+    static T Product<T>(params T[] arr) // Return Product of Int Array
     {
-        static void Main()
+        dynamic prod = 1;
+        foreach (var i in arr)
         {
-            int[] arr = ReceiveIntArray();
-            Console.WriteLine(Minimum(arr));
-            Console.WriteLine(Maximum(arr));
-            Console.WriteLine("{0:F2}", Average(arr));
-            Console.WriteLine(Sum(arr));
-            Console.WriteLine(Product(arr));
+            prod *= i;
         }
+        return prod;
+    }
 
-        private static List<T> Product<T>(T arr) // Return Product of Int Array
+    static T Sum<T>(params T[] arr) // Return Sum of Int array
+    {
+        dynamic sum = 0;
+        for (int i = 0; i < arr.Length; i++)
         {
-            long prod = 1;
-            for (int i = 0; i < arr.Count; i++)
-            {
-                prod *= arr[i];
-            }
-            return prod;
+            sum += arr[i];
         }
+        return sum;
+    }
 
-        private static long Sum(int[] arr) // Return Sum of Int array
+    static T Average<T>(params T[] arr) // Return Average of Int Array
+    {
+        dynamic sum = 0;
+        for (int i = 0; i < arr.Length; i++)
         {
-            long sum = 0;
-            for (int i = 0; i < arr.Length; i++)
-            {
-                sum += arr[i];
-            }
-            return sum;
+            sum += arr[i];
         }
+        return sum / arr.Length;
+    }
 
-        private static decimal Average(int[] arr) // Return Average of Int Array
+    static T Maximum<T>(params T[] arr) // Return Maximum Value
+    {
+        dynamic max = arr[0];
+        for (int i = 1; i < arr.Length; i++)
         {
-            decimal sum = 0;
-            for (int i = 0; i < arr.Length; i++)
+            if (arr[i] > max)
             {
-                sum += arr[i];
+                max = arr[i];
             }
-            return sum / arr.Length;
         }
+        return max;
+    }
 
-        private static int Maximum(int[] arr) // Return Maximum Value
+    static T Minimum<T>(params T[] arr) // Return Minimum Value
+    {
+        dynamic min = arr[0];
+        for (int i = 1; i < arr.Length; i++)
         {
-            int max = arr[0];
-            for (int i = 1; i < arr.Length; i++)
+            if (arr[i] < min)
             {
-                if (arr[i] > max)
-                {
-                    max = arr[i];
-                }
+                min = arr[i];
             }
-            return max;
         }
+        return min;
+    }
 
-        private static int Minimum(int[] arr) // Return Minimum Value
+    private static int[] ReceiveIntArray() // Receive Int Array from Console
+    {
+        string[] arrS = (Console.ReadLine()).Split(' ');
+        int[] arr = new int[arrS.Length];
+        for (int i = 0; i < arrS.Length; i++)
         {
-            int min = arr[0];
-            for (int i = 1; i < arr.Length; i++)
-            {
-                if (arr[i] < min)
-                {
-                    min = arr[i];
-                }
-            }
-            return min;
+            arr[i] = int.Parse(arrS[i]);
         }
+        return arr;
     }
 }

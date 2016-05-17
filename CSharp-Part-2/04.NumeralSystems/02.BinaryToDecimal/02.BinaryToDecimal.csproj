@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7AE786F3-2604-468C-858D-D79F5C7389A3}</ProjectGuid>
+    <ProjectGuid>{031F4E11-FEDA-4F65-981A-661268BE2447}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_15.NumberCalculations</RootNamespace>
-    <AssemblyName>15.NumberCalculations</AssemblyName>
+    <RootNamespace>_02.BinaryToDecimal</RootNamespace>
+    <AssemblyName>02.BinaryToDecimal</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,9 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="NumCalc.cs" />
+    <Compile Include="BinaryToDecimal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="T.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
