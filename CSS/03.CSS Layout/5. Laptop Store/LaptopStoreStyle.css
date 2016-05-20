@@ -1,0 +1,61 @@
+﻿body > table {
+    border-radius: 8px;
+}
+
+.boxes {
+    display:inline-block;
+    width: 285px;
+    padding: 8px 8px 8px 8px;
+    font: 18px Tahoma;
+}
+
+
+.maindiv {
+    display:inline-block;
+    padding: 0 0 9px 0;
+    border-collapse: collapse;
+    border: 2px groove #808080;
+    font: 18px Tahoma;
+}
+.maint {
+    display:inline-block;
+    padding: 10px;
+    border-collapse: collapse;
+    border: 2px groove #808080;
+    font: 18px Tahoma;
+}
+
+a.Ln {
+    color: #0094ff;
+    font: 20px Tahoma;
+}
+
+fieldset {
+    border: 2px groove #808080;
+}
+
+nav {
+    height: 30px;
+    font: 18px Tahoma;
+    display: inline-block;
+    width: 790px;
+    border-bottom: 2px groove #808080;
+    margin: 0 15px 0 15px;
+}
+nav>a {
+    position: relative;
+    left: 150px;
+}
+article {
+    display: inline-block;
+}
+.slide {
+    position: relative;
+    top: 50px;
+    display: inline-block;
+    padding-left: 10px;
+    font-size: 1.2em;
+}
+input#slider {
+    width: 90%;
+}

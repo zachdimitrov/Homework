@@ -2,32 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Notebook Store</title>
-    <style>
-    body>table {
-        border-radius: 8px;
-    }
-        td.main, th.main {
-            height: 30px;
-            border: 2px groove #808080;
-            font: 18px Tahoma;
-        }
-        th, td {padding: 8px 8px 8px 8px;
-                font: 18px Tahoma;
-        }
-        table.maint {
-            width: 90%;
-            border-collapse: collapse;
-            border: 2px groove #808080;
-            font: 18px Tahoma;
-        }
-        a.Ln {color:#0094ff; font: 20px Tahoma;}
-        fieldset {border: 2px groove #808080}
-    </style>
+    <link href="LaptopStoreStyle.css" rel="stylesheet" />
 </head>
 <body>
-    <table class="maint">
-        <tr>
-            <th colspan="2" class="main">
+    <main class="maint">
+        <header>
+            <nav class="main">
                 <a class="Ln" href="http://www.apple.com/"> Apple </a>&ensp;
                 <a class="Ln" href="http://www.toshiba.com/"> Toshiba </a>&ensp;
                 <a class="Ln" href="http://www.Lenovo.com/"> Lenovo </a>&ensp;
@@ -35,13 +15,13 @@
                 <a class="Ln" href="http://www.Asus.com/"> Asus </a>&ensp;
                 <a class="Ln" href="http://www.hacer.com/"> hAcer </a>&ensp;
                 <a class="Ln" href="http://www.HP.com/"> HP </a>
-            </th>
-        </tr>
-        <tr>
-            <td>
-                <table class="maint">
-                    <tr>
-                        <td>
+            </nav>
+        </header>
+        <section>
+            <article>
+                <div class="maindiv">
+                    <div>
+                        <div class="boxes">
                             <fieldset>
                                 <legend>Apple MacBook Air</legend>
                                 <table class="clean">
@@ -61,8 +41,8 @@
                                     </tr>
                                 </table>
                             </fieldset>
-                        </td>
-                        <td>
+                        </div>
+                        <div class="boxes">
                             <fieldset>
                                 <legend>Apple MacBook Air</legend>
                                 <table class="clean">
@@ -82,10 +62,10 @@
                                     </tr>
                                 </table>
                             </fieldset>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="boxes">
                             <fieldset>
                                 <legend>Apple MacBook Air</legend>
                                 <table class="clean">
@@ -105,8 +85,8 @@
                                     </tr>
                                 </table>
                             </fieldset>
-                        </td>
-                        <td>
+                        </div>
+                        <div class="boxes">
                             <fieldset>
                                 <legend>Apple MacBook Pro</legend>
                                 <table class="clean">
@@ -126,10 +106,10 @@
                                     </tr>
                                 </table>
                             </fieldset>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="boxes">
                             <fieldset>
                                 <legend>Apple MacBook Pro</legend>
                                 <table class="clean">
@@ -149,8 +129,8 @@
                                     </tr>
                                 </table>
                             </fieldset>
-                        </td>
-                        <td>
+                        </div>
+                        <div class="boxes">
                             <fieldset>
                                 <legend>Apple MacBook Pro</legend>
                                 <table class="clean">
@@ -170,21 +150,21 @@
                                     </tr>
                                 </table>
                             </fieldset>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-            <td class="slide">
-                    <span>Min price: 500 USD</span><br /><br />
-                    <input id="slider" type="range" min="500" max="1500" value="1000" /><br /><br />
-                    <span>Max price: 1500 USD</span><br /><br />
-                    <input id="slider" type="range" min="500" max="1500" value="1000" /><br /><br />
-                    <span>Min RAM: 4 GB</span><br /><br />
-                    <input id="slider" type="range" min="500" max="1500" value="1000" /><br /><br />
-                    <span>Max RAM: 16 GB</span><br /><br />
-                    <input id="slider" type="range" min="500" max="1500" value="1000" /><br /><br />
-            </td>
-        </tr>
-    </table>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <div class="slide">
+                <span>Min price: 500 USD</span><br /><br />
+                <input id="slider" type="range" min="500" max="1500" value="1000" /><br /><br />
+                <span>Max price: 1500 USD</span><br /><br />
+                <input id="slider" type="range" min="500" max="1500" value="1000" /><br /><br />
+                <span>Min RAM: 4 GB</span><br /><br />
+                <input id="slider" type="range" min="500" max="1500" value="1000" /><br /><br />
+                <span>Max RAM: 16 GB</span><br /><br />
+                <input id="slider" type="range" min="500" max="1500" value="1000" /><br /><br />
+            </div>
+        </section>
+    </main>
 </body>
 </html>
