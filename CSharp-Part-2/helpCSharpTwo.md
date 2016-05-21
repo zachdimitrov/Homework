@@ -45,4 +45,50 @@ int[] array = new [5] { 1, 2, 3, 4, 5 };
 int[] copyArray = (int[])array.Clone();
 ```
 #### multi-dimentional arrays
-
+```C#
+int[,] matrix = new int[3, 4];
+string[,,] stringCube = new string[5, 5, 5];
+matrix =                 // The matrix size is 2 x 4 (2 rows, 4 cols)
+{
+      { 1, 2, 3, 4 }, // row 0 values
+      { 5, 6, 7, 8 }, // row 1 values
+}; 
+int element11 = matrix[1, 1]; // element11 = 1
+for (int row = 0; row < 2; row++)               //reading a matrix
+{
+    for (int column = 0; column < 4; column++)
+    {
+          Console.Write("matrix[{0},{1}] = ", row, column);
+          matrix[row, column] = int.Parse(Console.ReadLine());
+    }
+}
+for (int row = 0; row < matrix.GetLength(0); row++)       //printing a matrix
+{
+    for (int col = 0; col < matrix.GetLength(1); col++)
+    {
+        Console.Write("{0, 4}", matrix[row, col]);
+    }
+    Console.WriteLine();
+}
+```
+###### find maximal platform
+```C#
+int[,] matrix =
+{
+    {7, 1, 3, 3, 2, 1},
+    {1, 3, 9, 8, 5, 6},
+    {4, 6, 7, 9, 1, 0}
+};
+int bestSum = int.MinValue;
+for (int row = 0; row < matrix.GetLength(0) - 1; row++)
+{
+    for (int col = 0; col < matrix.GetLength(1) - 1; col++)
+    {
+        int sum = matrix[row, col] + matrix[row, col + 1] +
+                  matrix[row + 1, col] +
+                  matrix[row + 1, col + 1];
+        if (sum > bestSum)
+            bestSum = sum;
+    }
+}
+```
