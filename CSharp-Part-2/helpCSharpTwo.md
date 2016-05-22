@@ -92,3 +92,10 @@ for (int row = 0; row < matrix.GetLength(0) - 1; row++)
     }
 }
 ```
+###### jagged arrays
+```C#
+int[][] jagged = new int[3][];
+jagged[0] = new int[3];
+jagged[1] = new int[2];
+jagged[2] = new int[5];
+
