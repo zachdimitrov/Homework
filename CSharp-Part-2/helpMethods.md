@@ -54,5 +54,17 @@ static string FullName(string a, string b, string c = "")
   return fullName;
 }
 ```
+###### mnojestvo ot parametri
+```C#
+static int Sum(params int[] numbers)
+{
+int sum = 0;
+foreach (var c in numbers)
+{
+  sum += c;
+}
+return sum;
+}
+```
 
 
