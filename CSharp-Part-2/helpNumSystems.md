@@ -59,6 +59,21 @@ static void main()
   }
 }
 ```
+###### from decimal to hex
+```C#
+static string DecimalToHex(int decValue)
+{
+  string result = "";
+  string hexDigits = "0123456789ABCDEF";
+  do
+  {
+    int value = decvalue % 16;
+    result = hexDigits[value] + result;
+    decvalue /= 16;
+  } while (decValue != 0);
+  return result;
+}
+```
 ###### from hex to binary
 ```C#
 static Dictionary<char, string> HexBin = new Dictionary<char, string>() 
