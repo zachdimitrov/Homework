@@ -21,3 +21,38 @@ static void PrintSign(int number)
   }
 }
 ```
+###### generic method
+```C#
+static void Print<T>(T number)
+{
+  Console.WriteLine(number);
+}
+static void main()
+{
+  Print<String>("5");
+}
+```
+###### nezadyljitelni parametri
+```C#
+static void PrintSum(int a, int b, int c = 0, int d = 0)
+{
+  Console.WriteLine(a+b+c)
+}
+static void main()
+{
+  PrintSum(5, 6);
+  PrintSum(5, 6, 7);
+  PrintSum(5, 6, 7, 8);
+  PrintSum(5, 6, d: 8);
+}
+```
+###### metodi koito vryshtat rezultat
+```C#
+static string FullName(string a, string b, string c = "")
+{
+  fullName = a+b+c;
+  return fullName;
+}
+```
+
+
