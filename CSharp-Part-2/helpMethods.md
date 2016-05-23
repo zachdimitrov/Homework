@@ -11,7 +11,7 @@ statc void Main()
 ```
 ###### printirane na znak
 ```C#
-static coid PrintSign(int number)
+static void PrintSign(int number)
 {
   switch(number>0)
   {
