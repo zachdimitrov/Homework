@@ -198,15 +198,15 @@ for(int i = 0; i < 3; i++)
 ```
 #### console class methods
 ```C# arr.Rank ```             
-- dava broq na izmereniqta
+dava broq na izmereniqta
 ```C# arr.Length ```           
-- dava cqlata dyljina na masiva vyv vsichki izmereniq
+dava cqlata dyljina na masiva vyv vsichki izmereniq
 ```C# arr.GetLength(0) ```     
-- dava dyljinata na edno izmerenie, v sluchaq (0)
+dava dyljinata na edno izmerenie, v sluchaq (0)
 ```C# arr.GetEnumerator() ```  
-- 
-```C# arr.BunarySearch() ```     
--
+vryshta IEnumerator za elementite na masiva
+```C# arr.BunarySearch() ```    
+tyrsi element v sortiran masiv
 ```C# arr.IndexOf() ```          
-- vryshta indeksa na pyrviq nameren takyv element
+vryshta indeksa na pyrviq nameren takyv element
 
