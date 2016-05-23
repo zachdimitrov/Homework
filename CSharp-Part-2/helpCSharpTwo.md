@@ -152,8 +152,8 @@ for(int i = 1; i <= n; i++)             // na masivite ot vseki sledvasht red do
   {
     pascal[i][j] = pascal[i-1][j-1] + pascal[i-1][j];  // vseki sledvsaht element e sbora ot tezi nad nego
   }
-  pascal[i][i] = 1;                    // zadavame stoinost na posledniq element (nqma kak s gorniq nashin, otdqsno e prazno)
-}
+  pascal[i][i] = 1;                    // zadavame stoinost na posledniq element 
+}                                      // nqma kak s gorniq nashin, otdqsno e prazno
 for(int i = 0; i <= n; i++)            // izvejdame rezultata
 {
   Console.WriteLine(String.Join(" ", pascal[i]));          // pascal[i] sa vsichki masivi
@@ -196,6 +196,11 @@ for(int i = 0; i < 3; i++)
  Console.WriteLine(); 
 }
 ```
-
- 
+#### console class methods
+```C# arr.Rank ```             - dava broq na izmereniqta
+```C# arr.Length ```           - dava cqlata dyljina na masiva vyv vsichki izmereniq
+```C# arr.GetLength(0) ```     - dava dyljinata na edno izmerenie, v sluchaq (0)
+```C# arr.GetEnumerator() ```  - 
+```C# arr.BunarySearch ```     -
+```C# arr.IndexOf ```          - 
 
