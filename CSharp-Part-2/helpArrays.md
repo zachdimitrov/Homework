@@ -201,6 +201,8 @@ for(int i = 0; i < 3; i++)
 **arr.Length**               dava cqlata dyljina na masiva vyv vsichki izmereniq  
 **arr.GetLength(0)**         dava dyljinata na edno izmerenie, v sluchaq (0)  
 **arr.GetEnumerator()**      vryshta IEnumerator za elementite na masiva  
-**arr.BunarySearch()**       tyrsi element v sortiran masiv  
-**arr.IndexOf()**            vryshta indeksa na pyrviq nameren takyv element  
+**arr.BunarySearch(X)**      tyrsi element v sortiran masiv - int index e rezultata
+**arr.IndexOf(X)**           vryshta indeksa na pyrviq nameren takyv element  
+**arr.LastIndexOf(X)**       vryshta indeksa na posledniq nameren element X
 **Array.Sort(arr)**          sortira po vyzhodqsht red
+**Array.Clone(arr)**         pravi shallow copy na masiva (ne e dobre za referentni tipove)
