@@ -95,7 +95,7 @@ for (int row = 0; row < matrix.GetLength(0) - 1; row++)
 ```
 ##### jagged arrays
 ```C#
-int[][] jagged = new int[3][];
+int[][] jagged = new int[3][]; // vytreshnite izmereniq ne se zadavat
 jagged[0] = new int[3];
 jagged[1] = new int[2];
 jagged[2] = new int[5];
@@ -110,6 +110,32 @@ for(int i=0; i<jagged.Length; i++)
     jagged[i][j] = int.Parse(input[j]);
   }
 }
-int input = Console.RadLine().Split(' ').Select(int.Parse).ToArray(); // another way to input
 ```
+###### group numbers by remainder of dividing by 3 - 0, 1, 2
+```C#
+int[] input = Console.RadLine().Split(' ').Select(int.Parse).ToArray(); // another way to input
+int[] count = {0, 0, 0};              // broqch za vynshnite masivi
+foreach(int number in input)          // namirame broq na elementite vyv vseki ot vynshnite masivi
+{                                     // i gi zapazvame v masiva 'count'
+  count[number % 3]++;                // ako ostatyka e 0,1,2 uvelichavame syotvetnoto chislo v count
+}
+int[][] answer = { new int[count[0]], new int[count[1]], new int[count[2]] };
+count = new int[] {0, 0, 0};  //nulirame broqcha
+foreach(int number in input)
+{
+  int remainder = number % 3;
+  answer[remainder][count[remainder]] = number;  // bez switch
+  count[remainder]++;
+}
+for(int i=0; i<3; i++)                           // output result
+{
+  Console.Write("Remainder {0}:", i);
+  foreach (int number in answer[i])
+  {
+    Console.Write(" {0}", number);
+  }
+  Console.WriteLine();
+}
+```
+
 
