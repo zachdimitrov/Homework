@@ -137,5 +137,65 @@ for(int i=0; i<3; i++)                           // output result
   Console.WriteLine();
 }
 ```
+###### pascal triangle
+namira briq kombinacii - primer na poziciq (7, 3) namirame kolko nachina ima da se vzemat 3 chisla ot 7
+```C#
+int n = 10;                             // broi na redove
+int[][] pascal = new int[n+1][];        // syzdavame masiv ot masivi s n+1 na broi redove
+pascal[0] = new int[1];                 // zadavame masiva na 1-viq red
+pascal[0][0] = 1;                       // sys stoinost 1
+for(int i = 1; i <= n; i++)             // na masivite ot vseki sledvasht red dobavqme po oshte 1 element
+{                                       
+  pascal[i] = new int[i + 1];           // red 2 stava s 3 elementa, red 5 stava s 6 elementa i t.n.
+  pascal[i][0] = 1;                     // 0-viq element ot vseki red e 1
+  for(int j = 0; j < i; j++)            // zadavame sledvashtite elementi na vseki red s cikal
+  {
+    pascal[i][j] = pascal[i-1][j-1] + pascal[i-1][j];  // vseki sledvsaht element e sbora ot tezi nad nego
+  }
+  pascal[i][i] = 1;                    // zadavame stoinost na posledniq element (nqma kak s gorniq nashin, otdqsno e prazno)
+}
+for(int i = 0; i <= n; i++)            // izvejdame rezultata
+{
+  Console.WriteLine(String.Join(" ", pascal[i]));          // pascal[i] sa vsichki masivi
+}
+```
+###### matrix multiplication
+umnojava se vseki element ot red(i) ot 1-vata sys vseki element ot kolona(j) ot 2-rata, 
+poluchenite rezultati se sybirat i se slagat v kletka (i, j) na rezultata
+```C#
+int[,] matrix1 = new int[,]
+{
+  { 1, 2, 3 },
+  { 4, 5, 6 },
+  { 7, 8, 9 }
+};
+int[,] matrix2 = new int[,]
+{
+  { 0, 1, 0 },
+  { 7, 3, 4 },
+  { 2, 6, 3 }
+};
+int[,] matrix3 = new int[,];
+for(int i = 0; i < 3; i++)  // rows
+{
+  for(int j = 0; j < 3; j++)  //columns
+  {
+    matrix3[i, j] = 0;
+    for(int k = 0; k < 3; k++)
+    {
+      matrix3[i, j] += matrix1[i, k] * matrix2[k, j];
+    }
+  }
+}
+for(int i = 0; i < 3; i++)
+{
+  for(int j = 0; j < 3; j++)
+  {
+    Console.Write(matrix3[i, j] + " ");
+  }
+ Console.WriteLine(); 
+}
+```
 
+ 
 
