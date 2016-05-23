@@ -11,10 +11,11 @@ int[] array = new int[] {1, 2, 3, 4, 5, 6};
 int[] reversed = new int[array.Length];
 for (int i=o; i<array.Length; i++) { reversed[array.Length - i - 1] = array[i]; }
 ```
-###### reading and writing arrya to console
+###### reading and writing array to console
 ```C#
 int[] arr = new int[5];
 for (int i = 0; i < 5; i++) { arr[i] = int.Parse(Console.ReadLine()); }
+string[] input = Console.ReadLine().Split(' ');  // taka vyvejdame chisla ot tipa - 1 2 3 5 7 8
 ```
 ###### symmetry check
 ```C#
@@ -92,11 +93,23 @@ for (int row = 0; row < matrix.GetLength(0) - 1; row++)
     }
 }
 ```
-###### jagged arrays
+##### jagged arrays
 ```C#
 int[][] jagged = new int[3][];
 jagged[0] = new int[3];
 jagged[1] = new int[2];
 jagged[2] = new int[5];
+````
+###### reading jagged arrays
+```C#
+for(int i=0; i<jagged.Length; i++)
+{
+  string[] input = Console.ReadLine().Split(' '); 
+  for(int j=0; j<jagged[i].Length; j++;)
+  {
+    jagged[i][j] = int.Parse(input[j]);
+  }
+}
+int input = Console.RadLine().Split(' ').Select(int.Parse).ToArray(); // another way to input
 ```
 
