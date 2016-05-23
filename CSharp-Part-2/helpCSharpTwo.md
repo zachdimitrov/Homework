@@ -197,10 +197,16 @@ for(int i = 0; i < 3; i++)
 }
 ```
 #### console class methods
-```C# arr.Rank ```             - dava broq na izmereniqta
-```C# arr.Length ```           - dava cqlata dyljina na masiva vyv vsichki izmereniq
-```C# arr.GetLength(0) ```     - dava dyljinata na edno izmerenie, v sluchaq (0)
-```C# arr.GetEnumerator() ```  - 
-```C# arr.BunarySearch ```     -
-```C# arr.IndexOf ```          - 
+```C# arr.Rank ```             
+- dava broq na izmereniqta
+```C# arr.Length ```           
+- dava cqlata dyljina na masiva vyv vsichki izmereniq
+```C# arr.GetLength(0) ```     
+- dava dyljinata na edno izmerenie, v sluchaq (0)
+```C# arr.GetEnumerator() ```  
+- 
+```C# arr.BunarySearch() ```     
+-
+```C# arr.IndexOf() ```          
+- vryshta indeksa na pyrviq nameren takyv element
 
