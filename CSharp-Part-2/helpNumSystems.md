@@ -39,6 +39,13 @@ do
 ```C#
 Console.WriteLine(0x123); // prevryshta v shestnaisetichna
 ```
+0 - 3 | 4 - 7 | 8 - B | C - F
+--- | --- | --- | ---
+0x0 = 0000 | 0x4 = 0100 | 0x8 = 1000 | 0xC = 1100
+0x1 = 0001 | 0x5 = 0101 | 0x9 = 1001 | 0xD = 1101
+0x2 = 0010 | 0x6 = 0110 | 0xA = 1010 | 0xE = 1110
+0x3 = 0011 | 0x7 = 0111 | 0xB = 1011 | 0xF = 1111
+
 ##### convertions
 ###### from hex to decimal
 ```C#
