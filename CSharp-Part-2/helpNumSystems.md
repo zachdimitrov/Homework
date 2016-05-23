@@ -85,7 +85,7 @@ static string HexToBinary(string hex)
   string result = "";
   foreach (char hexDigit in hex)
   {
-    result = HexBin[hexDigit] + result;
+    result += HexBin[hexDigit];
   }
   return result;
 }
