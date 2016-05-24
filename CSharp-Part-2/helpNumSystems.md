@@ -115,10 +115,10 @@ static string HexToBinary(string hex)
 #### binary representation
 32 bit integers
 unsigned - 2<sup>32</sup>
-00000000 00000000 00000000 00000001 - smallest number
-11111111 11111111 11111111 11111111 - largest numberr
-signed - -2<sup>16</sup> to +2<sup>16</sup>-1 and 0
-00000000 00000000 00000000 00000001 - smallest positive number (1)
-01111111 11111111 11111111 11111111 - largest positive number
-11111111 11111111 11111111 11111111 - largest negative number (-1)
-10000000 00000000 00000000 00000000 - smallest negative number
+00000000 00000000 00000000 00000001 - smallest number  
+11111111 11111111 11111111 11111111 - largest numberr  
+signed - -2<sup>16</sup> to +2<sup>16</sup>-1 and 0  
+00000000 00000000 00000000 00000001 - smallest positive number (1)  
+01111111 11111111 11111111 11111111 - largest positive number  
+11111111 11111111 11111111 11111111 - largest negative number (-1)  
+10000000 00000000 00000000 00000000 - smallest negative number  
