@@ -123,6 +123,6 @@ signed: -2<sup>16</sup> to +2<sup>16</sup>-1 and 0
 11111111 11111111 11111111 11111111 - largest negative number (-1)  
 10000000 00000000 00000000 00000000 - smallest negative number  
 ###### floating point
-first bit: sign
-bits 31 - 23: decimal part - smqta se kato integer
-bits 22 - 1: fractional part - 2<sup>-1</sup> + 2<sup>-2</sup> + 2<sup>-3</sup> ... 2<sup>-n</sup>
+32-nd bit: sign  
+bits 31 - 23: decimal part - smqta se kato integer  
+bits 22 - 1: fractional part - 2<sup>-1</sup> + 2<sup>-2</sup> + 2<sup>-3</sup> ... 2<sup>-n</sup>  
