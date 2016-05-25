@@ -49,16 +49,16 @@ The type or member can be accessed by any code in the same assembly, but not fro
 The type or member can be accessed by any code in the assembly in which it is declared, or from within a derived class in another assembly. Access from another assembly must take place within a class declaration that derives from the class in which the protected internal element is declared, and it must take place through an instance of the derived class type.  
 
 ##### property
-```C# p1.Name ```, ```C# p1.Age ``` tova e zadavane na properties
+`p1.Name`, `p1.Age` tova e zadavane na properties
 ##### static methods
-```C# Console.WriteLine("Gosho") ``` tova e statichen method
+`Console.WriteLine("Gosho")` tova e statichen method
 ##### instance methods
-```C# <object_name>.<method_name>(<parameters>) ``` tova e sintaksisa za izvikvane na instance method  
-```C# List<T>.Add(item) ```  
-```C#DateTime.AddDays(Count) ```  
-```C# string.Substring(index, length) ```  
-```C# p1.AssignFakeName("Pesho") ``` e izvikvane na takyv metod ako predi tova sme syzdali obekt p1 ot class Person  
-```C# "aaaaaa".ToUpper() ``` tova pak e instance method - vryshta AAAAAA  
+`<object_name>.<met hod_name>(<parameters>` tova e sintaksisa za izvikvane na instance method  
+`List<T>.Add(item`  
+`DateTime.AddDays(Count)`  
+`string.Substring(index, length)`  
+`p1.AssignFakeName("Pesho")` e izvikvane na takyv metod ako predi tova sme syzdali obekt p1 ot class Person  
+`"aaaaaa".ToUpper()` tova pak e instance method - vryshta AAAAAA  
 ##### DateTime (ne e class, a structure)
-```C# DateTime now = DateTime.Now; ``` tova e vzimane na static property  
-```C# DateTime later = now.AddHours(8); ``` tova e method  
+`DateTime now = DateTime.Now;` tova e vzimane na static property  
+`DateTime later = now.AddHours(8);` tova e method  
