@@ -1,6 +1,6 @@
 #### class
 **class** is a template for object instances in the program  
-[Example of simple Class: ](https://github.com/zachdimitrov/Homework/blob/master/CSharp-Part-2/00.Practice/001.Classes/Program.cs)  
+[Example of simple Class ](https://github.com/zachdimitrov/Homework/blob/master/CSharp-Part-2/00.Practice/001.Classes/Program.cs)  
 ```C#
 class Person
     {
@@ -49,17 +49,16 @@ The type or member can be accessed by any code in the same assembly, but not fro
 The type or member can be accessed by any code in the assembly in which it is declared, or from within a derived class in another assembly. Access from another assembly must take place within a class declaration that derives from the class in which the protected internal element is declared, and it must take place through an instance of the derived class type.  
 
 ##### property
-`p1.Name`, `p1.Age` tova e zadavane na properties
+```C# p1.Name ```, ```C# p1.Age ``` tova e zadavane na properties
 ##### static methods
-`Console.WriteLine("Gosho")` tova e statichen method
+```C# Console.WriteLine("Gosho") ``` tova e statichen method
 ##### instance methods
-`<object_name>.<method_name>(<parameters>)` tova e sintaksisa za izvikvane na instance method  
-`List<T>.Add(item)`  
-`DateTime.AddDays(Count)`  
-`string.Substring(index, length)`  
-`p1.AssignFakeName("Pesho")` e izvikvane na takyv metod ako predi tova sme syzdali obekt p1 ot class Person  
-`"aaaaaa".ToUpper()` tova pak e instance method - vryshta AAAAAA  
+```C# <object_name>.<method_name>(<parameters>) ``` tova e sintaksisa za izvikvane na instance method  
+```C# List<T>.Add(item) ```  
+```C#DateTime.AddDays(Count) ```  
+```C# string.Substring(index, length) ```  
+```C# p1.AssignFakeName("Pesho") ``` e izvikvane na takyv metod ako predi tova sme syzdali obekt p1 ot class Person  
+```C# "aaaaaa".ToUpper() ``` tova pak e instance method - vryshta AAAAAA  
 ##### DateTime (ne e class, a structure)
-`DateTime now = DateTime.Now;` tova e vzimane na static property
-`DateTime later = now.AddHours(8);` tova e method
-`Date
+```C# DateTime now = DateTime.Now; ``` tova e vzimane na static property  
+```C# DateTime later = now.AddHours(8); ``` tova e method  
