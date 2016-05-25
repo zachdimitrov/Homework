@@ -1,6 +1,41 @@
 #### class
 **class** is a template for object instances in the program  
-[Example of simple Class: ](https://github.com/zachdimitrov/Homework/blob/master/CSharp-Part-2/00.Practice/001.Classes/Program.cs)
+[Example of simple Class: ](https://github.com/zachdimitrov/Homework/blob/master/CSharp-Part-2/00.Practice/001.Classes/Program.cs)  
+```C#
+class Person
+    {
+        public string Name { get; private set; }
+        private int age;
+        public int Age
+        {
+            get
+            {
+                return age;
+            }
+            set
+            {
+                if (value > 0)
+                {
+                    age = value;
+                }
+            }
+        }
+        public Person()
+        {
+            Name = "Unnamed";
+            Age = 0;
+        }
+        public Person(string name, int age)
+        {
+            Name = name;
+            Age = age;
+        }
+        public void AssignFakeName(string newName)
+        {
+            Name = newName;
+        }
+    }
+```
 ##### access modifiers
 - **public**:
 The type or member can be accessed by any other code in the same assembly or another assembly that references it.
