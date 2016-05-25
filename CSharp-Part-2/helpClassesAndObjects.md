@@ -1,28 +1,52 @@
 #### class
 *class* is a template for object instances in the program
 ```C#
-class Person
+using System;
+
+namespace TestClasses
 {
-  public string Name {get; set;} //field - pole promenlivi ili konstanti
-  public int Age {get; set;} 
-  public Person(string name, int age)
-  {
-    this.name = Name;
-    this.age= Age;
-  }
-  public string GetName()
-  {
-    return this.name;
-  }
-  public int GetAge()
-  {
-    return this.age;
-  }
+    class Person
+    {
+        public string Name { get; private set; }
+        private int age;
+        public int Age
+        {
+            get
+            {
+                return age;
+            }
+            set
+            {
+                if (value > 0)
+                {
+                    age = value;
+                }
+            }
+        }
+        public Person()
+        {
+            Name = "Unnamed";
+            Age = 0;
+        }
+        public Person(string name, int age)
+        {
+            Name = name;
+            Age = age;
+        }
+        public void AssignFakeName(string newName)
+        {
+            Name = newName;
+        }
+    }
+    class ProgramToTestClasses
+    {
+        static void Main(string[] args)
+        {
+            Person p1 = new Person("Pesho", 0);
+            p1.Age++;
+            p1.AssignFakeName("Gosho");
+            Console.WriteLine(p1.Name + " " + p1.Age);
+        }
+    }
 }
-class Program
-{
- static void main()
- {
-  Person Ivan = new Person();
- }
-}
+```
