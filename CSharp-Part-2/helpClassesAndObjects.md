@@ -46,4 +46,20 @@ The type or member can be accessed only by code in the same class or struct, or 
 - **internal**:
 The type or member can be accessed by any code in the same assembly, but not from another assembly.
 - **protected internal**:
-The type or member can be accessed by any code in the assembly in which it is declared, or from within a derived class in another assembly. Access from another assembly must take place within a class declaration that derives from the class in which the protected internal element is declared, and it must take place through an instance of the derived class type.
+The type or member can be accessed by any code in the assembly in which it is declared, or from within a derived class in another assembly. Access from another assembly must take place within a class declaration that derives from the class in which the protected internal element is declared, and it must take place through an instance of the derived class type.  
+
+##### property
+`p1.Name`, `p1.Age` tova e zadavane na properties
+##### static methods
+`Console.WriteLine("Gosho")` tova e statichen method
+##### instance methods
+`<object_name>.<method_name>(<parameters>)` tova e sintaksisa za izvikvane na instance method  
+`List<T>.Add(item)`  
+`DateTime.AddDays(Count)`  
+`string.Substring(index, length)`  
+`p1.AssignFakeName("Pesho")` e izvikvane na takyv metod ako predi tova sme syzdali obekt p1 ot class Person  
+`"aaaaaa".ToUpper()` tova pak e instance method - vryshta AAAAAA  
+##### DateTime (ne e class, a structure)
+`DateTime now = DateTime.Now;` tova e vzimane na static property
+`DateTime later = now.AddHours(8);` tova e method
+`Date
