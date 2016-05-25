@@ -1,6 +1,6 @@
 #### class
 **class** is a template for object instances in the program  
-[Example of simple Class: ](Homework/CSharp-Part-2/00.Practice/001.Classes/Program.cs)
+[Example of simple Class: ](https://github.com/zachdimitrov/Homework/blob/master/CSharp-Part-2/00.Practice/001.Classes/Program.cs)
 ##### access modifiers
 - **public**:
 The type or member can be accessed by any other code in the same assembly or another assembly that references it.
