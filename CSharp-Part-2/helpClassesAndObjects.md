@@ -63,10 +63,10 @@ The type or member can be accessed by any code in the assembly in which it is de
 `DateTime now = DateTime.Now;` tova e vzimane na static property  
 `DateTime later = now.AddHours(8);` tova e method  
 ##### structures
-`struct Person()' po syshtiq nachin raboti kato class, no stoinostite ne sa po referenciq
+`struct Person()` po syshtiq nachin raboti kato class, no stoinostite ne sa po referenciq
 ##### namespace
 `namespace PersonClasses` otdelqne na grupa ot klasove
-##### random
+##### random (pseudo random)
 ```C#
 Random rand = new Random();  
 for (int number = 1; number <= 6; number++)
