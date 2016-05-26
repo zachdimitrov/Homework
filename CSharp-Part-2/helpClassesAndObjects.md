@@ -62,3 +62,16 @@ The type or member can be accessed by any code in the assembly in which it is de
 ##### DateTime (ne e class, a structure)
 `DateTime now = DateTime.Now;` tova e vzimane na static property  
 `DateTime later = now.AddHours(8);` tova e method  
+##### structures
+`struct Person()' po syshtiq nachin raboti kato class, no stoinostite ne sa po referenciq
+##### namespace
+`namespace PersonClasses` otdelqne na grupa ot klasove
+##### random
+```C#
+Random rand = new Random();  
+for (int number = 1; number <= 6; number++)
+{
+    int randomNumber = rand.Next(49) + 1;  // 6 proizvolni chisla (moje da se povtarqt)
+    Console.Write("{0} ", randomNumber);   // randoma e dobre da e kato static promenliva izvyn Main()
+}
+```
