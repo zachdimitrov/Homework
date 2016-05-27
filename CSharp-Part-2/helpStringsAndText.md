@@ -15,3 +15,12 @@
 ##### leksikografsko sravnqvane
 `string.Compare(str1, str2)` vryshta int rezultat: 0 - equal, -1 ako pyrvoto e po-malko, 1 - ako pyrvoto e po-golqmo    
 `string.Compare(str1, str2, true)` slaga - ignore case  
+
+##### concatenirane
+```C#
+string[] words = new string[] {"gosho", "tosho", "meow"};
+string conc = string.Concat(words[0] + words[1] + word[2]); // po-dobriq nachin e stringbuilder
+```
+##### search in strings
+
+
