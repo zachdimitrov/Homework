@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ToCorrectBrackets
 {
@@ -14,17 +11,34 @@ namespace ToCorrectBrackets
             List<int> open = new List<int>();
             List<int> closed = new List<int>();
             open = FindInString(exp, "(");
+            // Console.WriteLine(String.Join(", ", open));
             closed = FindInString(exp, ")");
+            // Console.WriteLine(String.Join(", ", closed));
             if (open.Count == closed.Count)
             {
-                if (open[open.Count-1] < closed[0])
+                int openBeforeClosed = 0;
+                int closedAfterOpen = 0;
+                int i = 0;
+                int j = 0;
+                while(i < open.Count && j < closed.Count)
                 {
-                    Console.WriteLine("Correct");
+                    if(open[i] < closed[j])
+                    {
+                        openBeforeClosed++;
+                        i++;
+                    }
+                    else
+                    {
+                        closedAfterOpen++;
+                        j++;
+                    }
+                    if (closedAfterOpen > openBeforeClosed)
+                    {
+                        Console.WriteLine("Incorrect");
+                        break;
+                    }
                 }
-                else
-                {
-                    Console.WriteLine("Incorrect");
-                }
+                Console.WriteLine("Correct");
             }
             else
             {
@@ -37,7 +51,7 @@ namespace ToCorrectBrackets
             List<int> positions = new List<int>();
             for (int i = 0; i < exp.Length; i++)
             {
-                if (Convert.ToString(exp[i]) == v)
+                if (exp[i].ToString() == v)
                 {
                     positions.Add(i);
                 }
