@@ -1,15 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace _06.StringLength
+namespace ForStringLength
 {
-    class Program
+    class StringLenght
     {
-        static void Main(string[] args)
+        static void Main()
         {
+                string str = Console.ReadLine();
+                str = str.Trim('\n', '\t', ' ');
+                string result = str.PadRight(20, '*');
+                Console.WriteLine(result);
+            
         }
     }
 }

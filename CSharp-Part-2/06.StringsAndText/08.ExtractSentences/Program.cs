@@ -1,15 +1,27 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace _08.ExtractSentences
+class ExtrSent
 {
-    class Program
+    static void Main()
     {
-        static void Main(string[] args)
+        string word = Console.ReadLine().ToLower();
+        string text = Console.ReadLine();
+        var sentences = text.Split('.');
+
+        StringBuilder result = new StringBuilder();
+
+        foreach (var sentence in sentences)
         {
+            var words = sentence.Split(new[] { '.', ' ', ',', '-', '!', '?', '\n', '\t' }, StringSplitOptions.RemoveEmptyEntries);
+
+            if (Array.IndexOf(words, word.ToLower()) > -1)
+            {
+                result.Append(sentence.Trim());
+                result.Append(". ");
+            }
         }
+
+        Console.WriteLine(result.ToString().Trim());
     }
 }
