@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "001.Classes", "001.Classes\001.Classes.csproj", "{2252F04E-15B8-4D32-B762-E49119E01E14}"
 EndProject
@@ -22,6 +22,16 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task3.Tron3D", "Task3.Tron3D\Task3.Tron3D.csproj", "{EF157525-7E30-4562-A502-25FEEA911B7D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task3.Tron3D-2", "Task3.Tron3D-2\Task3.Tron3D-2.csproj", "{18A403AE-710C-406F-A28A-81FAAE214BDF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exam-1-Messages", "Exam-1-Messages\Exam-1-Messages.csproj", "{996D3518-6AAF-4E86-941A-0243766D99F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exam-2-DancingMoves", "Exam-2-DancingMoves\Exam-2-DancingMoves.csproj", "{AEE8779F-3ADA-4A4E-8B59-27345F784A68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exam-3-HarryPotter4D", "Exam-2-HarryPotter4D\Exam-3-HarryPotter4D.csproj", "{E4A93C84-FA69-4A2C-8A0C-B1A3CB18F012}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exam-4-SoupProject", "Exam-4-SoupProject\Exam-4-SoupProject.csproj", "{74E5A213-41A4-43BD-B073-D13B36EE60EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exam-5-Penquin", "Exam-5-Penquin\Exam-5-Penquin.csproj", "{F413DA1A-25F5-4C78-AA10-C67296056561}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +79,26 @@ Global
 		{18A403AE-710C-406F-A28A-81FAAE214BDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18A403AE-710C-406F-A28A-81FAAE214BDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18A403AE-710C-406F-A28A-81FAAE214BDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{996D3518-6AAF-4E86-941A-0243766D99F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{996D3518-6AAF-4E86-941A-0243766D99F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{996D3518-6AAF-4E86-941A-0243766D99F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{996D3518-6AAF-4E86-941A-0243766D99F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEE8779F-3ADA-4A4E-8B59-27345F784A68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEE8779F-3ADA-4A4E-8B59-27345F784A68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEE8779F-3ADA-4A4E-8B59-27345F784A68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEE8779F-3ADA-4A4E-8B59-27345F784A68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4A93C84-FA69-4A2C-8A0C-B1A3CB18F012}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4A93C84-FA69-4A2C-8A0C-B1A3CB18F012}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4A93C84-FA69-4A2C-8A0C-B1A3CB18F012}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4A93C84-FA69-4A2C-8A0C-B1A3CB18F012}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74E5A213-41A4-43BD-B073-D13B36EE60EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74E5A213-41A4-43BD-B073-D13B36EE60EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74E5A213-41A4-43BD-B073-D13B36EE60EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74E5A213-41A4-43BD-B073-D13B36EE60EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F413DA1A-25F5-4C78-AA10-C67296056561}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F413DA1A-25F5-4C78-AA10-C67296056561}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F413DA1A-25F5-4C78-AA10-C67296056561}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F413DA1A-25F5-4C78-AA10-C67296056561}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
