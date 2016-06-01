@@ -1,0 +1,69 @@
+﻿body, div, h1, img, p, ul, li, a, span {
+    padding: 0;
+    margin: 0;
+}
+ul {
+    list-style: none;
+}
+ a{
+     text-decoration: none;
+     color: black;
+ }
+body {
+    /*background: url('/task-images/initial.png') no-repeat;*/
+    font-family: Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
+    font-size: 16px;
+}
+#wrapper {
+    padding: 15px;
+}
+#wrapper > div {
+    border-radius: 5px;
+    padding: 10px 0 10px 10px;
+    display: inline-block;
+    width: 690px;
+    background-color: #ccc;
+}
+.clearfix:after { /* za da izpolzvame nagotovo */
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+#wrapper > div .holder {
+    float: left;
+}
+#wrapper > div .holder img {
+    width: 550px;
+    border-radius: 5px;
+}
+#wrapper > div .playlist {
+    float: left;
+}
+#wrapper > div .playlist ul{
+    padding: 0 0 0 10px;
+}
+#wrapper > div .playlist ul li {
+    width: 120px;
+    height: 101px;
+    padding-top: 5px;
+    border-bottom: 1px solid black;
+    box-sizing: border-box;
+}
+
+#wrapper > div .playlist ul li a {
+    display: block;
+}
+
+#wrapper > div .playlist ul li a span {
+    font-weight: bold;
+    margin: 0 8px;
+}
+    
+#wrapper > div .playlist ul li a img {
+    display: block;
+    margin: 0 17px;
+    border-radius: 10px;
+}

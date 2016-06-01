@@ -1,0 +1,75 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Exam_2_DancingMoves
+{
+    class DancingMoves
+    {
+        static void Main()
+        {
+            string[] array = Console.ReadLine().Split(' ');
+            int[] arr = new int[array.Length];
+            for (int i = 0; i < arr.Length; i++)
+            {
+                arr[i] = int.Parse(array[i]);
+            }
+            var command = new List<string>();
+            while (true)
+            {
+                string a = Console.ReadLine();
+                if (a.Contains("stop"))
+                {
+                    break;
+                }
+                command.Add(a);
+            }
+
+            long sumForMove = 0;
+            long sumFinal = 0;
+            int startIndex = 0;
+            int index = 0;
+
+            for (int i = 0; i < command.Count; i++)
+            {
+                string[] com = command[i].Split(' ');
+                int times = int.Parse(com[0]);
+                int step = int.Parse(com[2]);
+                startIndex = index;
+                sumForMove = 0;
+                for (int j = 0; j < times; j++)
+                {
+                    if (com[1] == "right")
+                    {
+                        index += step;
+                        if (index >= arr.Length)
+                        {
+                            while (index >= arr.Length)
+                            {
+                                index = index - arr.Length;
+                            }
+                        }
+                        sumForMove += arr[index];
+                    }
+                    else if (com[1] == "left")
+                    {
+                        index = index - step;
+                        if (index < 0)
+                        {
+                            while (index < 0)
+                            {
+                                index = index + arr.Length;
+                            }
+                        }
+                        sumForMove += arr[index];
+                    }
+                }
+                sumFinal += sumForMove;
+            }
+            double avgSum = (double)sumFinal / command.Count;
+            Console.WriteLine("{0:F1}", avgSum);
+        }
+    }
+}
