@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem-1-Printing", "Problem-1-Printing\Problem-1-Printing.csproj", "{37396DD2-7DD8-4A9D-A199-569E8AD0FEE2}"
 EndProject
@@ -56,6 +56,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chef-1-PieceOfCake", "Chef-1-PieceOfCake\Chef-1-PieceOfCake.csproj", "{3115C82D-2917-40A3-8961-F75304CAE195}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chef-2-LifeUniverseEverything", "Chef-2-LifeUniverseEverything\Chef-2-LifeUniverseEverything.csproj", "{8C8EFAB0-A60A-4639-846B-4499B9E38162}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.1.NoName", "Test.1.NoName\Test.1.NoName.csproj", "{39B676BE-BDCC-4FE8-921B-DEF5FAAA6D44}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -171,6 +173,10 @@ Global
 		{8C8EFAB0-A60A-4639-846B-4499B9E38162}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C8EFAB0-A60A-4639-846B-4499B9E38162}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C8EFAB0-A60A-4639-846B-4499B9E38162}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39B676BE-BDCC-4FE8-921B-DEF5FAAA6D44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39B676BE-BDCC-4FE8-921B-DEF5FAAA6D44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39B676BE-BDCC-4FE8-921B-DEF5FAAA6D44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39B676BE-BDCC-4FE8-921B-DEF5FAAA6D44}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
