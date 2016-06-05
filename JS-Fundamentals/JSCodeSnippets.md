@@ -24,8 +24,6 @@ function hideS(id1, id2) {
 ### 4. Variables and data types
 ##### Problem 1 - Literals
 ```JS
-wrt('pro1', 'Problem 1. Literals' + '<br>');
-
 var intNum = 123;
 var floNum = 12.3;
 var str = 'My name is';
@@ -40,14 +38,11 @@ var car = {
 ```
 ##### Problem 2 - Quoted text
 ```JS
-wrt('pro2', 'Problem 2. Quoted Text' + '<br>');
 var quoted = '\'What is your name?\', \'He asked\'';
 wrt('pr2', quoted + '<br>');
 ```
 ##### Problem 3 - Type of variables
 ```JS
-wrt('pro3', 'Problem 3. Type of Variables' + '<br>');
-
 function getName(what) {
     for (var name in window) {
         if (window[name] == what)
@@ -73,7 +68,6 @@ y.innerHTML =
 ```
 ##### Problem 4 - Typeof null
 ```JS
-wrt('pro4', 'Problem 4. Type of Variables' + '<br>');
 var nulType = null;
 var nanType = NaN;
 var undType;
