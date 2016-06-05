@@ -307,10 +307,9 @@ function bigFind() {
     elm = 'The biggest number is: ' + test;
     wrt('pr33', elm);
 }
-
-//Problem 4 - Sort 3 numbers
-wrt('pro34', 'Problem 4. Sort 3 numbers' + '<br>');
-
+```
+##### Problem 4 - Sort 3 numbers
+```JS
 function sortNum() {
     var info = document.getElementById('n34');
     var a = +info.elements[0].value;
