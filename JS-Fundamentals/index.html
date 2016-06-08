@@ -20,18 +20,28 @@
                 <li><a href="index.html">Homework</a>
                     <ul>
                         <li>
-                            <a id="a" href="" onclick="showS('variables'); hideS('oper', 'cond'); return false; " id="task1">
+                            <a href="" onclick="showS('variables'); hideS('array', 'oper', 'cond', 'loop'); return false; " id="task1">
                                 4. Variables and data types
                             </a>
                         </li>
                         <li>
-                            <a id="b" href="" onclick="showS('oper'); hideS('variables', 'cond'); return false;" id="task2">
+                            <a href="" onclick="showS('oper'); hideS('array', 'variables', 'cond', 'loop'); return false;" id="task2">
                                 5. Operators And Expressions
                             </a>
                         </li>
                         <li>
-                            <a id="c" href="" onclick="showS('cond'); hideS('variables', 'oper'); return false;" id="task3">
+                            <a href="" onclick="showS('cond'); hideS('array', 'variables', 'oper', 'loop'); return false;" id="task3">
                                 6. Conditional statements
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" onclick="showS('loop'); hideS('array', 'variables', 'oper', 'cond'); return false;" id="task4">
+                                7. Loops
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" onclick="showS('array'); hideS('loop', 'variables', 'oper', 'cond'); return false;" id="task5">
+                                8. Arrays
                             </a>
                         </li>
                     </ul>
@@ -40,7 +50,7 @@
             </ul>
         </nav>
     </header>
-    <!-- Variables -->
+    <!-- 4. Variables -->
     <section id="variables">
         <h2>4. Variables and data types</h2>
         <div>
@@ -63,7 +73,7 @@
             <p id="pr4">
         </div>
     </section>
-    <!-- Operators and Expressions -->
+    <!-- 5. Operators and Expressions -->
     <section id="oper">
         <h2>5. Operators and Expressions</h2>
         <div>
@@ -145,8 +155,17 @@
             <button onclick="traInput()">Calculate trapezoid's area</button>
             <p id="pr18"></p>
         </div>
+        <div>
+            <h1 id="pro19"></h1> Check if point is within a circle ((1,1), 3) and outside rectangle (-1,-1, h2, w6).
+            <form action="form_action.asp" id="n19">Enter coordinates of point:
+                <input type="number" value="0">X
+                <input type="number" value="0">Y
+            </form>
+            <button onclick="pointInCirOutsideRect()">Find if the point meets the condition</button>
+            <p id="pr19"></p>
+        </div>
     </section>
-    <!-- Conditional Statements -->
+    <!-- 6. Conditional Statements -->
     <section id="cond">
         <h2>6. Conditional statements</h2>
         <div>
@@ -218,10 +237,67 @@
             <button onclick="bigFive()">Click here find the biggest</button>
             <p id="pr37"></p>
         </div>
+        <div>
+            <h1 id="pro38"></h1>
+            <form action="form_action.asp" id="n38">Enter number:
+                <input type="number" value="0">
+            </form>
+            <button onclick="NumAsWords()">Click here to see it in words</button>
+            <p id="pr38"></p>
+        </div>
     </section>
+    <!-- 7. Loops -->
+    <section id="loop">
+        <h2>7. Loops</h2>
+        <div>
+            <h1 id="pro41"></h1>
+            <form action="form_action.asp" id="n41">Enter number N:
+                <input type="number" value="0">
+            </form>
+            <button onclick="FromOneToN()">Click here</button> to see all numbers from 1 to N: <br>
+            <p id="pr41"></p>
+        </div>
+        <div>
+            <h1 id="pro42"></h1>
+            <form action="form_action.asp" id="n42">Enter number N:
+                <input type="number" value="0">
+            </form>
+            <button onclick="NotDivisible()">Click here</button> to see all numbers from 1 to N not divisible by 7 and 3 at the same time: <br>
+            <p id="pr42"></p>
+        </div>
+        <div>
+            <h1 id="pro43"></h1>
+            <form action="form_action.asp" id="n43">Enter numbers, seperated by space:
+                <input type="text" style="width: 250px" value="0">
+            </form>
+            <button onclick="MaxMinValue()">Click here</button> to see Min and Max number<br>
+            <p id="pr43"></p>
+        </div>
+        <div>
+            <h1 id="pro44"></h1>
+            <button onclick="WritePropertie()"> Click here</button> to see lexicographically smallest and largest property in document, window and navigator objects.<br>
+            <p id="pr44"></p>
+        </div>
+    </section>
+    <!-- 8. Arrays -->
+    <section id="array">
+        <h2>1. Increase array members</h2>
+        <div>
+            <h1 id="pro51"></h1>
+            <form action="form_action.asp" id="n51">Enter array length:
+                <input type="number" value="0"> <br>Enter multiplier:
+                <input type="number" value="0">
+            </form>
+            <button onclick="IncreaseArray()">Click here</button> to see all elements ot the new array: <br>
+            <p id="pr51"></p>
+        </div>
+    </section>
+    <script type="text/javascript" src="JS Basic FUnctions.js"></script>
     <script type="text/javascript" src="JS Fundamentals Homework.js"></script>
     <script type="text/javascript" src="JS Operators and Expressions.js"></script>
     <script type="text/javascript" src="JS Conditional Statements.js"></script>
+    <script type="text/javascript" src="JS Loops.js"></script>
+    <script type="text/javascript" src="JS Arrays.js"></script>
 </body>
 
 </html>

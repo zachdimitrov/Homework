@@ -154,3 +154,18 @@ input {
     position: relative;
     left: 65px;
 }
+
+.rem > div div {
+    all: unset;
+}
+
+h5 {
+    all: unset;
+    font-family: consolas;
+    margin: 0;
+}
+
+.rem div > div a,
+.rem .gist-meta {
+    display: none;
+}

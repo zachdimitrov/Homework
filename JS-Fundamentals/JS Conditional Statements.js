@@ -1,13 +1,3 @@
-function wrt(iid, txt) {
-    var x = document.getElementById(iid);
-    x.innerHTML = txt;
-}
-
-function newField(id) {
-    var z = document.getElementById(id);
-    z.innerHTML += '<input type="number" value="0">';
-}
-
 //Problem 1 - Exchange if greater
 wrt('pro31', 'Problem 1. Exchange if greater' + '<br>');
 
@@ -191,3 +181,147 @@ function bigFive() {
 
 //Problem 8 - Numbers in words
 wrt('pro38', 'Problem 8. Numbers in words' + '<br>');
+
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+function NumAsWords() {
+    var info = document.getElementById('n38');
+    var a = +info.elements[0].value;
+    var numAsStr = a + '';
+    var text = '';
+    var l = numAsStr.length - 1;
+    for (var i = l; i >= 0; i--) {
+        if (i === l) {
+            text = TensNumAsWords(numAsStr.charAt(i));
+        }
+        if (l > 0 && i === l - 1) {
+            if (numAsStr.charAt(i) == '1') {
+                text = TeenNumAsWords(numAsStr.charAt(i + 1));
+            } else {
+                text = HundNumAsWords(numAsStr.charAt(i)) + ' ' + text;
+            }
+        }
+        if (l > 1 && i === l - 2) {
+            if (numAsStr.charAt(l) === '0' && numAsStr.charAt(l - 1) === '0') {
+                text = TensNumAsWords(numAsStr.charAt(i)) + ' hundred';
+            } else {
+                text = TensNumAsWords(numAsStr.charAt(i)) + ' hundred and ' + text;
+            }
+        }
+    }
+    text = capitalizeFirstLetter(text);
+    wrt('pr38', text);
+}
+
+function TensNumAsWords(ch) {
+    var result = '';
+    switch (ch) {
+        case '0':
+            result = '';
+            break;
+        case '1':
+            result = 'one';
+            break;
+        case '2':
+            result = 'two';
+            break;
+        case '3':
+            result = 'three';
+            break;
+        case '4':
+            result = 'four';
+            break;
+        case '5':
+            result = 'five';
+            break;
+        case '6':
+            result = 'six';
+            break;
+        case '7':
+            result = 'seven';
+            break;
+        case '8':
+            result = 'eight';
+            break;
+        case '9':
+            result = 'nine';
+            break;
+    }
+    return result;
+}
+
+function HundNumAsWords(ch) {
+    var result = '';
+    switch (ch) {
+        case '0':
+            result = '';
+            break;
+        case '1':
+            result = '';
+            break;
+        case '2':
+            result = 'twenty';
+            break;
+        case '3':
+            result = 'thirty';
+            break;
+        case '4':
+            result = 'fourty';
+            break;
+        case '5':
+            result = 'fifty';
+            break;
+        case '6':
+            result = 'sixty';
+            break;
+        case '7':
+            result = 'seventy';
+            break;
+        case '8':
+            result = 'eighty';
+            break;
+        case '9':
+            result = 'ninety';
+            break;
+    }
+    return result;
+}
+
+function TeenNumAsWords(ch) {
+    var result = '';
+    switch (ch) {
+        case '0':
+            result = 'ten';
+            break;
+        case '1':
+            result = 'eleven';
+            break;
+        case '2':
+            result = 'twelve';
+            break;
+        case '3':
+            result = 'thirteen';
+            break;
+        case '4':
+            result = 'fourteen';
+            break;
+        case '5':
+            result = 'fifteen';
+            break;
+        case '6':
+            result = 'sixteen';
+            break;
+        case '7':
+            result = 'seventeen';
+            break;
+        case '8':
+            result = 'eighteen';
+            break;
+        case '9':
+            result = 'nineteen';
+            break;
+    }
+    return result;
+}

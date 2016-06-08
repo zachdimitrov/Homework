@@ -1,13 +1,3 @@
-function wrt(iid, txt) {
-    var x = document.getElementById(iid);
-    x.innerHTML = txt;
-}
-
-function newField(id) {
-    var z = document.getElementById(id);
-    z.innerHTML += '<input type="number" value="0">';
-}
-
 //Problem 1 - odd or Evens
 wrt('pro11', 'Problem 1. Odd or Even' + '<br>');
 
@@ -185,4 +175,22 @@ function traInput() {
     area = (a + b) * (h / 2);
     elm = 'The area of the trapezoid is: ' + area + ' cm2';
     wrt('pr18', elm);
+}
+//Problem 9 - Point in Circle and outside Rectangle
+wrt('pro19', 'Problem 9. Point in Circle and outside Rectangle' + '<br>');
+
+function pointInCirOutsideRect() {
+    var info = document.getElementById('n19');
+    var x = +info.elements[0].value;
+    var y = +info.elements[1].value;
+    var message = '';
+    // radius squared = 9
+    var test = ((x - 1) * (x - 1) + (y - 1) * (y - 1)) <= 9 && (x < -1 || (y > 1 || y < -1));
+    if (test) {
+        message = ' is within a circle ((1,1), 3) and outside rectangle (-1,-1, h2, w6)'
+    } else {
+        message = ' does not meet the condition!'
+    }
+    message = 'The point with coordinates: ' + x + ' and ' + y + message;
+    wrt('pr19', message)
 }
