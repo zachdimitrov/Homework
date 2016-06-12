@@ -1,8 +1,8 @@
 ##### class
 ```C# 
-public class MyCustomClass // class definition
+public class AlarmClock // class definition
 public const double PI = 3.1415 // constant definition
-public int Number { get; set; } //automatic property, no need for property setup
+public int Minutes { get; set; } //automatic property, no need for property setup
 //fields, properties
 private int hours;  //field
 public int Hours    // full property setup
