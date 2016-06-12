@@ -1,12 +1,24 @@
 ##### class
-```C# public class MyCustomClass``` class definition
-```C# public const double PI = 3.1415``` constant definition
-```C# public int Number { get; set; }``` automatic property
-```C#
+```C# 
+public class MyCustomClass // class definition
+public const double PI = 3.1415 // constant definition
+public int Number { get; set; } //automatic property, no need for property setup
+
 private int hours;  //field
-public int Hours    // property setup
+public int Hours    // full property setup
 	{
-		get { return this.hours; }
-		set { this.hours = value; }
+		get { return this.hours; } // getter
+		set { this.hours = value; } // setter
 	}
+
+	public AlarmClock() // empty constructor
+	{ 
+        }
+        
+	public AlarmClock(int hours = 5, int minutes) // full constructor hours is optional field
+	{
+		this.hours = hours;
+		this.minutes = minutes;
+	}
+	
 ```
