@@ -36,9 +36,15 @@ public override string ToString() // override method
             return string.Format("Time: ({0} : {1})", Hours, Minutes);
         }
 ```
-##### static class
+##### static class, property, method
 ```C#
-
+public static class Printer
+{
+public static void PrintTime()
+	{
+		Console.WriteLine(new AlarmClock(20, 10))
+	}
+}
 ```
 ##### enumeration
 ```C#
@@ -47,9 +53,10 @@ public enum CatColor  // syzdavane na enumeraciq, moje da se zadade stoinost, ak
 	Black, White, Mixed, Brown
 }
 ```
-##### structure
-##### generic
-##### namespace
-##### indexer
-##### attribute
+##### structures
+##### generics
+##### namespaces
+##### indexers
+##### operators
+##### attributes
 
