@@ -8,7 +8,17 @@ private int hours;  //field
 public int Hours    // full property setup
 	{
 		get { return this.hours; } // getter
-		set { this.hours = value; } // setter
+		set // setter with validation
+		{ 
+		if (value > 0)
+			{
+				this.hours = value;
+			}
+		else 
+			{
+				return new ArgumentException("Wrong input!");
+			}
+		} 
 	}
 //constructors
 public AlarmClock() // empty constructor
@@ -20,11 +30,26 @@ public AlarmClock(int hours = 5, int minutes) // full constructor hours is optio
 	this.hours = hours;
 	this.minutes = minutes;
 }
+//methods
+public override string ToString() // override method
+        {
+            return string.Format("Time: ({0} : {1})", Hours, Minutes);
+        }
 ```
 ##### static class
+```C#
+
+```
 ##### enumeration
+```C#
+public enum CatColor  // syzdavane na enumeraciq, moje da se zadade stoinost, ako ne iskame defaultnata (0, 1, 2..)
+{
+	Black, White, Mixed, Brown
+}
+```
 ##### structure
 ##### generic
+##### namespace
 ##### indexer
 ##### attribute
 
