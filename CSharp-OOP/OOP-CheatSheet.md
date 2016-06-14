@@ -42,7 +42,7 @@ public static class Printer
 {
 public static void PrintTime()
 	{
-		Console.WriteLine(new AlarmClock(20, 10))
+		Console.WriteLine(new AlarmClock(20, 10));
 	}
 }
 ```
@@ -54,7 +54,13 @@ public enum CatColor  // syzdavane na enumeraciq, moje da se zadade stoinost, ak
 }
 ```
 ##### structures
+```C#
+public struct Point3D // definira se po syshtiq nachin kato class, razlikata e che e value type promenliva
+```
 ##### generics
+```C#
+
+```
 ##### namespaces
 ##### indexers
 ##### operators
