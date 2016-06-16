@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PR-1-CatSystem", "PR-1-CatSystem\PR-1-CatSystem.csproj", "{8B4D1989-4C88-44AE-91F0-34D902B5FA8F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleMoveEngine", "ConsoleMoveEngine\ConsoleMoveEngine.csproj", "{1CF96A76-5E5E-48E1-A18F-55286E44295B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{8B4D1989-4C88-44AE-91F0-34D902B5FA8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B4D1989-4C88-44AE-91F0-34D902B5FA8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B4D1989-4C88-44AE-91F0-34D902B5FA8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CF96A76-5E5E-48E1-A18F-55286E44295B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CF96A76-5E5E-48E1-A18F-55286E44295B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CF96A76-5E5E-48E1-A18F-55286E44295B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CF96A76-5E5E-48E1-A18F-55286E44295B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
