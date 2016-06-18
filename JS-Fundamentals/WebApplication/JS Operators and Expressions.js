@@ -152,7 +152,6 @@ function prmInput() {
         for (j = 2; j <= Math.sqrt(pro); j = j + 1) {
             if (pro % j === 0) {
                 test = true;
-                break;
             }
         }
         if (test) {

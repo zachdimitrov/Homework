@@ -100,5 +100,30 @@ function solve(args) {
 
 // problem 8. trapezoid area
 function solve(args) {
+    var a = +args[0];
+    var b = +args[1];
+    var h = +args[2];
+    var area = (a + b) * (h / 2);
+    return area.toFixed(7);
+}
 
+// problem 9. // point in a circle outside rectangle
+function solve(args) {
+    var x = +args[0];
+    var y = +args[1];
+    var k = 1.5;
+    var str = '';
+    var result = ((x - 1) * (x - 1) + (y - 1) * (y - 1));
+    var distance = Math.sqrt(result);
+
+    if (k >= distance) {
+        str = 'inside circle ';
+    } else {
+        str = 'outside circle ';
+    }
+    if (x >= -1 && x <= 5 && y >= -1 && y <= 1) {
+        return str + 'inside rectangle';
+    } else {
+        return str + 'outside rectangle';
+    }
 }
