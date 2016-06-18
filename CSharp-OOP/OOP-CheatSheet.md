@@ -67,7 +67,7 @@ public struct Point3D // definira se po syshtiq nachin kato class, razlikata e c
 - always static class - extention methods are inside this class
 - use this keyword  
 
-```
+```C#
 public static class Extentions
 { 
 	public static int WordCount(this string str) // extend string class
