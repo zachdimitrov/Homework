@@ -65,4 +65,15 @@ public struct Point3D // definira se po syshtiq nachin kato class, razlikata e c
 ##### indexers
 ##### operators
 ##### attributes
-
+##### extention methods
+- добавят функционалност към съществуващи класове
+- always static class - extention methods are inside this class
+```C#
+public static class Extentions
+{
+	public static int WordCount(this string str)
+	{
+		
+	}
+}
+```
