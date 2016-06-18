@@ -58,9 +58,6 @@ public enum CatColor  // syzdavane na enumeraciq, moje da se zadade stoinost, ak
 public struct Point3D // definira se po syshtiq nachin kato class, razlikata e che e value type promenliva
 ```
 ##### generics
-```C#
-
-```
 ##### namespaces
 ##### indexers
 ##### operators
@@ -68,12 +65,33 @@ public struct Point3D // definira se po syshtiq nachin kato class, razlikata e c
 ##### extention methods
 - добавят функционалност към съществуващи класове
 - always static class - extention methods are inside this class
+- use this keyword  
+
 ```C#
 public static class Extentions
-{
-	public static int WordCount(this string str)
+{ 
+	public static int WordCount(this string str) // extend string class
 	{
-		
+		return str.Split(new[] {'', '.', '?'}, StringSplitOptions.RemoveEmptyEntities);
+	}
+	public static string ToString<T>(this IEnumerable<T>) // extend all INumerables
+	{
+		var result = new StringBuilder();
+		result.Append("[ ");
+		foreach (var item in enumeration)
+		{
+			result.Append(item);
+			result.Append(" ");
+		}
+		result.Append("]");
+		return result.ToString();
+	}
+	public static IncreaseWidth(this IList<int> list, int amount) // extend all <int> lists
+	{
+		for (int i = 0; i < list.Count; i++)
+		{
+			list[i] += amount;
+		}
 	}
 }
 ```
