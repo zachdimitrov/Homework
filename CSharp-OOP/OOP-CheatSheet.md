@@ -62,10 +62,11 @@ public struct Point3D // definira se po syshtiq nachin kato class, razlikata e c
 ##### indexers
 ##### operators
 ##### attributes
+##### regex
 ##### extention methods
 - добавят функционалност към съществуващи класове
 - always static class - extention methods are inside this class
-- use this keyword  
+- use this keyword
 
 ```C#
 
@@ -95,4 +96,13 @@ public static class Extentions
 		}
 	}
 }
+```
+##### class library
+- create class library prom *new project*
+- use class library to store classes, add refference to library before use
+
+##### anonymous types  
+
+```C#
+var point = new { x = 3, y = 5 };  // ne se podava tip
 ```
