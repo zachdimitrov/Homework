@@ -1,5 +1,5 @@
 ##### class
-```C# 
+```js
 public class AlarmClock // class definition
 public const double PI = 3.1415 // constant definition
 public int Minutes { get; set; } //automatic property, no need for property setup
@@ -37,7 +37,7 @@ public override string ToString() // override method
         }
 ```
 ##### static class, property, method
-```C#
+```js
 public static class Printer
 {
 public static void PrintTime()
@@ -47,14 +47,14 @@ public static void PrintTime()
 }
 ```
 ##### enumeration
-```C#
+```js
 public enum CatColor  // syzdavane na enumeraciq, moje da se zadade stoinost, ako ne iskame defaultnata (0, 1, 2..)
 {
 	Black, White, Mixed, Brown
 }
 ```
 ##### structures
-```C#
+```js
 public struct Point3D // definira se po syshtiq nachin kato class, razlikata e che e value type promenliva
 ```
 ##### generics
@@ -68,7 +68,7 @@ public struct Point3D // definira se po syshtiq nachin kato class, razlikata e c
 - always static class - extention methods are inside this class
 - use this keyword
 
-```C#
+```js
 
 public static class Extentions
 { 
@@ -103,6 +103,6 @@ public static class Extentions
 
 ##### anonymous types  
 
-```C#
+```js
 var point = new { x = 3, y = 5 };  // ne se podava tip
 ```
