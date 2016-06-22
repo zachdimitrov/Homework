@@ -1,3 +1,5 @@
+#### OOP shortcuts
+https://msdn.microsoft.com/en-us/library/z41h7fat(v=vs.140).aspx
 ##### class
 ```js
 public class AlarmClock // class definition
@@ -36,6 +38,10 @@ public override string ToString() // override method
             return string.Format("Time: ({0} : {1})", Hours, Minutes);
         }
 ```
+##### interpolated string 
+```js
+Console.WriteLine($"The area of interest is bounded by ({p1.X},{p1.Y})") // izpolzva se stoinostta na tova koeto e v kydravite skobi
+```
 ##### static class, property, method
 ```js
 public static class Printer
@@ -46,6 +52,9 @@ public static void PrintTime()
 	}
 }
 ```
+```js
+this.dog = obj as dog; // cast from object to type
+```
 ##### enumeration
 ```js
 public enum CatColor  // syzdavane na enumeraciq, moje da se zadade stoinost, ako ne iskame defaultnata (0, 1, 2..)
@@ -54,16 +63,82 @@ public enum CatColor  // syzdavane na enumeraciq, moje da se zadade stoinost, ak
 }
 ```
 ##### structures
+- vinagi imat default constructor, izpolzva se kogato ne iskame da promenqme obekta, stava value type
+- ```ref``` moje da se izpolzva i taka strukturata sht ese dyrji kato class
+- ```out``` podava se v kraq na metoda
+
 ```js
 public struct Point3D // definira se po syshtiq nachin kato class, razlikata e che e value type promenliva
 ```
-##### generics
-##### namespaces
-##### indexers
-##### operators
-##### attributes
-##### regex
-##### extention methods
+##### generic class
+```js
+public stirng MyList<T> // syzdavame template class
+where T : struct // ogranichenie na tipa koito moje da se izpolzva, izbroqvat se v opredelen red
+```
+##### generic method
+```js
+public void walk<T>(T units)
+{
+	Console.WriteLine($"Walking {units.GetType().Name}); // tipa danni e neopredelen (izkarva imeto na tipa)
+}
+```
+##### namespaces  
+- slujat za podredba i grupirane na class-ovete po obshti kriterii
+
+##### indexers  
+```js
+public int this [int index] 
+{
+	get
+	{
+		if (index >= 0 && index <=31)
+		{
+		if ((value & (1 << index)) == 0)
+		return 0;
+		else
+		return 1;
+		}
+	}
+	set
+	{
+		name[i] = l;
+	}
+}
+```
+
+##### operators  
+```js
+public static int operator +(Cat cat, Dog doge) {... }
+```
+
+##### attributes  
+```js
+[Required]
+[DllImport("user32.dll", EntryPoint = "MessageBox")]
+public static extern int ShowMessageBox(int hWnd, string text, string Caption, int tupe);
+...
+ShowMessageBox(0, "text", "caption", 0); // DLL e importnat i se polzva
+```
+definirane na atribute
+```js
+public class AuthorAttribute : Attribute
+{
+	public AuthorAttribute(string authorName)
+	{
+		this.AuthorName = authorName;
+	}
+	public string AuthorName { get; set; }
+}
+... // predi classa kydeto se izpolzwa pishem atributa
+[author("Zahari Dimitrov")]
+var assembly = Assembly.GetCallingAssembly();
+var allTypeThatHaveAuthor = assembly.GetTypes().where(x => x.GetCustomAttributes(typeof(AuthorAttribute).Count>0.ToList()));
+foreach (var myType in allTYpesThatHaveAuthor)
+{ Console.WriteLine(myType); }
+
+##### regex  
+
+##### extention methods  
 - добавят функционалност към съществуващи класове
 - always static class - extention methods are inside this class
 - use this keyword
