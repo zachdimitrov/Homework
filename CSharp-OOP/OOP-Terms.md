@@ -75,19 +75,6 @@ vsichki klasove nasledqvat ```object```
 ##### Exception
 * Nasledqvame : ApplicationException
 
-```C#
-public class InvalidNeshtoSiException : ApplicationException
-{
- public InvalidNeshtoSiException(string msg, int minAge, int maxAge) : base(msg) // dopylnitelna informaciq
- {
-  this.MinAge = minAge;
-  this.MaxAge = maxAge;
- }
- public int MinAge { get; private set; }
- public int MaxAge { get; private set; }
-}
-```
-
 ##### Cohesion (strong is good)
 * za kolko neshta se griji edin class - po-malko po-dobre
 * class utilities losha coheziq - dobre e dori da ima mnogo metodi te da se grijat za edin tip neshta
@@ -97,3 +84,17 @@ public class InvalidNeshtoSiException : ApplicationException
 * law of Demeter
 * Primerno ako trqbva da smenqme neshto da ne se nalaga da pipame oshte 5 neshta
 * Vseki klas razchita na svoite parametri
+
+### Common Type System
+##### idea of CTS
+* nqkolko ezika, koito da moje da rabotqt po edin i syshti nachin v .NET
+ - koda se kompilira do drug vid ezik - IL- koito e obsht
+ - izpolzvat edni i syshti tipove danni koito se razbirat ot CLR
+ - ILSpy - dekompilira exe file - moje da vidim krainiq product
+ - OS -> CLR -> BCL -> DataTier -> WCF and WWF -> UI (ASP.NET, WF, WPF, Win)
+* BCL - osnovni instrumenti
+* DataTer - bazi danni, nie gi dostypvame chres bibliotekite ADO.NET, EF, LINQ, XML
+* WCF and WWF - komunikaciqta mejdu dannite i usera
+* UI - izpolzvat se razlichnite tehnologii da web, mobile, desktop...
+ - Unity 3D
+ - Xamarin
