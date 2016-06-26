@@ -191,3 +191,35 @@ public static class Extentions
 ```C#
 var point = new { x = 3, y = 5 };  // ne se podava tip
 ```
+
+##### Interface
+```C#
+public interface IMovable
+{
+	void move();
+}
+```
+* Ne se polzvat accsess modifiers
+* Moje da se napravi kolekciq ot interface List<IMovable>
+
+##### Inheritance
+```C#
+public class Cat : Mammal
+{
+	public Cat(int age) : base(age) // age e property ot bazoviq klass Mammal i se nasledqva
+	{
+	}
+}
+```
+
+##### HashSet
+```C#
+public override int GetHashCode() // metod za override na GetHashCode
+    { 
+        return x;
+    } 
+var ints = new HashSet<int>(); // pazi samo unikalni stoinosti, dobr e da implementirame GetHashCode
+ints.Add(1);
+```
+
+
