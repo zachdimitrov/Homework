@@ -13,13 +13,13 @@ vsichki klasove nasledqvat ```object```
 
 ##### elements of a class
 * fields - pazqt dannite za obekta
-* constants - 
-* methods - 
-* properties - 
-* indexers -
-* events - 
-* operators - 
-* constructors - 
+* constants - konkretni stoinosti
+* methods - deistviq, koito obekta izvyrshva
+* properties - systoqniq na obekta
+* indexers - dobavqt [index] 
+* events - sybitiq, koito se izvikvat s delegati
+* operators - izpolzvane na operatorite kato +, - i t.n. za obektite
+* constructors - shablon za syzdavane na obekta
 * destructors - ne se izpolzvat, po-dobre ```IDisposable, using```
 * inner types - inner classes, structures, interfaces, delegates - ```Action```
 
@@ -28,6 +28,7 @@ vsichki klasove nasledqvat ```object```
 * private - vijdat se samo v clasa
 * protected - vijdat se samo v clasa ili negovi naslednici
 * internal - vijdat se v klasa i naslednicite no samo v prilojenieto po koeto rabotim
+* protected internal - samo v tekushtoto assembly i naslednicite na klasa
 
 ##### members of classes can be
 * static - statichnite se dostypvat samo prez klasa
@@ -43,6 +44,24 @@ vsichki klasove nasledqvat ```object```
 * Read and write - get, set  
 ``` public string breed { get; set; }``` zamestva i poleto i property-to
 
-#### Enumerations - promenlivata moje da ima samo konkretni stoinosti
-enumeraciqta e sealed class sys static poleta
+##### Enumerations - promenlivata moje da ima samo konkretni stoinosti
+* enumeraciqta e sealed class sys static poleta
 
+##### Abstraction
+- Otdelqme vajnite svoistva na obektite
+
+* struct - ne moje da byde nasledqvano
+* static class - syzdava statichen klas koito ne moje d ase instancira
+* abstract class - podobno na interface, no moje da ima implementirani metodi - ne moje da se instancira
+ - abstract method - takiva sa metodite v Interface
+ - virtual method - implementiran metod, koito moje da overridenem
+* sealed class - ne moje da byde nasledqvan
+
+##### Encapsulation
+* Hides implementation details
+* Fields encapsulate properties
+ - get or set can be private
+ - fields are private
+ - properties can be public
+ - protected property is visible to child only
+* Use validation
