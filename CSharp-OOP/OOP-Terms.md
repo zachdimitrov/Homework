@@ -53,8 +53,8 @@ vsichki klasove nasledqvat ```object```
 * struct - ne moje da byde nasledqvano
 * static class - syzdava statichen klas koito ne moje d ase instancira
 * abstract class - podobno na interface, no moje da ima implementirani metodi - ne moje da se instancira
- - abstract method - takiva sa metodite v Interface
- - virtual method - implementiran metod, koito moje da overridenem
+ - abstract method - takiva sa metodite v Interface, zadyljitelno trqbva da implementirame, nqma tqlo
+ - virtual method - implementiran metod, koito moje da overridenem, moje da ne se implementira
 * sealed class - ne moje da byde nasledqvan
 
 ##### Encapsulation
@@ -65,3 +65,35 @@ vsichki klasove nasledqvat ```object```
  - properties can be public
  - protected property is visible to child only
 * Use validation
+
+##### Polymorphism
+* vyzmojnost edin obekt da ima poveche ot edna forma i da byde ot mnogo tipove
+* vikame vyzmojno nai bazoviq tip - intreface
+* naslednicite mogat da prezapisvat metodi na bazovite klsove - metoda trqbva da e virtual
+* kogato v konstruktor vikame metodi, toi ne trqbva da e virtualen
+
+##### Exception
+* Nasledqvame : ApplicationException
+
+```C#
+public class InvalidNeshtoSiException : ApplicationException
+{
+ public InvalidNeshtoSiException(string msg, int minAge, int maxAge) : base(msg) // dopylnitelna informaciq
+ {
+  this.MinAge = minAge;
+  this.MaxAge = maxAge;
+ }
+ public int MinAge { get; private set; }
+ public int MaxAge { get; private set; }
+}
+```
+
+##### Cohesion (strong is good)
+* za kolko neshta se griji edin class - po-malko po-dobre
+* class utilities losha coheziq - dobre e dori da ima mnogo metodi te da se grijat za edin tip neshta
+
+##### Coupling (loose is good)
+* Promqnata v edin klas da ne pravi problemi v drugi klasove
+* law of Demeter
+* Primerno ako trqbva da smenqme neshto da ne se nalaga da pipame oshte 5 neshta
+* Vseki klas razchita na svoite parametri
