@@ -221,5 +221,18 @@ public override int GetHashCode() // metod za override na GetHashCode
 var ints = new HashSet<int>(); // pazi samo unikalni stoinosti, dobr e da implementirame GetHashCode
 ints.Add(1);
 ```
+##### Exceptions
 
+```C#
+public class InvalidNeshtoSiException : ApplicationException
+{
+ public InvalidNeshtoSiException(string msg, int minAge, int maxAge) : base(msg) // dopylnitelna informaciq
+ {
+  this.MinAge = minAge;
+  this.MaxAge = maxAge;
+ }
+ public int MinAge { get; private set; }
+ public int MaxAge { get; private set; }
+}
+```
 
