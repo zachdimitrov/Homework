@@ -1,5 +1,4 @@
 #Document Object Model
--
 ###Select DOM Elements
 ```JS
 document.documentElement // <html>
@@ -57,16 +56,68 @@ for(var i = 0, length = divs.length; i < length; i += 1){
 - querySelectorAll returns a StaticNodeList - stores the elements az they were in the begining
 
 #DOM Operations
--
 **DOM element** it a JS object that has the same properties as the HTML element
 ```JS
   selectedDiv.innerHTML = "changed";  //changes the content of the div
   selectedDiv.style.background = "#456"; // promqnata na stilovete vliza kato inline stilove
   var div = document.createElement("div"); // taka sazdavame element
   var list = div.children[0]; // dava parvoto dete na elementa (ako ima)
-  list.appentChild();
+  var node = document.createElement("LI");                 // Create a <li> node
+  var textnode = document.createTextNode("Water");         // Create a text node
+  node.appendChild(textnode);                              // Append the text to <li>
+  document.getElementById("myList").appendChild(node);     // Append <li> to <ul> with id="myList"
+  var x = document.getElementById("item1").nextSibling.innerHTML; // Gives the second element "item2"
+```
+**Example**
+```JS
+function iterateList (listId) {
+    var trainersList = document.getElementById(listId);
+    var parent = trainersList.parentNode;
+    log("parent of trainers-list: " + parent.nodeName +
+        " with id: " + parent.id);
+
+    var children = trainersList.childNodes;
+    log("elements in trainers-list: " + children.length);
+    log("element in trainers-list");
+
+    for (var i = 0, len = children.length; i < len; i+=1) {
+      var subItem = children[i];
+      log(subItem.nodeName + " content: " +
+          subItem.innerText);
+    }
+}
+```
+**Creating elements**
+```JS
+var liElement = document.createElement("li");
+console.log(liElement instanceof HTMLLIElement); //true
+document.body.appendChild(studentsList); // dobavq go v kraq na DOM elementa
+// trqbva da dobavim elementa kym DOM darvoto - inache e samo edin JS obekt
+list.insertBefore(studentsList, list.childNodes[0]); // dobavq v nachaloto ili na izbrana poziciq
+```
+**Removing elements**
+```JS
+  var trainers = document.getElementsByTagName("ul")[0];
+  var trainer = trainers.getElementsByTagName("li")[0];
+  trainers.removeChild(trainer); //remove a selected element
+  var selectedElement = //select the element
+  selectedElement.parentNode.removeChild(selectedElement);
+  list.outerHtml = ''; list.innerHtml = ''; // podobno no malko kato hack
+```
+*HTML elements are unique and element is the same even if it changes its position or apearance.*
+**Altering style**
+```JS
+  var div = document.getElementById("content");
+  div.style.display = "block";
+  div.style.width = "123px";
+```
+**Optimisations**
+```JS
+frag = document.createDocumentFragment('li'); //used to store ready-to-append elements 
+list.appendChild(frag); //and append them at once to the DOM
+var clonedNode = li.cloneNode(true); // clonira elementa
 ```
 
 
 #Event Model in JS
--
+
