@@ -1,3 +1,5 @@
+#Document Object Model
+-
 ###Select DOM Elements
 ```JS
 document.documentElement // <html>
@@ -29,16 +31,13 @@ var forms = document.forms;
 ```
 ####using quiery Selector
 ```JS
-//the element with id="header"
-var header = document.querySelector('#header');
-//li elements contained in element with id=main-nav
-var navItems = document.querySelectorAll('#main-nav li');
+var header = document.querySelector('#header'); //the element with id="header"
+var navItems = document.querySelectorAll('#main-nav li'); //li elements contained in element with id=main-nav
 ```
 ####chain element selection
 ```JS
 var wrapper = document.getElementById('wrapper');
-// returns all div elements inside the element with id "wrapper"
-var divsInWrapper = wrapper.getElementsByTagName('div');
+var divsInWrapper = wrapper.getElementsByTagName('div'); // returns all div elements inside the element with id "wrapper"
 ```
 ###Node Lists
 **A NodeList is a collection returned by the DOM selector methods:**
@@ -46,6 +45,7 @@ var divsInWrapper = wrapper.getElementsByTagName('div');
 - getElementsByName(name)
 - getElementsByClassName(className)
 - querySelectorAll(selector)
+
 ```JS
 var divs = document.getElementsByTagName('div');
 for(var i = 0, length = divs.length; i < length; i += 1){
@@ -55,3 +55,18 @@ for(var i = 0, length = divs.length; i < length; i += 1){
 ###Static and Live node lists
 - getElementsBy methods return a LiveNodeList - keeps track of elements all the time
 - querySelectorAll returns a StaticNodeList - stores the elements az they were in the begining
+
+#DOM Operations
+-
+**DOM element** it a JS object that has the same properties as the HTML element
+```JS
+  selectedDiv.innerHTML = "changed";  //changes the content of the div
+  selectedDiv.style.background = "#456"; // promqnata na stilovete vliza kato inline stilove
+  var div = document.createElement("div"); // taka sazdavame element
+  var list = div.children[0]; // dava parvoto dete na elementa (ako ima)
+  list.appentChild();
+```
+
+
+#Event Model in JS
+-
