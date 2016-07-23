@@ -213,4 +213,26 @@ array.pop() // returns last element 'wed' - result is: ['mon', 'tue']
 array.unshift('daysofweek') // add ana element at the head
 array.shift() // removes the element at the head and returns its value
 ```
+**methods of arrays**
+```JS
+var arr1 = [1, 2, 3], 
+    arr2 = ["one", "two", "three"];
+var reversed = arr1.reverse(); //reversed = [3, 2, 1]
+var asString = arr1..join(", "); // '1, 2, 3' as string
+var result = arr1.concat(arr2); // result = [1, 2, 3, "one", "two", "three"] - this is new array
+[].push.apply(arr1, arr2); // arr1 = [1, 2, 3, "one", "two", "three"]
+var part = result.slice(1, 3); // part = [2, 3, "one"]; - new array with copy of elements from index1 to index2
+var arr3 = arr1.slice(); // this clones the array 
+// splice(1, 2, 3, 4) - removes at index (1) number of elements (2), and adds elements (3), (4)...
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.splice(2, 1, "Lemon", "Kiwi"); // Banana,Orange,Lemon,Kiwi,Mango - lemon is removed and new elements are inserted
+```
+**other methods**
+```JS
+someArray.indexOf(element [, rightOf]); // returns the index of the first matched [starting at position 'rightOf']
+someArray.lastIndexOf(element [, leftOf]) // the same but from the end of the array
+// if element is not found methods return -1
+someArray.isArray(); // true if it is array
+```
+
 
