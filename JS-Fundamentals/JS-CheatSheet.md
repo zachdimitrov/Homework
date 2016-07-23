@@ -210,7 +210,7 @@ for (i = 0, len = array.length; i < len; i += 1) {
 var array = ['mon', 'tue'];
 array.push('wed') // result is: ['mon', 'tue', 'wed']
 array.pop() // returns last element 'wed' - result is: ['mon', 'tue']
-array.unshift('daysofweek') //
-array.shift() //
+array.unshift('daysofweek') // add ana element at the head
+array.shift() // removes the element at the head and returns its value
 ```
 
