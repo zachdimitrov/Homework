@@ -234,5 +234,89 @@ someArray.lastIndexOf(element [, leftOf]) // the same but from the end of the ar
 // if element is not found methods return -1
 someArray.isArray(); // true if it is array
 ```
+##Functions
+**declare functions**
+*declare by function declaration*
+```JS
+function printLogo() {
+    console.log("JavaScript Fundamentals"); // functions always return value
+}
+```
+*declare using the constructor of the Function object*
+```JS
+var print = new Function("console.log('Hello')"); 
+```
+*declare by function expression*
+```JS
+var print = function() { console.log("Hello") }; // neshto kato delegat
+```
+**calling functions**
+```JS
+function print(){
+   console.log("printed");
+}
 
+function anotherPrint(){
+   print();
+   anotherPrint();
+}
+```
+**functions with parameters**
+```JS
+function printSign(number) {
+    if (number > 0) {
+        console.log("Positive");
+    } else if (number < 0) {
+        console.log("Negative");
+    } else {
+        console.log("Zero");
+    }
+}
+```
+**arguments object**
+*it exists in every function*
+```JS
+args = [].slice.apply(arguments); // taka se prevryshta arguments obekta v masiv
+```
+**returna a value**
+```JS
+function multiply (firstNum, secondNum) {
+    return firstNum * secondNum; // if we use return; only it terminates the function
+}
+```
+**function scope**
+- this is the scope inside the funcion, 
+- if a var is declared between the function {} it is visible only there
+- let is visible only in its scope even if it is a for loop or if-else
+
+**overloading a function**
+```JS
+// don't create many functions with the same name, they hide each othere
+// there is anothear way of overloading - using arguments number
+function printText (number, text) {
+  switch (arguments.length) {
+    case 1 : console.log (`Number: ${number}`);
+      break;
+    case 2 :
+      console.log (`Number: ${number}`);
+      console.log (`Text: ${text}`);
+      break;            
+  }
+}
+// or using arguments type
+function printValue (value) {
+  switch (typeof value) {
+    case "number" : console.log (`Number: ${value}`); break;
+    case "string" : console.log (`String: ${value}`); break;
+    case "object" : console.log (`Object: ${value}`); break;
+    case "boolean" : console.log (`Number: ${value}`); break;
+  }
+}
+// or using options parameter (object as parameter)
+function getRandomValue(opt) {
+  var min = +opt.min || Number.MIN_VALUE;
+  var max = +opt.max || Number.MAX_VALUE;
+  return (Math.random() * (max - min + 1) + min) | 0;
+}
+```
 
