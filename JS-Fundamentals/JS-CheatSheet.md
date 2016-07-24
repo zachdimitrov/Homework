@@ -1,4 +1,5 @@
-##Introduction
+## Introduction
+
 **zakachane na JS za HTML**
 ```HTML
 <scriрt src="scripts.js" type="text/javascript">
@@ -41,7 +42,7 @@ clearInterval(timer); // clear timer
 - warn(message)
 - error(message)
 
-##Data types and viariables
+## Data types and viariables
 
 **Declare variables**
 ```JS
@@ -78,7 +79,7 @@ let s = 'Welcome to JavaScript';
 let name = 'John' + ' ' + 'Doe';
 let greeting = `${s}, ${name}`; // nov zapis podobno na C#
 ```
-##Operators and expressions
+## Operators and expressions
 **Category	Operators**
 - Arithmetic	+ - * / % ++ --
 - Logical	&& || ^ !
@@ -88,7 +89,7 @@ let greeting = `${s}, ${name}`; // nov zapis podobno na C#
 - Concatenation	+
 - Other	. [] () ?: new in , delete void typeof instanceof
 
-##Conditional statemenst
+## Conditional statemenst
 **if** and **if-else** - statement
 ```JS
 var str = '1c23';
@@ -112,7 +113,7 @@ switch (false) {
 - **falsy values** - false, 0, "" / '', null, undefined, NaN
 - other valuer are **truthy** (http://www.sitepoint.com/javascript-truthy-falsy/)
 
-##Loops
+## Loops
 **while** - loop
 ```JS
 let counter = 0;
@@ -169,7 +170,8 @@ for (let [key, value] of iterable) {
 // 2
 // 3
 ```
-##Arrays
+## Arrays
+
 **declaring arrays**
 ```JS
 // Array holding integers
@@ -234,7 +236,8 @@ someArray.lastIndexOf(element [, leftOf]) // the same but from the end of the ar
 // if element is not found methods return -1
 someArray.isArray(); // true if it is array
 ```
-##Functions
+## Functions
+
 **declare functions**
 *declare by function declaration*
 ```JS
@@ -274,6 +277,7 @@ function printSign(number) {
 }
 ```
 **arguments object**
+
 *it exists in every function*
 ```JS
 args = [].slice.apply(arguments); // taka se prevryshta arguments obekta v masiv
@@ -319,4 +323,211 @@ function getRandomValue(opt) {
   return (Math.random() * (max - min + 1) + min) | 0;
 }
 ```
+## Objects
 
+**declaration**
+```jS
+let person = { 
+  firstName: 'Doncho',
+  lastName: 'Minkov',
+  toString: function () {
+    return this.firstName + ' ' + this.lastName;
+  }
+};
+```
+**object template**
+```JS
+function makePerson(fname, lname) {
+  return {
+    fname: fname,
+    lname: lname,
+    toString: function () {
+      return this.fname + ' ' + this.lname;
+    }
+  }
+}
+```
+**properties**
+```JS
+document.write === document['write']
+```
+## Methods of arrays and objects
+
+**every** - returns true if all elements meet the criteria in Callback
+- Signature: [].every(callback);
+- Callback: callback(item [, index [,arr]]) // callback needs to have exactly theese parameters
+
+```JS
+function isOdd(number) {
+  return !!(number % 2);
+}
+var arr = [1, 2, 3, 4];
+console.log(arr.every(isOdd)); //false
+```
+**some** - returns true if one element meets tche criteria in callback
+```JS
+[].some(callback);
+callback(item [, index [,arr]])
+//example
+console.log(arr.some(isOdd)); //true
+```
+**filter** - extracts a new array with the elements that meet the criteria  
+- Sgnature: [].filter(callback);
+- Callback: callback(item [, index [, arr]])
+
+```JS
+console.log(arr.filter(isOdd)); //[1, 3]
+```
+**reduce** - returns a single object, the result of the callback
+```JS
+var sum = arr.reduce(function(sum, number) {
+  return sum + number;
+}, 0);
+var product = arr.reduce(function(sum, number) {
+  return sum * number;
+}, 1);
+console.log(sum);               //10
+console.log(product);           //24
+```
+**map** - returns a new array where every element is mapped based on a callback
+```JS
+var squares = arr.map(function(number) {
+  return number * number;
+}); // will return [1, 4, 9, 16]
+```
+**forEach** - passes each element as argument of callback
+```JS
+var numbers = ['One', 'Two', 'Three', 'Four', 'Five'];
+numbers.forEach(function(item, index) {
+  console.log('Item at' + index + 'has value' + item);
+}); // print the elements of an array with their index
+```
+**find** - returns the leftmost element in the array, that meets the criteria in callback
+```JS
+var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+console.log(numbers.find(function(item) {
+  return !!(item % 2) && item > 5;
+}));            //prints 7
+```
+**findIndex** - returns the index of the leftmost element in the array, that meets the criteria in callback
+```JS
+var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+console.log(numbers.findIndex(function(item) {
+  return !!(item % 2) && item > 5;
+}));            //prints 6(element 7)
+```
+**sort**
+- Signature: [].sort(callback);
+- Callback: callback(obj1, obj2)
+
+```JS
+var numbers = [5, 1, 2, 4, 6];
+numbers.sort(function(x, y) {
+  return y - x;
+});
+console.log(numbers);  //[ 6, 5, 4, 2, 1 ]
+```
+**fill** - fills an array with the given value / not supported
+- Signature: [].fill(callback);
+- Callback: callback(value [, from [, to]])
+
+```JS
+var count = 15,
+  arr = Array.from({length: count})
+    .fill(1);
+console.log(arr);
+```
+###using ES 2015
+
+```JS
+var digitNames = digits.fill(0)
+  .map(x => Math.random()*10 | 0)
+  .filter(x => !!(x%2))
+  .map(x => […][x]);
+console.log(digitNames);
+```
+## Strings
+
+**object wrapper** - like number string har a object wrapper and methods are called to it
+```JS
+let str = 'sample'; // create string
+let tempStr = new String(str); // use it as object
+tempStr.length; // call property
+```
+- ```new String('…')``` - creates a string object
+- ```String(strObject)``` - creates a primitive string
+
+**string methods**
+- ```string.length``` - Returns the number of characters in the string
+- ```string[index]``` - gets a single char-string at given index
+- ```charAt(index)``` - gets a single char at index
+- ```string.concat(string2)``` - new string from 2
+- ```string.replace(str1, str2)``` - Replaces first occurrence of str1 with str2
+- ```string.search(regex)``` - searches for a substring based on regular expression
+- ```string.indexOf(substring [,position])``` - Returns the left-most occurrence of substring in a string, that is after position
+- ```string.lastIndexOf(substring [,position])``` - the same bur fom the end
+- ```string.split(separator)``` - Splits the string by separator and returns an array of strings
+- ```string.trim()``` - Removes whitespace from the beginning and end of the string
+- ```str.trimLeft(), str.trimRight()``` - the same as above, but only from the left or the right side
+- ```string.substr(start, length)``` - Returns a substring, starting from start and counting length characters
+- ```string.substring(start, end)``` - Returns a substring, starting from start and ending at end
+- ```string.valueOf()``` - Returns the primitive value of the object string
+- ```str.padLeft(count [,char]), str.padRight(count [,char])```
+
+**string concatenation**
+```JS
+var strConcat1 = str1 + str2; // simple slow method
+var strConcat2 = str.concat(str2);
+[].push(srt1, str2, str3, …).join(''); // this method works like stringbuilder
+```
+**preventing injection** - escaping strings
+```JS
+String.prototype.htmlEscape = function () {
+  let escapedStr = String(this)
+      .replace(/&/g, '&amp;');
+      .replace(/</g, '&lt;');
+      .replace(/>/g, '&gt;');
+      .replace(/"/g, '&quot;');
+      .replace(/'/g, '&#39');
+  return escapedStr;
+}
+```
+## Regular Expressions
+
+**regex syntax**
+```JS
+const literalRegex = /y$/g; // literal syntax
+const constructorRegex = new RegExp('^T', 'g'); // function constructor syntax
+```
+**methods and properties** - [here in MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
+- ```RegExp.test``` – searches for a match in a given string. Returns true or false  
+- ```RegExp.exec``` - searches for the next match in a given string  
+  Returns an array of all captured groups for the found match or null.  
+- ```String.match``` – searches for a match in a string  
+  Returns an array of information or null on a mismatch  
+- ```String.replace``` – replaces the matched substring with a replacement substring   
+  Returns the new string
+- ```String.split``` – breaks a string into an array of substrings, using a regex or a string search for matches  
+  Returns an array
+- ```String.search``` – tests for a match in a string  
+  It returns the index of the match, or -1 if the search fails  
+
+**special characters** - [complete List](https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#Using_special_characters)
+- **\*** – The preceding character/group is matched 0 or more times
+- **\+** – Almost the same behaviour as * - the preceding character/group is matched 1 or more times
+- **?** – The preceding character/group is matched 0 or 1 times
+- **.(dot)** – matches any single character except the newline character
+- **|** – Matches one pattern or the other
+- **[xyz]** – Character set - Matches any of the characters
+- **[x-z]** – Character set - Matches any one between the characters range
+- **[^xyz]** – Inverted characters set - Matches all other characters
+- **{N}** – matches exactly N occurrences of the preceding character/group
+- **{N, M}** – matches at least N and at most M occurrences of the preceding character/group
+- **^** - matches the start of the string
+- **$** matches the end of the string
+- **\s** – matches a single white space character, including space, tab, form feed, line feed
+- **\S** – matches a single character other than white space
+- **\d** – matches a digit character - Equivalent to **[0-9]**
+- **\D** – matches any non-digit character - Equivalent to [^0-9]
+- **\w** – matches any alphanumeric character including the underscore
+- **\W** – matches any non-alphanumeric or underscore character
