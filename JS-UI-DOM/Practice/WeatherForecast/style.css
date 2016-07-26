@@ -1,0 +1,29 @@
+body,
+li,
+ul,
+div {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Calibri, sans-serif;
+}
+
+#weather-forecast {
+    list-style: none;
+}
+
+#template {
+    display: none;
+}
+
+#weather-forecast .day-forecast {
+    width: 100px;
+    top: 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin: 3px;
+    padding: 10px;
+}
