@@ -1,0 +1,10 @@
+[7/31/2016 6:32:36 PM] Pesho deposits 1000.
+[7/31/2016 6:32:36 PM] Pesho withdraws 150.
+[7/31/2016 6:33:44 PM]  deposits 100.
+[7/31/2016 6:33:44 PM]  deposits 100.
+[7/31/2016 6:33:44 PM]  withdraws 50.
+[7/31/2016 6:42:37 PM] Pesho deposits 1000.
+[7/31/2016 6:42:37 PM] Pesho withdraws 150.
+[7/31/2016 7:55:20 PM]  deposits 100.
+[7/31/2016 7:55:20 PM]  deposits 100.
+[7/31/2016 7:55:20 PM]  withdraws 50.
