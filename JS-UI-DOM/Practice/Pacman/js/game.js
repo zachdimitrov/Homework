@@ -145,8 +145,8 @@ function createGame(pacmanSelector, mazeSelector) {
     }
 
     function updatePacmanPosition() {
-        pacman.x += 4 * dirDeltas[dir].x;
-        pacman.y += 4 * dirDeltas[dir].y;
+        pacman.x += 2 * dirDeltas[dir].x;
+        pacman.y += 2 * dirDeltas[dir].y;
 
         if (pacman.x < 0 || pacman.x >= pacmanCanvas.width ||
             pacman.y < 0 || pacman.y >= pacmanCanvas.height) {
@@ -172,19 +172,28 @@ function createGame(pacmanSelector, mazeSelector) {
             col,
             cell,
             obj,
-            balls = [];
+            balls = [],
+            wallImg = new Image();
+        wallImg = document.getElementById("wallImage");
         const ballSize = 8;
         for (var row = 0; row < maze.length; row += 1) {
             for (var col = 0; col < maze[row].length; col += 1) {
                 cell = maze[row][col];
                 if (cell === ballChar) {
                     obj = {
-                        "x": col * cellSize + ballSize / 2,
-                        "y": row * cellSize + ballSize / 2,
-                        "size": ballSize
+                        "x": col * cellSize + cellSize / 4,
+                        "y": row * cellSize + cellSize / 4,
+                        "size": cellSize / 2
                     };
                     balls.push(obj);
                     drawBall(obj, "green", ctx);
+                } else if (cell === wallChar) {
+                    obj = {
+                        "x": col * cellSize,
+                        "y": row * cellSize,
+                        "size": cellSize
+                    };
+                    ctx.drawImage(wallImg, obj.x, obj.y, cellSize, cellSize);
                 }
             }
         }

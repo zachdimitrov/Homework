@@ -14,9 +14,12 @@
         <canvas id="game-canvas" class="pacman-canvas"></canvas>
         <canvas id="maze-canvas" class="pacman-canvas"></canvas>
     </div>
+    <img id="wallImage" src="img\\wall.JPG" style="display:none;">
     <script>
-        var game = createGame("#game-canvas", "#maze-canvas");
-        game.start();
+        window.onload = function() {
+            var game = createGame("#game-canvas", "#maze-canvas");
+            game.start();
+        };
     </script>
 </body>
 
