@@ -1,8 +1,7 @@
 function solve() {
     return function(selector) {
         var elm,
-            buttons,
-            contents;
+            buttons;
 
         if (typeof(selector) === 'string') {
             elm = document.getElementById(selector);
