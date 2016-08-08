@@ -2,10 +2,10 @@
 "use strict";
 //three.js biblioteka za webGL
 const maze = [
-        "*** ******************* **********",
-        "*** ***             *** *        *",
-        "*** *** *********** *** * ****** *",
-        "***                     *        *",
+        "**** ****************** **********",
+        "*    **             *** *        *",
+        "* ** ** *********** *** * ****** *",
+        "*                       *        *",
         "******* ** *** **** ****** *** ***",
         "        ** ***    * ****** ***    ",
         "**** ** ** ****** *         **** *",
@@ -25,8 +25,8 @@ function createGame(pacmanSelector, mazeSelector) {
         isMouthOpen = false,
         pacman = {
             "x": 0,
-            "y": 0,
-            "size": 20
+            "y": 100,
+            "size": 18
         },
         dir = 0,
         keyCodeToDir = {
@@ -49,6 +49,7 @@ function createGame(pacmanSelector, mazeSelector) {
             "y": -1
         }],
         balls = [],
+        walls = [],
         rows = maze.length,
         columns = maze[0].length;
 
@@ -71,7 +72,7 @@ function createGame(pacmanSelector, mazeSelector) {
     }
 
     function isBetween(value, min, max) {
-        return min <= value && value <= max;
+        return min < value && value < max;
     }
 
     function areColliding(obj2, obj1) {
@@ -110,9 +111,26 @@ function createGame(pacmanSelector, mazeSelector) {
             // drawBall(ball, "Green", ctxMaze); 
         });
 
-        if (updatePacmanPosition()) {
-            ctxPacman.clearRect(0, 0, pacmanCanvas.width, pacmanCanvas.height);
+        var isPacmanColiding = false;
+        var futurePosition = {
+            "x": pacman.x + dirDeltas[dir].x,
+            "y": pacman.y + dirDeltas[dir].y,
+            "size": pacman.size
         };
+        for (var index = 0; index < walls.length; index += 1) {
+            var wall = walls[index]; {
+                if (areColliding(wall, futurePosition)) {
+                    isPacmanColiding = true;
+                }
+                // drawBall(ball, "Green", ctxMaze); 
+            }
+        }
+
+        if (!isPacmanColiding) {
+            if (updatePacmanPosition()) {
+                ctxPacman.clearRect(0, 0, pacmanCanvas.width, pacmanCanvas.height);
+            }
+        }
         window.requestAnimationFrame(gameLoop);
     }
 
@@ -145,8 +163,8 @@ function createGame(pacmanSelector, mazeSelector) {
     }
 
     function updatePacmanPosition() {
-        pacman.x += 2 * dirDeltas[dir].x;
-        pacman.y += 2 * dirDeltas[dir].y;
+        pacman.x += dirDeltas[dir].x;
+        pacman.y += dirDeltas[dir].y;
 
         if (pacman.x < 0 || pacman.x >= pacmanCanvas.width ||
             pacman.y < 0 || pacman.y >= pacmanCanvas.height) {
@@ -173,6 +191,7 @@ function createGame(pacmanSelector, mazeSelector) {
             cell,
             obj,
             balls = [],
+            walls = [],
             wallImg = new Image();
         wallImg = document.getElementById("wallImage");
         const ballSize = 8;
@@ -194,16 +213,19 @@ function createGame(pacmanSelector, mazeSelector) {
                         "size": cellSize
                     };
                     ctx.drawImage(wallImg, obj.x, obj.y, cellSize, cellSize);
+                    walls.push(obj);
                 }
             }
         }
-        return balls;
+        return [
+            balls,
+            walls
+        ];
     }
 
     return {
         "start": function() {
-            drawMazeAndGetBalls(ctxMaze, maze, pacman.size);
-            balls = drawMazeAndGetBalls(ctxMaze, maze, pacman.size);
+            [balls, walls] = drawMazeAndGetBalls(ctxMaze, maze, 20);
             gameLoop();
         }
     }

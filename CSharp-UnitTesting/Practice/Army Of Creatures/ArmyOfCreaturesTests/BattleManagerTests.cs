@@ -105,7 +105,6 @@ namespace ArmyOfCreaturesTests
 
             var battleMan = new MockedBattleManager(mockedFactory.Object, mockedLogger.Object);
             var identifier = CreatureIdentifier.CreatureIdentifierFromString("Angel(1)");
-            battleMan.AddCreatures(identifier, 1);
 
             var creature = new Angel();
 
@@ -113,9 +112,39 @@ namespace ArmyOfCreaturesTests
 
             mockedLogger.Setup(x => x.WriteLine(It.IsAny<string>()));
 
+            battleMan.AddCreatures(identifier, 1);
+
             battleMan.Attack(identifier, identifier);
 
-            mockedLogger.Verify(x => x.WriteLine(It.IsAny<string>()), Times.Exactly(4));
+            mockedLogger.Verify(x => x.WriteLine(It.IsAny<string>()), Times.Exactly(5));
+        }
+
+        [Test]
+        public void Attack_WhenAttackAttackIsSuxessful_()
+        {
+            var mockedFactory = new Mock<ICreaturesFactory>();
+            var mockedLogger = new Mock<ILogger>();
+
+            var battleMan = new MockedBattleManager(mockedFactory.Object, mockedLogger.Object);
+
+            var identifierAttacker = CreatureIdentifier.CreatureIdentifierFromString("Angel(1)");
+            var identifierDefender= CreatureIdentifier.CreatureIdentifierFromString("Angel(1)");
+
+            var creature = new Angel();
+
+            mockedFactory.Setup(x => x.CreateCreature(It.IsAny<string>())).Returns(creature);
+
+            mockedLogger.Setup(x => x.WriteLine(It.IsAny<string>()));
+
+            battleMan.AddCreatures(identifierAttacker, 1);
+            battleMan.AddCreatures(identifierDefender, 1);
+
+            battleMan.Attack(identifierAttacker, identifierDefender);
+
+            //var attacker = battleMan.FirstArmyOfCreatures.FirstOrDefault();
+            //var defender = battleMan.SecondArmyOfCreatures.FirstOrDefault();
+
+            Assert.Throws<ArgumentException>(() => battleMan.Attack(identifierAttacker, identifierDefender));
         }
     }
 }

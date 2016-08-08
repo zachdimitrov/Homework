@@ -87,6 +87,11 @@
                 speciallity.ApplyAfterDefending(defenderCreature);
             }
 
+            //if(attackerIdentifier.ArmyNumber == defenderIdentifier.ArmyNumber)
+            //{
+            //    throw new ArgumentException();
+            //}
+
             this.logger.WriteLine(string.Format(CultureInfo.InvariantCulture, LogFormat, "Attacker after", attackerCreature));
             this.logger.WriteLine(string.Format(CultureInfo.InvariantCulture, LogFormat, "Defender after", defenderCreature));
         }
