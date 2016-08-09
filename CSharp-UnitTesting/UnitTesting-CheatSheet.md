@@ -12,7 +12,11 @@
 1. 
 
 ##NUnit basics
-
+####To Test Internal Methods
+- use this code in tested assembly - Properties - AssemblyInfo.cs
+```C#
+[assembly: InternalsVisibleTo("TestAssemblyName")]
+```
 ####Basic NUnit Test Structure
 ```C#
 [TestFixture]
@@ -66,3 +70,21 @@ public class ClassToTest.Test
       Assert.DoesNotThrow(() => Validator.CheckIfStringLengthIsValid(exampleString, maxLenght, minLenght));
   }
 ```
+####Different Assert Methods Examples
+```C#
+Assert.IsTrue(engine.Categories.ContainsKey(categoryName));
+Assert.AreSame(mockedCategory.Object, engine.Categories[categoryName]);
+mockedCategory.Verify(x => x.AddProduct(mockedShampoo.Object), Times.Once);
+Assert.IsInstanceOf<ICategory>(executionResult);
+Assert.Throws<IndexOutOfRangeException>(() => cosmeticFactory.CreateShampoo("example", brandParam, 10.0M, GenderType.Men, 100, UsageType.EveryDay));
+```
+## Moq Basics
+####Basic Usage of Moq
+- when we use mocked object allways put ```.object``` behind
+```C#
+// use Interfaces to mock
+var mockedFactory = new Mock<ICosmeticsFactory>(); 
+// sumulate getter of property
+mockedCommand.SetupGet(x => x.Name).Returns("CreateCategory"); 
+// simulate execution of method
+mockedCommandParser.Setup(p => p.ReadCommands()).Returns(() => new List<ICommand>() { mockedCommand.Object });
