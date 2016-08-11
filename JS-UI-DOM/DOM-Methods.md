@@ -16,6 +16,11 @@ Method | Description
 - nodeValue
 - nodeType
 
+```JS
+element.parentNode.removeChild(element); //workaround to remove an element without knowing the parent
+input.value // pokazva teksta v input pole
+```
+
 ####Changing HTML Elements
 
 Method|	Description
