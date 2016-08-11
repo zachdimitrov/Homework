@@ -135,7 +135,8 @@ frag.appendChild(clonedNode); // zakachame elementa kum fragmenta
 ```JS
 input.addEventListener('keyup', function() {}); // zakacha events, moje da zakachish poveche ot edin
 let button = document.getElementBiID('button');
-button.addEventListener('click', function() {}); // dobavqne na event kym proizvolen elemenrt
+button.addEventListener('click', function() {}, true); // dobavqne na event kym proizvolen elemenrt
+// true oznachava che ne se buble-va
 input.removeEventListener('keyup'); // premava event
 ```
 
