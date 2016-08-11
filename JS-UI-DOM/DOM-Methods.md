@@ -6,6 +6,16 @@ Method | Description
 ```document.getElementsByTagName(name)```|	Find elements by tag name
 ```document.getElementsByClassName(name)```|	Find elements by class name
 
+####Navigating Between Nodes
+- parentNode
+- childNodes[nodenumber]
+- firstChild
+- lastChild
+- nextSibling
+- previousSibling
+- nodeValue
+- nodeType
+
 ####Changing HTML Elements
 
 Method|	Description
