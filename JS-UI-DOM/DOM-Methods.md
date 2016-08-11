@@ -12,6 +12,7 @@ Method | Description
 - firstChild
 - lastChild
 - nextSibling
+- nextElementSibling
 - previousSibling
 - nodeValue
 - nodeType
