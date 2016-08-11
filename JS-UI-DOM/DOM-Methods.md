@@ -19,6 +19,7 @@ Method | Description
 ```JS
 element.parentNode.removeChild(element); //workaround to remove an element without knowing the parent
 input.value // pokazva teksta v input pole
+element.cloneNode(true) // syzdava deep copie
 ```
 
 ####Changing HTML Elements
