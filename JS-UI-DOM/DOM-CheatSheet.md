@@ -129,7 +129,15 @@ frag.appendChild(clonedNode); // zakachame elementa kum fragmenta
 
 # Event Model in JS
 
-###[All DOM Events](http://www.w3schools.com/jsref/dom_obj_event.asp)
+`window.onload = function() {}`
+`inpit.onkeyup = function() {}`
+
+```JS
+input.addEventListener('keyup', function() {}); // zakacha events, moje da zakachish poveche ot edin
+let button = document.getElementBiID('button');
+button.addEventListener('click', function() {}); // dobavqne na event kym proizvolen elemenrt
+input.removeEventListener('keyup'); // premava event
+```
 
 
 
