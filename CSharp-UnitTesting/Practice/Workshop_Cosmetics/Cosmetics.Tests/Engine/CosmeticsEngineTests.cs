@@ -18,8 +18,6 @@
         public void Start_WhenInputStringIsValidCreateCategoryCommand_CategoryShouldBeAddedToList()
         {
             // Arrange
-            var categoryName = "ForMale";
-
             var mockedFactory = new Mock<ICosmeticsFactory>();
             var mockedShoppingCart = new Mock<IShoppingCart>();
             var mockedCommandParser = new Mock<ICommandParser>();
@@ -28,11 +26,11 @@
             var mockedCategory = new Mock<ICategory>();
 
             mockedCommand.SetupGet(x => x.Name).Returns("CreateCategory");
-            mockedCommand.SetupGet(x => x.Parameters).Returns(new List<string>() { categoryName });
+            mockedCommand.SetupGet(x => x.Parameters).Returns(new List<string>() { "ForMale" });
             mockedCommandParser.Setup(p => p.ReadCommands()).Returns(() => new List<ICommand>() { mockedCommand.Object });
 
-            mockedCategory.SetupGet(x => x.Name).Returns(categoryName);
-            mockedFactory.Setup(x => x.CreateCategory(categoryName)).Returns(mockedCategory.Object);
+            mockedCategory.SetupGet(x => x.Name).Returns("ForMale");
+            mockedFactory.Setup(x => x.CreateCategory("ForMale")).Returns(mockedCategory.Object);
 
             var engine = new MockedCosmeticsEngine(mockedFactory.Object, mockedShoppingCart.Object, mockedCommandParser.Object);
 
@@ -40,8 +38,8 @@
             engine.Start();
 
             // Assert
-            Assert.IsTrue(engine.Categories.ContainsKey(categoryName));
-            Assert.AreSame(mockedCategory.Object, engine.Categories[categoryName]);
+            Assert.IsTrue(engine.Categories.ContainsKey("ForMale"));
+            Assert.AreSame(mockedCategory.Object, engine.Categories["ForMale"]);
         }
 
         [Test]
