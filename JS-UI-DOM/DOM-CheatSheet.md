@@ -1,5 +1,11 @@
 # Document Object Model
 
+###[The HTML DOM Document Object](http://www.w3schools.com/jsref/dom_obj_document.asp)
+###[The HTML DOM Element Object](http://www.w3schools.com/jsref/dom_obj_all.asp)
+###[The HTML DOM Attribute Object](http://www.w3schools.com/jsref/dom_obj_attributes.asp)
+###[HTML DOM Events](http://www.w3schools.com/jsref/dom_obj_event.asp)
+###[HTML DOM Style Object](http://www.w3schools.com/jsref/dom_obj_style.asp)
+
 ### Select DOM Elements
 
 ```JS
@@ -122,5 +128,17 @@ frag.appendChild(clonedNode); // zakachame elementa kum fragmenta
 ```
 
 # Event Model in JS
+
+`window.onload = function() {}`
+`inpit.onkeyup = function() {}`
+
+```JS
+input.addEventListener('keyup', function() {}); // zakacha events, moje da zakachish poveche ot edin
+let button = document.getElementBiID('button');
+button.addEventListener('click', function() {}, true); // dobavqne na event kym proizvolen elemenrt
+// true oznachava che ne se buble-va
+input.removeEventListener('keyup'); // premava event
+```
+
 
 
