@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="res"></div>
+    <script src="..\Handlebars\handlebars.js"></script>
+    <script src="..\Handlebars\jquery.min.js"></script>
+    <script>
+        /* globals Handlebars */
+        Handlebars.registerHelper('link', function(url, text) {
+  var url = Handlebars.escapeExpression(url),
+      text = Handlebars.escapeExpression(text);
+
+  return new Handlebars.SafeString(
+    "<a href='" + url + "' target='_blank'>" + text + "</a>"
+  );
+});
+    </script>
+    <script id="tests" type="text/handlebars">
+    <ul style="list-style-type: none">
+        {{#each data}}
+            <li>{{link url text}}</li>
+        {{/each}} 
+    </ul>
+    </script>
+    <script>
+        /* globals Handlebars */
+var source = $("#tests").html(); //getting the template object
+var template = Handlebars.compile(source);  //compiling
+var data = [
+    {url: "https://www.google.bg", text: "search for something"},
+    {url: "https://www.yahoo.com", text: "search for something else"},
+    {url: "https://www.bing.com", text: "search for something different"},
+    {url: "https://www.dir.bg", text: "search for something bulgarian"}
+];
+var result = template({data: data});
+document.getElementById('res').innerHTML = result
+    </script>
+</body>
+
+</html>
