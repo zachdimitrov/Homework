@@ -25,7 +25,7 @@ function createImagesPreviewer(selector, items) {
     selectedImage.style.borderRadius = '10px';
 
     listOfItems.style.listStyleType = 'none';
-    listOfItems.style.height = '400px';
+    listOfItems.style.height = '1200px';
     listOfItems.style.overflow = 'scroll';
     listOfItems.style.paddingLeft = '30px';
     listOfItems.style.paddingRight = '10px';
