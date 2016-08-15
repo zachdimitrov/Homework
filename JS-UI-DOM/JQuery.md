@@ -21,9 +21,10 @@ var content = $('#item').html(); // getsh the HTML content
 ```JS
 var $divs = $('div');  // selects elements with this tag - multiple elements like array
 $( ".myClass" ); // select by class - multiple
-$('#someId); // select by CSS selector - ID
+$( "#someId" ); // select by CSS selector - ID
 $( "#contents ul.people li" ); // complex CSS selector
+$( "div.myClass, ul.people" ); // with comma seperated CSS
 $( "input[name='first_name']" ); // by attribute
-
+$( "a.external:first" ); // pseudo selectors
 
 ```
