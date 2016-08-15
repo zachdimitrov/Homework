@@ -140,6 +140,7 @@ $( "#myDiv" ).data( "keyName" );                 // Returns { foo: "bar" }
 ```JS
 $.trim( "    lots of extra whitespace    " ); // trims whitespaces
 $.each([10, 20, 30, 40], function(index, value) { console.log(index + ":" + value + "<br>" }); // returnes 4 lines like (0:10, 1:20...)
+$.map() //  works on plain JavaScript arrays while .map() don't
 var myArray = [ 1, 2, 3, 5 ];
 if ( $.inArray( 4, myArray ) !== -1 ) { console.log( "found it!" ); } // returns element in array
 var newObject = $.extend( firstObject, secondObject ); // adds second object to first, firstObject is also changed
@@ -156,4 +157,17 @@ $.type( true ); // "boolean"
 $.type( /test/ ); // "regexp"
 ```
 
+###Events
+```JS
+$( "p" ).click(function() { console.log( "You clicked a paragraph!" ); }); // standard way to use events
+// .focus() .blur() .change() are similar
+$( "p" ).on( "click", function() { console.log( "click" ); }); // same using on
+$( "body" ).on( "click", "button", function( event ) { alert( "Hello." ); }); // attach to parent
 ```
+####Event handler functions
+```JS
+.preventDefault() // prevents default action
+.stopPropagation() // stops bubbling
+```
+[Other methods](http://www.w3schools.com/jquery/jquery_ref_events.asp)
+[Events](http://www.w3schools.com/jsref/dom_obj_event.asp(
