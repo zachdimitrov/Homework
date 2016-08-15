@@ -169,5 +169,6 @@ $( "body" ).on( "click", "button", function( event ) { alert( "Hello." ); }); //
 .preventDefault() // prevents default action
 .stopPropagation() // stops bubbling
 ```
-[Other methods](http://www.w3schools.com/jquery/jquery_ref_events.asp)
-[Events](http://www.w3schools.com/jsref/dom_obj_event.asp(
+[Other methods](http://www.w3schools.com/jquery/jquery_ref_events.asp)   
+[Events](http://www.w3schools.com/jsref/dom_obj_event.asp)  
+
