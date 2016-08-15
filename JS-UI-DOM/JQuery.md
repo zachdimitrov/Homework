@@ -73,8 +73,87 @@ $( "#content" ) // this is method chaining
 ```.after()``` - places the element provided as an argument after the selected element  
 ```.insertBefore()``` - places before argument  
 ```.before()``` - places argument element before selection  
-```.appendTo()``` - adds as last child element to argument
+```.appendTo()``` - adds as last child element to argument  
 ```.append()``` - adds arguments az last child elements  
 ```.prependTo()``` - adds as first child element to argument  
-```.prepend()``` - adds arguments az first child elements  
+```.prepend()``` - adds arguments az first child elements   
+*clone remove detach empty*  
+```.clone()``` - creates a copy of element - ```$( "#myList li:first" ).clone().appendTo( "#myList" );```    
+```.remove()``` - delete from DOM   
+```.detach()``` - detach from DOM but keep as var   
+```.empty()``` - dispose elements innerHTML   
 
+####Creating elements
+```JS
+$( "<p>This is a new paragraph</p>" ); // Creating new elements from an HTML string
+$( "<a/>", {
+    html: "This is a <strong>new</strong> link",
+    "class": "new",
+    href: "foo.html"
+}); // This is creating element with properties 
+``` 
+
+####Traversing the DOM
+```JS
+// Parents and children
+$( "span.subchild" ).parent();
+$( "span.subchild" ).parents( "div.parent" );
+$( "span.subchild" ).parentsUntil( "div.grandparent" );
+$( "span.subchild" ).closest( "div" );
+$( "div.grandparent" ).children( "div" );
+// Siblings
+$( "div.parent" ).next();
+$( "div.parent" ).prev();
+$( "div.parent" ).nextAll();
+$( "div.parent" ).nextAll().first();
+$( "div.parent" ).nextAll().last();
+$( "div.Parent2" ).prevAll();
+$( "div.Parent2" ).prevAll().first();
+$( "div.Parent2" ).prevAll().last();
+$( "div.parent" ).siblings();
+```
+
+####Styling and CSS
+```JS
+$( "h1" ).css( "font-size" ); // Also works "fontSize" - getting property
+$( "h1" ).css( "fontSize", "100px" ); // individual property
+$( "h1" ).css({                       // multiple properties
+    fontSize: "100px",
+    color: "red"
+});
+h1.addClass( "big" );
+h1.removeClass( "big" );
+h1.toggleClass( "big" );  // removed if added and opposite
+h1.hasClass( "big" ); // true or false 
+$( "h1" ).width( "50px" );
+$( "h1" ).height( "50px" ); // if no argument works as getter
+$( "h1" ).position();
+```
+
+####Data methods
+
+```JS
+$( "#myDiv" ).data( "keyName", { foo: "bar" } ); // Storing and retrieving data related to an element.
+$( "#myDiv" ).data( "keyName" );                 // Returns { foo: "bar" }
+```
+####Utility methods
+```JS
+$.trim( "    lots of extra whitespace    " ); // trims whitespaces
+$.each([10, 20, 30, 40], function(index, value) { console.log(index + ":" + value + "<br>" }); // returnes 4 lines like (0:10, 1:20...)
+var myArray = [ 1, 2, 3, 5 ];
+if ( $.inArray( 4, myArray ) !== -1 ) { console.log( "found it!" ); } // returns element in array
+var newObject = $.extend( firstObject, secondObject ); // adds second object to first, firstObject is also changed
+var newObject = $.extend( {}, firstObject, secondObject ); // keeps the first object and creates ne independant
+$.proxy() // Returns a function that will always run in the provided scope
+```
+
+####Testing Types
+```JS
+$.isArray([]); // true
+$.isFunction(function() {}); // true
+$.isNumeric(3.14); // true
+$.type( true ); // "boolean"
+$.type( /test/ ); // "regexp"
+```
+
+```
