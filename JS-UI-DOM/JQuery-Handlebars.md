@@ -18,16 +18,51 @@ var html = template(context); //display the info wrapped in the template
 ```
 Generating new helper
 ```JS
-Handlebars.registerHelper('link', function(text, url) {
-  text = Handlebars.Utils.escapeExpression(text); // escape manually
-  url  = Handlebars.Utils.escapeExpression(url);  // because the result does not escape HTML
-
+Handlebars.registerHelper('link', function(obj) {
+  text = Handlebars.Utils.escapeExpression(this.text); // escape manually
+  url  = Handlebars.Utils.escapeExpression(this.url);  // because the result does not escape HTML
   var result = '<a href="' + url + '">' + text + '</a>';
-
   return new Handlebars.SafeString(result);
 });
 ```
 This is executed this way
 ```HTML
 {{{link story}}}
+// or if we have multiple objects
+{{#each data}}
+    <li>{{link url text}}</li>
+{{/each}} 
+// if statement 
+{{#if author}}
+    <h1>{{link story}}</h1>
+{{/if}}
+```
+Using **options.fn** to create a helper - takes this as a regular template and uses it in the helper
+```JS
+Handlebars.registerHelper('bold', function(options) {
+  return new Handlebars.SafeString(
+      '<div class="mybold">'
+      + options.fn(this)
+      + '</div>');
+});
+// use it like this
+{{#bold}}{{body}}{{/bold}}
+```
+Using **with** helper
+```JS
+Handlebars.registerHelper('with', function(context, options) {
+  return options.fn(context);
+});
+{{#with story}}
+    <div class="intro">{{{intro}}}</div>
+    <div class="body">{{{body}}}</div>
+{{/with}}
+```
+Using **if** statement
+```JS
+{{#if isActive}}
+  <img src="star.gif" alt="Active">
+{{else}} // this is optional
+  <img src="cry.gif" alt="Inactive">
+{{/if}}
 ```
