@@ -64,7 +64,8 @@
             var invalidInput = " ForMale Cool";
 
             // Act && Assert
-            Assert.That(() => Command.Parse(invalidInput), Throws.ArgumentNullException.With.Message.Contains("Name"));
+            Assert.Throws<ArgumentNullException>(() => Command.Parse(invalidInput)).Message.Contains("Name");
+            //Assert.That(() => Command.Parse(invalidInput), Throws.ArgumentNullException.With.Message.Contains("Name"));
         }
 
         [Test]
