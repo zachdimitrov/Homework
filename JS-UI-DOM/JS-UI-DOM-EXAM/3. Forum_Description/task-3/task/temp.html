@@ -1,0 +1,33 @@
+<div id="forum-container">
+    <h1>{{title}}</h1>
+    <ul>
+        {{#each posts}}
+        <li>
+            <div class="post">
+                <p class="author">
+                    {{#if author}}
+                    <a class="user" href="/user/{{thisauthor}}">{{this.author}}</a> {{#else}}
+                    <a class="anonymous">Anonymous</a> {{/if}}
+                </p>
+                <pre class="content">{{{this.text}}}</pre>
+            </div>
+            {{#if comments}}
+            <ul>
+                {{#each comments}}
+                <li>
+                    <div class="comment">
+                        <p class="author">
+                            {{#if author}}
+                            <a class="user" href="/user/{{this.author}}">{{this.author}}</a> {{#else}}
+                            <a class="anonymous">Anonymous</a> {{/if}}
+                        </p>
+                        <pre class="content">{{{this.text}}}</pre>
+                    </div>
+                </li>
+                {{/each}}
+            </ul>
+            {{/if}}
+        </li>
+        {{/each}}
+    </ul>
+</div>
