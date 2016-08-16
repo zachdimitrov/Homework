@@ -18,7 +18,7 @@ $(function() {
             $('#countries').html('');
             return;
         }
-        
+
         $.get('http://restcountries.eu/rest/v1/name/' + value)
             .success(function(respCountries) {
                 var $countriesList = createCountriesList(respCountries);
