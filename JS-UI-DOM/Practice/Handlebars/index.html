@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Handlebars demo</title>
+    <style>
+        .item {
+            display: inline-block;
+            border: 1px solid red;
+            border-radius: 5px;
+            margin: 2px;
+            padding: 5px;
+            width: 160px;
+        }
+        
+        .item:nth-of-type(n) {
+            background-color: lightgreen;
+        }
+        
+        .item:nth-of-type(2n) {
+            background-color: lightblue;
+        }
+        
+        .item:nth-of-type(3n) {
+            background-color: yellow;
+        }
+        
+        ul {
+            list-style-type: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="result"></div>
+    <script src="handlebars.js">
+    </script>
+    <script id="custom-helpers">
+        Handlebars.registerHelper('tagsLists', function(tags) {
+            var list = '<ul>';
+            tags.forEach(function(tag) {
+                list += '<li>' + tag + '</li>';
+            });
+            list += '</ul>';
+            return new Handlebars.SafeString(list);
+        });
+    </script>
+    <script type="text/handlebars-tpl" id="template">
+        {{#tagsLists tags}} {{/tagsLists}}
+    </script>
+    <script type="text/handlebars-tpl" id="posts">
+        {{title}}
+        <ul class="posts">
+            {{#posts}}
+            <li>
+                <article>
+                    <header>
+                        <h1>{{title}}</h1>
+                    </header>
+                    <div class="tags-holder">
+                        {{#each tags}}
+                        <span class="tag">
+                            {{this}}
+                        </span> {{/each}}
+                    </div>
+                </article>
+                <p>
+                    {{description}}
+                </p>
+            </li>
+            {{/posts}}
+        </ul>
+    </script>
+    <script type="text/handlebars" id="potemplate">
+        <h1>Select a John</h1>
+        <ul>
+            {{#each items}}
+            <li class="item">
+                <label for="john-{{name}}">
+                <strong>{{name}}</strong> 
+                {{#if beard}} <span>has beard</span> {{/if}}
+                {{#unless beard}} <span>no beard</span> {{/unless}}
+                </label>
+                <input id="john-{{name}}" type="radio" name="johns[]" value="age-{{age}}">
+            </li>
+            {{/each}}
+        </ul>
+    </script>
+    <script>
+        /* globals Handlebars */
+
+        var templateHTML = document.getElementById('template').innerHTML;
+        var template = Handlebars.compile(templateHTML);
+
+        var data = {
+                title: 'Posts',
+                posts: [{
+                    id: 0,
+                    title: 'Post #1',
+                    description: 'This is post#1',
+                    tags: ['js', 'javaScript', 'html', 'C#']
+                }, {
+                    id: 0,
+                    title: 'Post #2',
+                    description: 'This is post#2',
+                }, {
+                    id: 0,
+                    title: 'Post #3',
+                    description: 'This is post#3',
+                    tags: ['js', 'javaScript', 'html']
+                }],
+                items: []
+            },
+            count = 15,
+            i;
+
+        for (i = 0; i < count; i += 1) {
+            var john = {
+                name: 'John #' + (i + 1),
+                age: 10 + i % 5
+            };
+
+            if (!(i % 3)) {
+                john.beard = 'yes';
+            }
+
+            data.items.push(john);
+        }
+
+        var result = template(data);
+        // var result = '<table><tr>';
+
+        // data.forEach(function(item) {
+        //     result += '<td>' + template(item) + '</td>';
+        // });
+
+        // result += '</tr></table>';
+
+        document.getElementById('result').innerHTML = result;
+    </script>
+</body>
+
+</html>

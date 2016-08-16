@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Plugins test</title>
+    <link rel="stylesheet" type="text/css" href="jquery-ui.css">
+</head>
+
+<body>
+    <h1 id="ele" style="cursor: pointer">
+        Alert Me!
+    </h1>
+    <script src="../Handlebars/jquery.min.js"></script>
+    <script src="jquery-ui.js"></script>
+    <script src="plugins.js"></script>
+    <script>
+        var element = $("#ele");
+        element.alertMe();
+    </script>
+</body>
+
+</html>
