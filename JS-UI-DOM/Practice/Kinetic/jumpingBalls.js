@@ -6,7 +6,7 @@ var stage = new Kinetic.Stage({
 
 var layer = new Kinetic.Layer();
 
-var i, count = 15;
+var i, count = 10;
 
 for (var i = 0; i < count; i += 1) {
     var ball = new Kinetic.Circle({
@@ -17,6 +17,8 @@ for (var i = 0; i < count; i += 1) {
         stroke: 'blue',
         strokeWidth: 3
     });
+    ball.movex = 5;
+    ball.movey = 5;
 
     layer.add(ball);
 }
@@ -31,56 +33,46 @@ for (var i = 0; i < count; i += 1) {
 //     draggable: true
 // });
 
-var updatex = Array.apply(null, { length: count })
-    .map(function() {
-        return Math.random() * 5;
-    })
-var updatey = Array.apply(null, { length: count })
-    .map(function() {
-        return Math.random() * 5;
-    });
-
 function animation() {
     var balls = layer.find('Circle');
-    balls.forEach(function(circle, index) {
-        var movex = updatex[index];
-        var movey = updatey[index];
 
-        circle.setX(circle.getX() + movex);
-        if (circle.getX() > stage.getWidth() - circle.getRadius() || circle.getX() < circle.getRadius()) {
-            movex *= -1;
+    balls.forEach(function(circle) {
+        var x = circle.getX() + circle.movex,
+            y = circle.getY() + circle.movey,
+            r = circle.getRadius();
+
+        if (x - r < 0 || x + r > stage.getWidth()) {
+            circle.movex *= -1;
         }
 
-        circle.setY(circle.getY() + movey);
-        if (circle.getY() > stage.getHeight() - circle.getRadius() || circle.getY() < circle.getRadius()) {
-            movey *= -1;
+        if (y - r < 0 || y + r > stage.getHeight()) {
+            circle.movey *= -1;
         }
 
         if (balls.some(function(other) {
-                if (other === ball) {
+                if (other === circle) {
                     return false;
                 }
                 var b1 = {
-                        x: ball.getX(),
-                        y: ball.getY(),
-                        r: ball.getRadius()
+                        x: circle.getX(),
+                        y: circle.getY(),
+                        r: circle.getRadius()
                     },
                     b2 = {
                         x: other.getX(),
                         y: other.getY(),
                         r: other.getRadius()
-                    },
-                    d = Math.sqrt((b1.x - b2.x) * (b1.x - b2.x) +
-                        (b1.y - b2.y) + (b1.y - b2.y));
+                    };
+                var d = Math.sqrt((b1.x - b2.x) * (b1.x - b2.x) +
+                    (b1.y - b2.y) * (b1.y - b2.y));
                 return d <= (b1.r + b2.r);
             })) {
-            movex *= -1;
-            movey *= -1;
+            circle.movex *= -1;
+            circle.movey *= -1;
         }
-circle.setX(circle.getX() + movex);
-circle.setY(circle.getY() + movey);
-        updatex[index] = movex;
-        updatey[index] = movey;
+
+        circle.setX(circle.getX() + circle.movex);
+        circle.setY(circle.getY() + circle.movey);
     });
 
     layer.draw();
