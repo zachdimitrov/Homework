@@ -41,22 +41,47 @@ var updatey = Array.apply(null, { length: count })
     });
 
 function animation() {
-    layer.find('Circle')
-        .forEach(function(circle, index) {
-            var movex = updatex[index];
-            var movey = updatey[index];
-            circle.setX(circle.getX() + movex);
-            if (circle.getX() > stage.getWidth() - circle.getRadius() || circle.getX() < circle.getRadius()) {
-                movex *= -1;
-            }
+    var balls = layer.find('Circle');
+    balls.forEach(function(circle, index) {
+        var movex = updatex[index];
+        var movey = updatey[index];
 
-            circle.setY(circle.getY() + movey);
-            if (circle.getY() > stage.getHeight() - circle.getRadius() || circle.getY() < circle.getRadius()) {
-                movey *= -1;
-            }
-            updatex[index] = movex;
-            updatey[index] = movey;
-        });
+        circle.setX(circle.getX() + movex);
+        if (circle.getX() > stage.getWidth() - circle.getRadius() || circle.getX() < circle.getRadius()) {
+            movex *= -1;
+        }
+
+        circle.setY(circle.getY() + movey);
+        if (circle.getY() > stage.getHeight() - circle.getRadius() || circle.getY() < circle.getRadius()) {
+            movey *= -1;
+        }
+
+        if (balls.some(function(other) {
+                if (other === ball) {
+                    return false;
+                }
+                var b1 = {
+                        x: ball.getX(),
+                        y: ball.getY(),
+                        r: ball.getRadius()
+                    },
+                    b2 = {
+                        x: other.getX(),
+                        y: other.getY(),
+                        r: other.getRadius()
+                    },
+                    d = Math.sqrt((b1.x - b2.x) * (b1.x - b2.x) +
+                        (b1.y - b2.y) + (b1.y - b2.y));
+                return d <= (b1.r + b2.r);
+            })) {
+            movex *= -1;
+            movey *= -1;
+        }
+circle.setX(circle.getX() + movex);
+circle.setY(circle.getY() + movey);
+        updatex[index] = movex;
+        updatey[index] = movey;
+    });
 
     layer.draw();
 
