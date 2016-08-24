@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SVG Test</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <svg width="500" height="220" id="the-svg">
+        <!--RECTANGLE-->
+        <rect id="special" x="150" y="100" width="55" height="80" fill="#159" style="stroke-width: 8" stroke="#626" />
+
+        <!--LINE-->
+        <line x1="15" y1="75" x2="150" y2="200" style="stroke-width: 5" stroke="red" />
+
+        <!--CIRCLE-->
+        <circle cx="350" cy="50" r="30" stroke="red" fill="yellow"/>
+
+        <!--STRAIGHT LINE PATH-->
+        <!--s glavna bukva pishem absolutni koordinati, a s malka relativni-->
+        <path id="special-path" d="M 250 175 l 70 -30 H 300 V 35 Z" stroke="green" fill="none" /> 
+        
+        <!--QUADRATIC BEZIER CURVE-->
+        <!--koordinatite sled 'Q' sa na tochkata na izdyrpwane-->
+        <PATH d="M 10 10 Q 40 140 150 50 T 200 50" stroke="purple" fill="none"></PATH>
+
+        <!--QUBIC BEZIER CURVE-->
+        <!--koordinatite sled 'T' prodaljavat krivata kato izpolzvat poslednata tochka-->
+        <PATH d="M 45 20 C -20 140 250 200 250 20 T 380 120" stroke="blue" fill="none"></PATH>
+
+    </svg>
+    <script src="svgScript.js"></script>
+</body>
+
+</html>
