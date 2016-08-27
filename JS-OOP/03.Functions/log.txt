@@ -1,0 +1,76 @@
+------------------ example 1
+"zahari", true, 34]
+------------------ example 2
+772
+["edno", "dve", "tri"]
+------------------- example 3
+15
+452
+pesho ivanov
+------------------- example 4
+0
+sum
+[object Object]
+null
+------------------- example 5
+Message: hello
+------------------- example 6
+VM6179:3 22
+------------------- example 7
+function sum(...items) {
+    if (Array.isArray(items[0])) {
+        items = items[0];
+    }
+
+    let itemsSum = 0;
+    if (typeof items[0] !== "number") {
+        itemsSum = "";
+    }
+
+    for (let item of items) {
+        itemsSum += item;
+    }
+
+    return itemsSum;
+}
+24
+92
+38
+------------------- example 8
+479001600
+------------------- example 9
+  HTML
+  --HEAD
+  ----META
+  ----/META
+  ----TITLE
+  ----/TITLE
+  --/HEAD
+  --BODY
+  ----H3
+  ----/H3
+  ----SCRIPT
+  ----/SCRIPT
+  --/BODY
+  /HTML
+ ------------------- example 10
+ 5
+ 35
+ Makes sence?
+ ------------------- example 11
+ iife1
+ iife2
+ iife3
+ iife4
+ iife5
+ iife6
+ ------------------- example 12
+ 1
+ 2
+ 3
+ 4
+ ------------------- example 13
+ 1
+ 1
+ 2
+ 2

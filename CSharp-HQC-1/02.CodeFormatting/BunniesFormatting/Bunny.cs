@@ -19,6 +19,7 @@ namespace High.Quality.Code.BadExample
 
         public void Introduce(IWriter writer)
         {
+            // sorry, style-cop does not recognise C#-6 here!
             writer.WriteLine($"{this.Name} - \"I am {this.Age} years old!\"");
             writer.WriteLine($"{this.Name} - \"And I am {this.FurType.ToString().SplitToSeparateWordsByUppercaseLetter()}");
         }

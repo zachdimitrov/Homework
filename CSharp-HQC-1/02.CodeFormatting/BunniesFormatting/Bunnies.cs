@@ -7,13 +7,33 @@ namespace High.Quality.Code.BadExample
     using System.Collections.Generic;
     using System.IO;
 
+    /// <summary>
+    /// different fur types
+    /// </summary>
     public enum FurType
     {
-        NotFluffy, ALittleFluffy, Fluffy, FluffyToTheLimit
+        /// <summary>not fluffy</summary>
+        NotFluffy,
+
+        /// <summary>a little fluffy</summary>
+        ALittleFluffy,
+
+        /// <summary>just fluffy</summary>
+        Fluffy,
+
+        /// <summary>too fluffy</summary>
+        FluffyToTheLimit
     }
 
+    /// <summary>
+    /// creates a bunch of bunnies and outputs info about them
+    /// </summary>
     public class Bunnies
     {
+        /// <summary>
+        /// main bunny method
+        /// </summary>
+        /// <param name="args">main method arguments</param>
         private static void Main(string[] args)
         {
             var bunnies = new List<Bunny>

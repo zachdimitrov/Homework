@@ -3,7 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFormatting", "CodeFormatting\CodeFormatting.csproj", "{1682F8DD-5739-4B98-A20B-8F570DCAD90C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BunniesFormatting", "BunniesFormatting\BunniesFormatting.csproj", "{81D1C343-D11B-42CD-A1B9-30F75CA6ACBD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BunniesFormatting-SingleFile", "BunniesFormatting-SingleFile\BunniesFormatting-SingleFile.csproj", "{F65DC25C-E3A5-4D68-8C70-C81E3CEE3AE6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventsFormatting-SingleFile", "EventsFormatting-SingleFile\EventsFormatting-SingleFile.csproj", "{FEB9A11F-F2B7-4851-BE78-9F23266A1E9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventsFormatting", "EventsFormatting\EventsFormatting.csproj", "{034BA498-FE86-461D-9A11-D62390A8DDE2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "javascriptFormatting", "javascriptFormatting\javascriptFormatting.csproj", "{84E9C259-0769-4B1E-8C62-244AFB5D5172}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +19,26 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1682F8DD-5739-4B98-A20B-8F570DCAD90C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1682F8DD-5739-4B98-A20B-8F570DCAD90C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1682F8DD-5739-4B98-A20B-8F570DCAD90C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1682F8DD-5739-4B98-A20B-8F570DCAD90C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81D1C343-D11B-42CD-A1B9-30F75CA6ACBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81D1C343-D11B-42CD-A1B9-30F75CA6ACBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81D1C343-D11B-42CD-A1B9-30F75CA6ACBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81D1C343-D11B-42CD-A1B9-30F75CA6ACBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F65DC25C-E3A5-4D68-8C70-C81E3CEE3AE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F65DC25C-E3A5-4D68-8C70-C81E3CEE3AE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F65DC25C-E3A5-4D68-8C70-C81E3CEE3AE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F65DC25C-E3A5-4D68-8C70-C81E3CEE3AE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEB9A11F-F2B7-4851-BE78-9F23266A1E9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEB9A11F-F2B7-4851-BE78-9F23266A1E9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEB9A11F-F2B7-4851-BE78-9F23266A1E9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEB9A11F-F2B7-4851-BE78-9F23266A1E9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{034BA498-FE86-461D-9A11-D62390A8DDE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{034BA498-FE86-461D-9A11-D62390A8DDE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{034BA498-FE86-461D-9A11-D62390A8DDE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{034BA498-FE86-461D-9A11-D62390A8DDE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84E9C259-0769-4B1E-8C62-244AFB5D5172}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84E9C259-0769-4B1E-8C62-244AFB5D5172}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84E9C259-0769-4B1E-8C62-244AFB5D5172}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84E9C259-0769-4B1E-8C62-244AFB5D5172}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
