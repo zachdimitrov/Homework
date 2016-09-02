@@ -1,0 +1,19 @@
+div {
+    display: inline-block;
+    width: 100px;
+    height: 70px;
+    border: 1px solid blue;
+    background-color: yellow;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 15px;
+    text-align: center;
+    padding-top: 33px;
+    font-size: 1.5em;
+}
+
+div:hover {
+    cursor: pointer;
+    background-color: orangered;
+    font-weight: bold;
+    color: white;
+}

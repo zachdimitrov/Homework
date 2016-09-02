@@ -1,0 +1,15 @@
+{
+    "name": "classes",
+    "version": "1.0.0",
+    "description": "",
+    "main": "classes.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "node_modules\\.bin\\babel classes.js -o classes-old-es.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "babel-preset-es2015": "^6.14.0"
+    }
+}

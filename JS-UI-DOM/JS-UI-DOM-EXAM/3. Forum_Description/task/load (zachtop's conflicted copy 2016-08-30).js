@@ -1,0 +1,72 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Forum</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+    <div id="forum-container">
+        <h1>Conspiracy Theories</h1>
+        <ul>
+            <li>
+                <div class="post">
+                    <p class="author">
+                        <a class="anonymous">Anonymous</a>
+                    </p>
+                    <pre class="content">Dear God,</pre>
+                </div>
+                <ul>
+                    <li>
+                        <div class="comment">
+                            <p class="author">
+                                <a class="user" href="/user/G">G</a>
+                            </p>
+                            <pre class="content">Yes, my child?</pre>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="comment">
+                            <p class="author">
+                                <a class="anonymous">Anonymous</a>
+                            </p>
+                            <pre class="content">I would like to file a bug report.</pre>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="post">
+                    <p class="author">
+                        <a class="user" href="/user/Cuki">Cuki</a>
+                    </p>
+                    <pre class="content"><a href="https://xkcd.com/258/">link</a></pre>
+                </div>
+                <ul>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html> }, {
+            author: 'Cuki',
+            text: 'This works',
+            comments: [{
+                author: 'Cuki',
+                text: 'Well, ofcourse!\nRegards'
+            }, {
+                text: 'You are fat',
+                deleted: true
+            }]
+        }, {
+            author: 'Pesho',
+            text: 'Is anybody out <a href="https://facebook.com/">there</a>?',
+            comments: []
+        }]
+    };
+
+    document.getElementById('forum-container')
+        .innerHTML = template(data);
+}());
