@@ -69,3 +69,25 @@ Ubiquitous use of defensive programming
     - Tests for all scenarios
     - High code coverage
   - Passed code reviews and inspections
+
+## 3.Code Formatting
+
+#### What is it needed for
+- Good formatting goals
+  - To improve code readability
+  - To improve code maintainability
+- Fundamental principle of code formatting:
+  - Any (consistent) formatting style that follows the above principle is good
+  - Good formatting don’t affect speed, memory use or other aspects of the program
+
+##### Blocks 
+- C# { and } alone on single lines, indent the code block one tab
+- JS - { on the same line, and } alone on the last line
+##### Brackets
+- use them to group operations - obligatory - ```x = (3 + 4) * (2 + 7);```
+- no spaces betweenbrackets and expressions - ```Factorial(uint num);```
+##### Empty lines
+- one empty line for separation between methods
+##### separation 
+- separate parameters by comma and one space ```(one, two)```
+
