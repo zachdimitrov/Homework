@@ -96,7 +96,7 @@ Ubiquitous use of defensive programming
 - separate parameters by comma and one space ```(one, two)```  
 
 ##### order of definitions  
--Use the following order of definitions:
+- Use the following order of definitions:
   - Constants, delegates, inner types, fields, constructors, properties, methods
   - Static members, public members, protected members, internal members, private members
 
@@ -110,11 +110,32 @@ Ubiquitous use of defensive programming
 - Avpid hard to pronounce names
 - Use meaningfull names
 - Use context names too - ```Account.Deposit()```
+- 
  #### Naming Conventions
-- in C# classes, structures etc. are in **PascalCase** - [Adjective] + [Noun]
-- Interfaces - 'I' + [Verb] + 'able' or 'I' + [Noun] or 'I' + [Adjective] + [Noun]
-- Enumerations - [Noun] or [Verb] or [Adjective] - content is **PascalCase**
-- Special classes - **Attribute** or **Collection** suffix - ```StringsCollection```
-- 
-- 
+- in C# classes, structures etc. are in **PascalCase** - [Adjective] + [Noun]  
+- Interfaces - 'I' + [Verb] + 'able' or 'I' + [Noun] or 'I' + [Adjective] + [Noun]  
+- Enumerations - [Noun] or [Verb] or [Adjective] - content is **PascalCase**  
+- Special classes - **Attribute**, **Collection**, **Exception** suffix - ```StringsCollection```  
+- dont abbreviate names  
+- namespaces - **PascalCase**
+- file name the same as class name - PascalCase for C#, no capitals for JS
+- assembly name the same as root namespace
+- Methods in C# - **PascalCase**, JS - **camelCase**
+- Variable names - **camelCase** - [Noun] or [Adjective] + [Noun]
+- Boolean - should reflect on the name - ```isPrime```
+- counters ```ticketCount```, state ```threadState```, conventions for these names
+- constants ```CAPITAL_LETTERS``` or ```PascalCase``` 
 
+## 5.Comments and Documentation
+
+#### Self Documenting
+- program structure
+- readable code
+- good naming
+- clear abstractions
+- minimized complexity
+- Loose coupling and strong cohesion
+
+#### Effective comments
+- Do not repeat the code
+- Comment code intent ask why
