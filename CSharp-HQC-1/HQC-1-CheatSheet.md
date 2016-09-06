@@ -81,13 +81,17 @@ Ubiquitous use of defensive programming
   - Good formatting don’t affect speed, memory use or other aspects of the program
 
 ##### Blocks 
-- C# { and } alone on single lines, indent the code block one tab
-- JS - { on the same line, and } alone on the last line
-##### Brackets
-- use them to group operations - obligatory - ```x = (3 + 4) * (2 + 7);```
-- no spaces betweenbrackets and expressions - ```Factorial(uint num);```
-##### Empty lines
-- one empty line for separation between methods
-##### separation 
-- separate parameters by comma and one space ```(one, two)```
-
+- C# { and } alone on single lines, indent the code block one tab  
+- JS - { on the same line, and } alone on the last line  
+##### Brackets  
+- use them to group operations - obligatory - ```x = (3 + 4) * (2 + 7);```  
+- no spaces betweenbrackets and expressions - ```Factorial(uint num);```  
+##### Empty lines  
+- one empty line for separation between methods   
+- or logically related code parts
+##### separation   
+- separate parameters by comma and one space ```(one, two)```  
+##### order of definitions  
+-Use the following order of definitions:
+  - Constants, delegates, inner types, fields, constructors, properties, methods
+  - Static members, public members, protected members, internal members, private members
