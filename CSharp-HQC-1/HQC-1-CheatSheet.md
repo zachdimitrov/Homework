@@ -110,7 +110,7 @@ Ubiquitous use of defensive programming
 - Avpid hard to pronounce names
 - Use meaningfull names
 - Use context names too - ```Account.Deposit()```
-- 
+ 
  #### Naming Conventions
 - in C# classes, structures etc. are in **PascalCase** - [Adjective] + [Noun]  
 - Interfaces - 'I' + [Verb] + 'able' or 'I' + [Noun] or 'I' + [Adjective] + [Noun]  
@@ -139,3 +139,18 @@ Ubiquitous use of defensive programming
 #### Effective comments
 - Do not repeat the code
 - Comment code intent ask why
+
+#### XML Documentation  
+```C#
+<summary>
+<param name="name">description</param>
+<returns>
+<remarks>
+<c> and <code>
+<see> and <seealso>
+<c> and <code>
+Gives you a way to indicate code
+<see> and <seealso> and cref
+Code reference <seealso cref="TestClass.Main"></seealso>
+<exception>
+```
