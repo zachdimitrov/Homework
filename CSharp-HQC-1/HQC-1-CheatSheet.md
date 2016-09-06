@@ -1,3 +1,5 @@
+## 2. High Quality Code
+
 #### High Quality Code - What is it?
 - Easy to read and understand
   - Easy to modify and maintain
@@ -27,4 +29,43 @@
 - Readable – easy to read
 - Understandable – self-documenting
 - Maintainable – easy to modify when required 
-
+- Good identifiers' names
+  - Good names for variables, constants, methods, parameters, classes, structures, fields, properties, interfaces, structures, enumerations, namespaces,
+- High-quality classes, interfaces and class hierarchies
+  - Good abstraction and encapsulation
+  - Simplicity, reusability, minimal complexity
+  - Strong cohesion, loose coupling
+- High-quality methods
+  - Reduced complexity, improved readability
+  - Good method names and parameter names
+  - Strong cohesion, loose coupling
+-   - Variables, data, expressions and constants
+  - Minimal variable scope, span, live time
+  - Simple expressions
+  - Correctly used constants
+  - Correctly organized data
+- Correctly used control structures
+  - Simple statements
+  - Simple conditional statements and simple conditions
+  - Well organized loops without deep nesting
+- Good code formatting
+  - Reflecting the logical structure of the program
+  - Good formatting of classes, methods, blocks, whitespace, long lines, alignment, etc.
+- High-quality documentation and comments
+  - Effective comments
+  - Self-documenting code
+- Defensive programming and exceptions
+Ubiquitous use of defensive programming
+  - Well organized exception handling
+- Code tuning and optimization
+  - Quality code instead of good performance
+  - Code performance when required
+- Following the corporate code conventions
+  - Formatting and style, naming, etc.
+  - Domain-specific best practices
+- Well tested and reviewed
+  - Testable code
+  - Well designed unit tests
+    - Tests for all scenarios
+    - High code coverage
+  - Passed code reviews and inspections
