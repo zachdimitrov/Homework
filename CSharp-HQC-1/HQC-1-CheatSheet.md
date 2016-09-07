@@ -148,9 +148,9 @@ Ubiquitous use of defensive programming
 <remarks>
 <c> and <code>
 <see> and <seealso>
-<c> and <code>
-Gives you a way to indicate code
+<c> and <code> Gives you a way to indicate code
 <see> and <seealso> and cref
 Code reference <seealso cref="TestClass.Main"></seealso>
 <exception>
 ```
+
