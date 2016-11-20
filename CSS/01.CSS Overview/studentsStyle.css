@@ -29,11 +29,22 @@ td>span {
 	bottom: 3px;
 }
 input[type="checkbox"] {
+	z-index: 100;
+	margin: -2px 0 0 -2px;
+	width:15px;
+	height: 15px;
+	background: none;
+	border: none;
+}
+
+.squared {
+	z-index: 200;
 	margin-left: 8px;
-	width:13px;
-	height: 13px;
-	border: 2px solid grey;
-	background: #fcfff4;
+	width:9px;
+	height: 9px;
+	border: 2px solid lightgrey;
+	border-style: inset;
+	background: transparent;
 }
 .last {
 	padding: 3px 10px 4px 3px;

@@ -1,6 +1,6 @@
-###Promices and asinchronic programming
+### Promices and asinchronic programming
 
-####Callbacks
+#### Callbacks
 ```js
 (function(){
     function pause(delay) {
@@ -34,7 +34,7 @@
 }());
 ```
 
-####Promices
+#### Promices
 ```js
 promiseMeSomething()
     .then(function(value) {
@@ -62,7 +62,7 @@ Promise.all([usersPromise, postsPromise])
 ```
 - primise.race - vzima nai-byrziq promise
 
-####function generators
+#### function generators
 ```js
 function *foo() { 
 // OR function* foo() {}
@@ -94,7 +94,7 @@ var sequence = fibonacci();
 sequence.next(true).value;
 ```
 
-###HTTP and AJAX
+### HTTP and AJAX
 
 - izvikvane na web prez konzolata
 ```
@@ -148,3 +148,6 @@ Status codes:
 - 400 - not found
 - 500 - server error
 - [Other](https://www.w3.org/Protocols/rfc2616/rfc2616-sec6.html)
+
+### AJAX - Asynchronous JS and XML
+
