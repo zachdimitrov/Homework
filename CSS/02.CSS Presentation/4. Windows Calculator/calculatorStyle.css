@@ -1,0 +1,188 @@
+        body,
+        wrapper,
+        th,
+        td,
+        table,
+        div,
+        a,
+        span {
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+        }
+        
+        #wrapper {
+            box-sizing: border-box;
+            margin: 10px;
+            display: block;
+            border: 2px ridge lightgrey;
+            border-radius: 3px;
+            width: 435px;
+            height: 393px;
+            background-image: url("bg-full.png");
+            background-position-y: bottom;
+        }
+        /*header panel*/
+        
+        header {
+            display: block;
+            background-position-y: bottom;
+            height: 20px;
+            border-bottom: 1px solid #CCC;
+        }
+        
+        .menu {
+            margin: 5px;
+            position: relative;
+            top: 4px;
+            color: black;
+        }
+        
+        .underline {
+            text-decoration: underline;
+        }
+        
+        main {
+            padding: 9px 11px 0px 11px;
+        }
+        /*result panel*/
+        
+        #result {
+            box-sizing: border-box;
+            display: block;
+            height: 56px;
+            width: 409px;
+            padding: 20px 10px 0 0;
+            border: 2px ridge lightgrey;
+            border-radius: 3px;
+            font-size: 2em;
+            background: #e5eefb;
+            text-align: right;
+            background: -moz-linear-gradient(top, #e5eefb 0%, #ffffff 100%);
+            background: -webkit-linear-gradient(top, #e5eefb 0%, #ffffff 100%);
+            background: linear-gradient(to bottom, #e5eefb 0%, #ffffff 100%);
+            filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#e5eefb', endColorstr='#ffffff', GradientType=0);
+        }
+        /*binary panel*/
+        
+        #binary {
+            box-sizing: border-box;
+            display: block;
+            height: 67px;
+            width: 409px;
+            margin-top: 8px;
+            border: 2px ridge lightgrey;
+            border-radius: 3px;
+            background-color: #D9E4F1;
+        }
+        
+        #binary>table {
+            width: 103%;
+            margin: 4px;
+        }
+        
+        #binary td {
+            line-height: 90%;
+            font-family: consolas;
+            font-size: 14px;
+        }
+        
+        .bluish>td {
+            color: #253A59;
+        }
+        
+        .grey>td {
+            color: grey;
+        }
+        /*keyboard*/
+        
+        #keyboard {
+            box-sizing: border-box;
+            display: block;
+            height: 209px;
+            width: 417px;
+            margin: 4px -4px -4px -4px;
+        }
+        
+        #keyboard>table {
+            width: 100%;
+            border-spacing: 5px;
+        }
+        
+        #keyboard td {
+            box-sizing: border-box;
+            width: 36px;
+            height: 30px;
+        }
+        
+        .flat,
+        .gradient,
+        .number {
+            text-align: center;
+        }
+        
+        .radios {
+            text-align: left;
+        }
+        
+        .big {
+            font-size: 1.4em;
+        }
+        
+        .bigger {
+            font-size: 1.8em;
+        }
+        
+        .faded {
+            border: 2px solid #BECBDA;
+            border-radius: 3px;
+        }
+        
+        #keyboard td:not(.faded) {
+            border: 2px outset #BECBDA;
+            border-radius: 3px;
+        }
+        
+        .gradient:hover,
+        .number:hover {
+            background: lightslategray;
+            color: white;
+        }
+        
+        .gradient {
+            background: rgb(239, 245, 251);
+            background: -moz-linear-gradient(top, rgba(239, 245, 251, 1) 0%, rgba(239, 245, 251, 1) 50%, rgba(213, 225, 238, 1) 51%, rgba(213, 225, 238, 1) 100%);
+            background: -webkit-linear-gradient(top, rgba(239, 245, 251, 1) 0%, rgba(239, 245, 251, 1) 50%, rgba(213, 225, 238, 1) 51%, rgba(213, 225, 238, 1) 100%);
+            background: linear-gradient(to bottom, rgba(239, 245, 251, 1) 0%, rgba(239, 245, 251, 1) 50%, rgba(213, 225, 238, 1) 51%, rgba(213, 225, 238, 1) 100%);
+            filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#eff5fb', endColorstr='#d5e1ee', GradientType=0);
+            cursor: default;
+        }
+        
+        .gradient:active,
+        .number:active {
+            background: rgb(254, 243, 232);
+            background: -moz-linear-gradient(top, rgba(254, 243, 232, 1) 0%, rgba(252, 225, 188, 1) 50%, rgba(251, 209, 120, 1) 51%, rgba(252, 246, 188, 1) 100%);
+            background: -webkit-linear-gradient(top, rgba(254, 243, 232, 1) 0%, rgba(252, 225, 188, 1) 50%, rgba(251, 209, 120, 1) 51%, rgba(252, 246, 188, 1) 100%);
+            background: linear-gradient(to bottom, rgba(254, 243, 232, 1) 0%, rgba(252, 225, 188, 1) 50%, rgba(251, 209, 120, 1) 51%, rgba(252, 246, 188, 1) 100%);
+            filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#fef3e8', endColorstr='#fcf6bc', GradientType=0);
+            border-color: lightsalmon;
+            color: black;
+        }
+        
+        .number {
+            background: rgb(247, 251, 255);
+            background: -moz-linear-gradient(top, rgba(247, 251, 255, 1) 0%, rgba(241, 245, 249, 1) 50%, rgba(231, 238, 245, 1) 51%, rgba(242, 252, 255, 1) 100%);
+            background: -webkit-linear-gradient(top, rgba(247, 251, 255, 1) 0%, rgba(241, 245, 249, 1) 50%, rgba(231, 238, 245, 1) 51%, rgba(242, 252, 255, 1) 100%);
+            background: linear-gradient(to bottom, rgba(247, 251, 255, 1) 0%, rgba(241, 245, 249, 1) 50%, rgba(231, 238, 245, 1) 51%, rgba(242, 252, 255, 1) 100%);
+            filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#f7fbff', endColorstr='#f2fcff', GradientType=0);
+            cursor: default;
+        }
+        /*footer*/
+        
+        #footer {
+            font-family: consolas;
+            padding: 10px;
+            font-size: 1.3em;
+        }

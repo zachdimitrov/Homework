@@ -17,7 +17,7 @@
     }
 
     function displayMap(obj) {
-        obj.src = `https://maps.googleapis.com/maps/api/staticmap?center=${obj.pos.lat},${obj.pos.lng}&zoom=17&size=500x500`;
+        obj.src = `https://maps.googleapis.com/maps/api/staticmap?center=${obj.pos.lat},${obj.pos.lng}&zoom=17&size=500x500&key=AIzaSyA66MMq38FBzDEA_RZoDBX_rTvUcYE-VPA`;
         obj.head = document.getElementById('heading');
         obj.div = document.getElementById('static');
         obj.img = document.createElement('img');

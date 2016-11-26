@@ -3,7 +3,7 @@
         console.log(pos);
         var src = "https://maps.googleapis.com/maps/api/staticmap?center=" +
             pos.coords.latitude + "," + pos.coords.longitude +
-            "&zoom=17&size=500x500",
+            "&zoom=17&size=500x500&key=AIzaSyA66MMq38FBzDEA_RZoDBX_rTvUcYE-VPA",
             div = document.getElementById('static'),
             img = document.createElement('img');
         img.setAttribute('src', src);

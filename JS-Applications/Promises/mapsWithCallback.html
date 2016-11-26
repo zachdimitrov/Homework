@@ -14,10 +14,13 @@
 </head>
 
 <body>
-    <p>KARTA</p> 
-    <div id="map"> maop window </div>
-    <p>KARTINKA</p> 
-    <div id="static">  </div>
+    <p>KARTA</p>
+    <p>Lat</p><input type="text" id="lat" name="x" value="42">
+    <p>Lon</p><input type="text" id="lon" name="x" value="23">
+    <p>Zoom</p><input type="text" id="zoom" name="x" value="12">
+    <div id="map"> map window </div>
+    <p>KARTINKA</p>
+    <div id="static"> </div>
     <script src="./scripts/mapLocation.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA66MMq38FBzDEA_RZoDBX_rTvUcYE-VPA&callback=initMap" async defer></script>
     <script src="./scripts/geoLocation.js"></script>

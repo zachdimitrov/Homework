@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculatorStyle.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <a href="#" class="menu"><span class="underline">V</span>iew</a>
+            <a href="#" class="menu"><span class="underline">E</span>dit</a>
+            <a href="#" class="menu"><span class="underline">H</span>elp</a>
+        </header>
+        <main>
+            <div id="result">8854455</div>
+            <div id="binary">
+                <table>
+                    <tr class="bluish">
+                        <td>0000</td>
+                        <td>0000</td>
+                        <td>0000</td>
+                        <td>0000</td>
+                        <td>0000</td>
+                        <td>0000</td>
+                        <td>0000</td>
+                        <td>0000</td>
+                    </tr>
+                    <tr class="grey">
+                        <td>63</td>
+                        <td> </td>
+                        <td> </td>
+                        <td> </td>
+                        <td>47</td>
+                        <td> </td>
+                        <td> </td>
+                        <td>32</td>
+                    </tr>
+                    <tr class="bluish">
+                        <td>0000</td>
+                        <td>0000</td>
+                        <td>1000</td>
+                        <td>0111</td>
+                        <td>0001</td>
+                        <td>1011</td>
+                        <td>1011</td>
+                        <td>0111</td>
+                    </tr>
+                    <tr class="grey">
+                        <td>31</td>
+                        <td> </td>
+                        <td> </td>
+                        <td> </td>
+                        <td>15</td>
+                        <td> </td>
+                        <td> </td>
+                        <td>0</td>
+                    </tr>
+                </table>
+            </div>
+            <div id="keyboard">
+                <table>
+                    <tr>
+                        <td class="radios" colspan="2" rowspan="3">
+                            <div>
+                                <input id="hex" type="radio" value="hex" name="first-box" />
+                                <label for="hex">Hex</label>
+                            </div>
+                            <div>
+                                <input id="dec" type="radio" value="dec" name="first-box" checked>
+                                <label for="dec">Dec</label>
+                            </div>
+                            <div>
+                                <input id="oct" type="radio" value="oct" name="first-box" />
+                                <label for="oct">Oct</label>
+                            </div>
+                            <div>
+                                <input id="bin" type="radio" value="bin" name="first-box" />
+                                <label for="bin">Bin</label>
+                            </div>
+                        </td>
+                        <td class="flat"> </td>
+                        <td class="gradient">Mod</td>
+                        <td class="flat big faded">A</td>
+                        <td class="flat">MC</td>
+                        <td class="flat">MR</td>
+                        <td class="flat">MS</td>
+                        <td class="flat">M+</td>
+                        <td class="flat">M-</td>
+                    </tr>
+                    <tr>
+                        <td class="gradient">(</td>
+                        <td class="gradient">)</td>
+                        <td class="flat big faded">B</td>
+                        <td class="gradient bigger">&larr;</td>
+                        <td class="gradient">CE</td>
+                        <td class="gradient">C</td>
+                        <td class="gradient">&plusmn;</td>
+                        <td class="flat faded">&radic;</td>
+                    </tr>
+                    <tr>
+                        <td class="gradient">RoL</td>
+                        <td class="gradient">RoR</td>
+                        <td class="flat big faded">C</td>
+                        <td class="number big">7</td>
+                        <td class="number big">8</td>
+                        <td class="number big">9</td>
+                        <td class="gradient">/</td>
+                        <td class="flat faded">%</td>
+                    </tr>
+                    <tr>
+                        <td class="radios" colspan="2" rowspan="3">
+                            <div>
+                                <input id="qord" type="radio" value="1" name="second-box" checked/>
+                                <label for="qord">Qword</label>
+                            </div>
+                            <div>
+                                <input id="dword" type="radio" value="2" name="second-box" />
+                                <label for="dword">Dword</label>
+                            </div>
+                            <div>
+                                <input id="word" type="radio" value="3" name="second-box" />
+                                <label for="word">Word</label>
+                            </div>
+                            <div>
+                                <input id="byte" type="radio" value="4" name="second-box" />
+                                <label for="byte">Byte</label>
+                            </div>
+                        </td>
+                        <td class="gradient">Or</td>
+                        <td class="gradient">Xor</td>
+                        <td class="flat big faded">D</td>
+                        <td class="number big">4</td>
+                        <td class="number big">5</td>
+                        <td class="number big">6</td>
+                        <td class="gradient">*</td>
+                        <td class="flat faded">1/x</td>
+                    </tr>
+                    <tr>
+                        <td class="gradient">Lsh</td>
+                        <td class="gradient">Rsh</td>
+                        <td class="flat big faded">E</td>
+                        <td class="number big">1</td>
+                        <td class="number big">2</td>
+                        <td class="number big">3</td>
+                        <td class="gradient">-</td>
+                        <td class="flat bigger" rowspan="2">=</td>
+                    </tr>
+                    <tr>
+                        <td class="gradient">Not</td>
+                        <td class="gradient">And</td>
+                        <td class="flat big faded">F</td>
+                        <td class="number big" colspan="2">0</td>
+                        <td class="flat faded">,</td>
+                        <td class="gradient">+</td>
+                    </tr>
+                </table>
+            </div>
+        </main>
+    </div>
+    <div id="footer">
+        <strong>notes:</strong><br> Press active key to highlight it! <br> Please zoom to 100%! <br> Thank you!
+    </div>
+</body>
+
+</html>
