@@ -1,0 +1,86 @@
+div,
+ul,
+li,
+h3,
+p,
+span a {
+    padding: 0;
+    margin: 0;
+    font-family: 'Courier New', Courier, 'Nimbus Mono L', monospace;
+    font-size: 16px;
+}
+
+#wrapper {
+    width: 960px;
+}
+
+.content {
+    display: none;
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background: rgb(254, 255, 255);
+    background: -moz-linear-gradient(top, rgba(254, 255, 255, 1) 0%, rgba(221, 241, 249, 1) 35%, rgba(160, 216, 239, 1) 100%);
+    background: -webkit-linear-gradient(top, rgba(254, 255, 255, 1) 0%, rgba(221, 241, 249, 1) 35%, rgba(160, 216, 239, 1) 100%);
+    background: linear-gradient(to bottom, rgba(254, 255, 255, 1) 0%, rgba(221, 241, 249, 1) 35%, rgba(160, 216, 239, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#a0d8ef', GradientType=0);
+}
+
+.content>h3 {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: underline;
+    padding: 10px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.content>p {
+    padding: 10px;
+}
+
+.content>ul {
+    list-style-type: square;
+    padding-left: 10px;
+}
+
+.content>ul li:hover {
+    text-decoration: underline;
+}
+
+.menu {
+    display: block;
+    list-style: none;
+}
+
+.menu>li {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background: rgb(228, 245, 252);
+    background: -moz-linear-gradient(top, rgba(228, 245, 252, 1) 0%, rgba(191, 232, 249, 1) 50%, rgba(159, 216, 239, 1) 51%, rgba(42, 176, 237, 1) 100%);
+    background: -webkit-linear-gradient(top, rgba(228, 245, 252, 1) 0%, rgba(191, 232, 249, 1) 50%, rgba(159, 216, 239, 1) 51%, rgba(42, 176, 237, 1) 100%);
+    background: linear-gradient(to bottom, rgba(228, 245, 252, 1) 0%, rgba(191, 232, 249, 1) 50%, rgba(159, 216, 239, 1) 51%, rgba(42, 176, 237, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#e4f5fc', endColorstr='#2ab0ed', GradientType=0);
+}
+
+.menu>li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: blue;
+}
+
+.menu>li:hover {
+    padding: 10px 40px;
+    font-size: 1.5em;
+}
+
+.menu>li:hover .content {
+    display: block;
+    position: absolute;
+    top: 45px;
+    margin-left: -20px;
+}
