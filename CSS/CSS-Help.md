@@ -23,7 +23,6 @@ All properties have **initial** and **inherit** values.
  - ```text-transform``` - uppercase, lowercase, capitalize;
  - ```line-height``` - 10px, 150%, 1.5em (related to the size of text)
  - ```white-space``` - normal, nowrap, pre, pre-line, pre-wrap
- - ```overflow``` - visible, hidden, scroll, auto
  - ```word-wrap``` - normal, break-word
  - ```word-spacing``` - 10px
  
@@ -93,10 +92,15 @@ opacity: 0.5 /* makes element half-visible, property is inherited from parents *
 
 ### Sizes
 
-- ```width``` - in pixels 50px, cm, can use **rem** or **em** too relative to font size
+- ```width``` - in pixels 50px, cm, %, can use **rem** or **em** too relative to font size
 - ```min-width``` - overrides if auto is smaller
 - ```max-width``` - overrides if auto is wider
 
-
+### Overflow
+ - **```overflow```**
+  - **visible** - prehvyrlq containera
+  - **hidden** - otrqzva teksta (elementa)
+  - **scroll** - postavq scrolls vinagi
+  - **auto** - dobavq scrolls ako ima nujda
 
 
