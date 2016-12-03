@@ -116,3 +116,7 @@ opacity: 0.5 /* makes element half-visible, property is inherited from parents *
  - **visible** - pokazva se sled hidden
 - **```margin```** - izbutva sysednite
 - **```padding```** - razshirqva elementa
+
+### Box model
+
+[Example of Box model](http://crypt.codemancers.com/assets/images/boxmodel/compare_models-ec8c849825b4fb3e1e6177e49e15d800cb77bdeaa99e6adcf896a65af62ab99f.png)
