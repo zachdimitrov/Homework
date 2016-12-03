@@ -1,4 +1,5 @@
 ### Text Related Properties
+All properties have **initial** and **inherit** values.
 
 #### Font Related
  - ```color``` - #123ABC, (123, 112, 32, 55)
@@ -19,7 +20,10 @@
   - **ellipsis** - slaga mnogotochie
  - ```text-transform``` - uppercase, lowercase, capitalize;
  - ```line-height``` - 10px, 150%, 1.5em (related to the size of text)
- - ```white-space``` - no-wrap, wrap
+ - ```white-space``` - normal, nowrap, pre, pre-line, pre-wrap
+ - ```overflow``` - visible, hidden, scroll, auto
+ - ```word-wrap``` - normal, break-word
+ - ```word-spacing``` - 10px 
  
 #### Short Way to set tet rules (not used)
 ```CSS
