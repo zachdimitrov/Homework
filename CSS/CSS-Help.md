@@ -48,3 +48,19 @@ is equal to
  src: url("https://fonts.googleapis.com/css?family=Roboto");
 }
 ```
+
+### Borders
+
+ - ```border-width``` - 10px
+ - ```border-color``` - #123ACF
+ - ```border-style``` - none, hidden, dotted, dashed, solid, double, groove, ridge, inset, outset
+ - ```border-top-[style, color, width]``` - set to each side
+ - ```border``` - complex selector { size style color }, none, 0 
+ - ```border-radius``` - 10px
+
+### Box Shadow
+```css
+.box-shadow {
+ box-shadow: 2px 2px 5px #ff0000; (x, y, blur, color);
+}
+```
