@@ -13,7 +13,9 @@
 #### Text Related
  - ```text-decoration``` - none, underline, strike-through, overline, (blink)
  - ```text-align``` - left, right, center, justify
- - ```line-height``` - 10px, 150%, 1.5em (normally the size of text)
+ - ```text-shadow``` -  2px 2px 5px #ff0000; (x, y, blur, color)
+ - ```text-transform``` - uppercase, lowercase, capitalize;
+ - ```line-height``` - 10px, 150%, 1.5em (related to the size of text)
  
 #### Short Way to set tet rules (not used)
 ```CSS
@@ -28,5 +30,13 @@ is equal to
  font-size: 12px;
  line-height: 16px;
  font-family: verdana;
+}
+```
+
+#### Declare font face
+```css
+@font-face {
+ font-family: 'Roboto', sans-serif;
+ src: url("https://fonts.googleapis.com/css?family=Roboto");
 }
 ```
