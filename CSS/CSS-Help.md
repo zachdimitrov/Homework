@@ -91,6 +91,12 @@ opacity: 0.5 /* makes element half-visible, property is inherited from parents *
 
 # Layout
 
+### Sizes
+
+- ```width``` - in pixels 50px, cm, can use **rem** or **em** too relative to font size
+- ```min-width``` - overrides if auto is smaller
+- ```max-width``` - overrides if auto is wider
+
 
 
 
