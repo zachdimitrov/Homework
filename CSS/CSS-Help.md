@@ -127,7 +127,10 @@ Example of **content-box** and **content-box**
 ### Positioning
 
 - **```position```**  
- - **relative** - zadava se poziciq sprqmo sobstvenoto polojenie  
-   ```top: 10px;```
-   ```left: 30px;```
- - **absolute** - zadava poziciq sprqmo nachalniq element
+ - **relative** - zadava se poziciq sprqmo sobstvenoto polojenie (za predpochitame **margin**)
+   ```top: 10px;```  
+   ```left: 30px;```  
+ - **absolute** - zadava poziciq sprqmo nachalniq element, roditel, koito ne e static (ne mu e zadaden position)
+ - **static** - default position
+ - **fixed** - vinagi sedi na opredeleno mqsto, dokato ostanaloto se dviji
+- **```z-index```** - 100, 200, 300 ili kolkoto iskame, vajnoto e da se razlichavat 
