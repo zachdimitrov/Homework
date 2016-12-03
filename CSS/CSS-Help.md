@@ -179,7 +179,8 @@ Main terminology
 
 ```css
 .container {
- display: flex; /* zadava se na parent elementa */
- flex-direction: column; /* smenqme main axis s cross axis */
+   display: flex; /* zadava se na parent elementa */
+   flex-direction: row | column | wrap; /* zadavame podredbata */
+   justify-content: center | space-around | space-between; /* centrira elementite */
 }
 ```
