@@ -141,13 +141,14 @@ Example of **content-box** and **content-box**
  
 ##### Float
 
-- **```float```** - none, left, right
-to use float we nead this hack to clean floating after
+- **```float```** - none, left, right  
+to use float we nead this hack to clean floating after  
+
 ```html
 <div class="clear"></div>
 ```
 ```css
 .clear {
- clear: left;
+ clear: left; /* left, right, both */
 }
 ```
