@@ -69,9 +69,10 @@ is equal to
 ##### Common Background properties
 
 - ```background-color``` - #123cdf
+- ```background-size``` - uvelichava ili namalq kartinkata, 40%
 - ```background-position``` - top-left, top-right, center / 20% 30% / 10px 15px
  - used in **sprites** multiple small images in one big image
-- ```background-image``` - url("./images/bg.jpg")
+- ```background-image``` - url("./images/bg.jpg") , can load multiple images
 - ```background-repeat``` - repeat, no-repeat, repeat-x, repeat-y
 - ```background``` - #423fcd url("image.png") repeat-x (sykraten zapis)
 - ```background-attachment``` - scroll, fixed, local
@@ -80,3 +81,8 @@ is equal to
 
 Use **[ColorZilla](http://www.colorzilla.com/gradient-editor/)** for gradient  
 Or **[ColorTools](http://www.colorzilla.com/chrome/)** to install in browser
+
+### Opacity
+```opacity: 0.5``` - makes element half-visible 
+
+
