@@ -78,5 +78,5 @@ is equal to
 
 ##### Gradients
 
-Use [ColorZilla](http://www.colorzilla.com/gradient-editor/) for gradient  
-Or [ColorTools](http://www.colorzilla.com/chrome/) to install in browser
+Use **[ColorZilla](http://www.colorzilla.com/gradient-editor/)** for gradient  
+Or **[ColorTools](http://www.colorzilla.com/chrome/)** to install in browser
