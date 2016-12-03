@@ -23,7 +23,7 @@ All properties have **initial** and **inherit** values.
  - ```white-space``` - normal, nowrap, pre, pre-line, pre-wrap
  - ```overflow``` - visible, hidden, scroll, auto
  - ```word-wrap``` - normal, break-word
- - ```word-spacing``` - 10px 
+ - ```word-spacing``` - 10px
  
 #### Short Way to set tet rules (not used)
 ```CSS
@@ -56,7 +56,7 @@ is equal to
  - ```border-style``` - none, hidden, dotted, dashed, solid, double, groove, ridge, inset, outset
  - ```border-top-[style, color, width]``` - set to each side
  - ```border``` - complex selector { size style color }, none, 0 
- - ```border-radius``` - 10px
+ - ```border-radius``` - 10px, 20% (50% is max) or set to every edge { 10px 0 20px 5px } 
 
 ### Box Shadow
 ```css
@@ -64,3 +64,12 @@ is equal to
  box-shadow: 2px 2px 5px #ff0000;  /* x, y, blur, color */
 }
 ```
+### Background
+
+- ```background-color``` - #123cdf
+- ```background-position``` - top-left, top-right, center / 20% 30% / 10px 15px
+ - used in **sprites** multiple small images in one big image
+- ```background-image``` - url("./images/bg.jpg")
+- ```background-repeat``` - repeat, no-repeat, repeat-x, repeat-y
+- ```background``` - #423fcd url("image.png") repeat-x (sykraten zapis)
+- ```background-attachment``` - scroll, fixed, local
