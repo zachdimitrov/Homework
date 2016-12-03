@@ -1,7 +1,7 @@
 ### Text Related Properties
 All properties have **initial** and **inherit** values.
 
-#### Font Related
+##### Font Related
  - ```color``` - #123ABC, (123, 112, 32, 55)
  - ```font-size``` - 10px, set to **body** and then use 1.7em, or 2.3rem
   - **em** - multiply to previous element size
@@ -11,7 +11,7 @@ All properties have **initial** and **inherit** values.
  - ```font-weight``` - normal, bold, bolder, 100 ... 900
  - ```font-style``` - normal, italic, oblique
  
-#### Text Related
+##### Text Related
  - ```text-decoration``` - none, underline, strike-through, overline, (blink)
  - ```text-align``` - left, right, center, justify
  - ```text-shadow``` -  2px 2px 5px #ff0000; (x, y, blur, color)
@@ -25,7 +25,7 @@ All properties have **initial** and **inherit** values.
  - ```word-wrap``` - normal, break-word
  - ```word-spacing``` - 10px
  
-#### Short Way to set tet rules (not used)
+##### Short Way to set tet rules (not used)
 ```CSS
 #selector { font: italic normal bold 12px/16px verdana; }
 ```
@@ -41,7 +41,7 @@ is equal to
 }
 ```
 
-#### Declare font face
+##### Declare font face
 ```css
 @font-face {
  font-family: 'Roboto', sans-serif;
@@ -66,6 +66,8 @@ is equal to
 ```
 ### Background
 
+##### Common Background properties
+
 - ```background-color``` - #123cdf
 - ```background-position``` - top-left, top-right, center / 20% 30% / 10px 15px
  - used in **sprites** multiple small images in one big image
@@ -73,3 +75,7 @@ is equal to
 - ```background-repeat``` - repeat, no-repeat, repeat-x, repeat-y
 - ```background``` - #423fcd url("image.png") repeat-x (sykraten zapis)
 - ```background-attachment``` - scroll, fixed, local
+
+##### Gradients
+
+Use (http://www.colorzilla.com/gradient-editor/)[ColorZilla] for gradient
