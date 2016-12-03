@@ -2,7 +2,9 @@
 
 #### Font Related
  - ```color``` - #123ABC, (123, 112, 32, 55)
- - ```font-size``` - 10px, set to **body** and then use **em** or **rem**
+ - ```font-size``` - 10px, set to **body** and then use 
+  - **em** - multiply to previous element size
+  - **rem** - multiply to initial size
  - ```font-family``` - Verdana, Arial, Sans-serifl
  - ```font-weight``` - normal, bold, bolder, 100 ... 900
  - ```font-style``` - normal, italic, oblique
