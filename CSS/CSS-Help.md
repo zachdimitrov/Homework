@@ -103,4 +103,16 @@ opacity: 0.5 /* makes element half-visible, property is inherited from parents *
   - **scroll** - postavq scrolls vinagi
   - **auto** - dobavq scrolls ako ima nujda
 
-
+### Display
+- **```display```**
+ - **inline** - no breaks are placed, no new line
+ - **block** - izpolzva cqlata shirina i se prenasq nq nov red
+ - **inline-block** - dyrji se kato block, no ne zaema cqlata shirina
+ - **none** - elementa izchezva
+ - **table** - table-row, table-cell
+- **```visibility```** 
+ - **hidden** - izchezva, no ostava kato poziciq i zaema mqsto
+ - **collapsed** - za tablici
+ - **visible** - pokazva se sled hidden
+- **```margin```** - izbutva sysednite
+- **```padding```** - razshirqva elementa
