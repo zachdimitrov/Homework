@@ -180,11 +180,12 @@ ili da slojim nov div sled **.parent**
 parent properties
 ```css
 .container {
-   display: flex; /* zadava se na parent elementa */
-   flex-direction: row | column | wrap | no-wrap; /* zadavame podredbata */
-   justify-content: center | space-around | space-between; /* centrira elementite po cross axis */
+   display: flex | inline-flex; /* zadava se na parent elementa */
+   flex-direction: row | column | row-reverse | column-reverse; /* zadavame podredbata */
+   flex-wrap:  | wrap | no-wrap; /* zadavame kak se razpredelqt ili ne */
+   justify-content: flex-start | flex-end | center | space-around | space-between; /* centrira elementite po cross axis */
    align-items: center | flex-start | flex-end | space-between; /* centrira elementie pootdelno */
-   align-content: center /* kogato imame multiple lines, centrira celiq content; */
+   align-content: center; /* kogato imame multiple lines, centrira celiq content; */
 }
 ```
 children properties
