@@ -33,20 +33,20 @@ All properties have **initial** and **inherit** values.
 is equal to
 ```css
 #selector {
- font-style: italic;
- font-variant: normal;
- font-weight: bold;
- font-size: 12px;
- line-height: 16px;
- font-family: verdana;
+   font-style: italic;
+   font-variant: normal;
+   font-weight: bold;
+   font-size: 12px;
+   line-height: 16px;
+   font-family: verdana;
 }
 ```
 
 ##### Declare font face
 ```css
 @font-face {
- font-family: 'Roboto', sans-serif;
- src: url("https://fonts.googleapis.com/css?family=Roboto");
+   font-family: 'Roboto', sans-serif;
+   src: url("https://fonts.googleapis.com/css?family=Roboto");
 }
 ```
 
@@ -155,11 +155,11 @@ to use float we nead this hack to clean floating after
 using float of child elements of element **.parent**
 
 ```css
-  .parent:after {
+.parent:after {
    content: "";
    display: table;
    clear: both; /* left, right, both */
- }
+}
 ```
 
 ili da slojim nov div sled **.parent**
@@ -177,10 +177,17 @@ Main terminology
 
 ![](https://mdn.mozillademos.org/files/3739/flex_terms.png)
 
+parent properties
 ```css
 .container {
    display: flex; /* zadava se na parent elementa */
-   flex-direction: row | column | wrap; /* zadavame podredbata */
-   justify-content: center | space-around | space-between; /* centrira elementite */
+   flex-direction: row | column | wrap | no-wrap; /* zadavame podredbata */
+   justify-content: center | space-around | space-between; /* centrira elementite po cross axis */
+   align-items: center | flex-start | flex-end | space-between /* centrira elementie pootdelno */
+   align-content: center /* kogato imame multiple lines, centrira celiq content */
 }
+```
+children properties
+```css
+
 ```
