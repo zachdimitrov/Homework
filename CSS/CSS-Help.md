@@ -183,11 +183,18 @@ parent properties
    display: flex; /* zadava se na parent elementa */
    flex-direction: row | column | wrap | no-wrap; /* zadavame podredbata */
    justify-content: center | space-around | space-between; /* centrira elementite po cross axis */
-   align-items: center | flex-start | flex-end | space-between /* centrira elementie pootdelno */
-   align-content: center /* kogato imame multiple lines, centrira celiq content */
+   align-items: center | flex-start | flex-end | space-between; /* centrira elementie pootdelno */
+   align-content: center /* kogato imame multiple lines, centrira celiq content; */
 }
 ```
 children properties
 ```css
-
+.first {
+  order: 1; /* podrejda elementa sprqmo ostanalite */
+  flex-grow: 4; /* razpredelq v syotnoshenie ostatychnoto mqsto */
+}
+.second {
+   order: 2; 
+   flex-grow: 6;
+}
 ```
