@@ -192,9 +192,12 @@ children properties
 .first {
   order: 1; /* podrejda elementa sprqmo ostanalite */
   flex-grow: 4; /* razpredelq v syotnoshenie ostatychnoto mqsto */
+  flex-shrink: 3; /* namalq gi kato otnema mqsto v tova syotnoshenie */
+  flex-basis: <length> | auto;
 }
 .second {
    order: 2; 
    flex-grow: 6;
+   flex-shrink: 3; 
 }
 ```
