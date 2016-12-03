@@ -14,8 +14,12 @@
  - ```text-decoration``` - none, underline, strike-through, overline, (blink)
  - ```text-align``` - left, right, center, justify
  - ```text-shadow``` -  2px 2px 5px #ff0000; (x, y, blur, color)
+ - ```text-overflow```
+  - **clip** - reje texta
+  - **ellipsis** - slaga mnogotochie
  - ```text-transform``` - uppercase, lowercase, capitalize;
  - ```line-height``` - 10px, 150%, 1.5em (related to the size of text)
+ - ```white-space``` - no-wrap, wrap
  
 #### Short Way to set tet rules (not used)
 ```CSS
