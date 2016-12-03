@@ -61,6 +61,6 @@ is equal to
 ### Box Shadow
 ```css
 .box-shadow {
- box-shadow: 2px 2px 5px #ff0000;  // x, y, blur, color
+ box-shadow: 2px 2px 5px #ff0000;  /* x, y, blur, color */
 }
 ```
