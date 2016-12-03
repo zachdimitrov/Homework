@@ -143,7 +143,13 @@ Example of **content-box** and **content-box**
 
 - **```float```** - none, left, right  
 
-use **clear** to stop floating on elements after this
+use **clear** to stop floating on elements after this  
+
+```css
+.next-element {
+    clear: both; /* left, right, both */
+}
+```
 
 to use float we nead this hack to clean floating after  
 using float of child elements of element **.parent**
@@ -164,5 +170,16 @@ ili da slojim nov div sled **.parent**
 ```css
 .clear {
     clear: both; /* left, right, both */
+}
+```
+### Flexbox
+Main terminology
+
+![](https://mdn.mozillademos.org/files/3739/flex_terms.png)
+
+```css
+.container {
+ display: flex; /* zadava se na parent elementa */
+ flex-direction: column; /* smenqme main axis s cross axis */
 }
 ```
