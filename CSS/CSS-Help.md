@@ -194,6 +194,7 @@ children properties
   flex-grow: 4; /* razpredelq v syotnoshenie ostatychnoto mqsto */
   flex-shrink: 3; /* namalq gi kato otnema mqsto v tova syotnoshenie */
   flex-basis: <length> | auto;
+  align-self: flex-end; /* samo edin element izmestvame */
 }
 .second {
    order: 2; 
