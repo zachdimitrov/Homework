@@ -128,6 +128,6 @@ Example of **content-box** and **content-box**
 
 - **```position```**  
  - **relative** - zadava se poziciq sprqmo sobstvenoto polojenie
-  - top: 10px;
-  - left: 30px;
+   top: 10px;
+   left: 30px;
  - **absolute** - zadava poziciq sprqmo nachalniq element
