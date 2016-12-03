@@ -83,6 +83,8 @@ Use **[ColorZilla](http://www.colorzilla.com/gradient-editor/)** for gradient
 Or **[ColorTools](http://www.colorzilla.com/chrome/)** to install in browser
 
 ### Opacity
-```opacity: 0.5``` - makes element half-visible 
+```opacity: 0.5``` - makes element half-visible, property is inherited from parents
+
+# Layout
 
 
