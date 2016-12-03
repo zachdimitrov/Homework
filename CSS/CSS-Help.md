@@ -201,3 +201,9 @@ children properties
    flex-shrink: 3; 
 }
 ```
+##### Shortland declaration
+```css
+.item {
+   flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ];
+}
+```
