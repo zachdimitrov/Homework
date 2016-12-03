@@ -173,7 +173,7 @@ ili da slojim nov div sled **.parent**
 }
 ```
 ### Flexbox
-Main terminology
+[Main terminology and explanation](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
 ![](https://mdn.mozillademos.org/files/3739/flex_terms.png)
 
