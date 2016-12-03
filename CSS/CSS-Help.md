@@ -142,13 +142,27 @@ Example of **content-box** and **content-box**
 ##### Float
 
 - **```float```** - none, left, right  
+
+use **clear** to stop floating on elements after this
+
 to use float we nead this hack to clean floating after  
+using float of child elements of element **.parent**
+
+```css
+  .parent:after {
+   content: "";
+   display: table;
+   clear: both; /* left, right, both */
+ }
+```
+
+ili da slojim nov div sled **.parent**
 
 ```html
 <div class="clear"></div>
 ```
 ```css
 .clear {
- clear: left; /* left, right, both */
+    clear: both; /* left, right, both */
 }
 ```
