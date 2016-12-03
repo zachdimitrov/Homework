@@ -13,8 +13,9 @@
 #### Text Related
  - ```text-decoration``` - none, underline, strike-through, overline, (blink)
  - ```text-align``` - left, right, center, justify
+ - ```line-height``` - 10px, 150%, 1.5em (normally the size of text)
  
-#### Short Way to set tet rules
+#### Short Way to set tet rules (not used)
 ```CSS
 #selector { font: italic normal bold 12px/16px verdana; }
 ```
@@ -27,4 +28,5 @@ is equal to
  font-size: 12px;
  line-height: 16px;
  font-family: verdana;
+}
 ```
