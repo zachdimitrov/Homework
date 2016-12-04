@@ -10,10 +10,11 @@ body {
     -webkit-font-smoothing: subpixel-antialiased;
 }
 
-body {
+
+/*body {
     background-image: url("../problem/final.png");
     background-repeat: no-repeat;
-}
+}*/
 
 #shellHeader,
 #shellHeader>div {
@@ -23,7 +24,7 @@ body {
 #logo {
     margin-left: 11px;
     height: 65px;
-    background-image: url("images/logo.png");
+    background-image: url("../template/images/logo.png");
     background-repeat: no-repeat;
     width: 180px;
 }

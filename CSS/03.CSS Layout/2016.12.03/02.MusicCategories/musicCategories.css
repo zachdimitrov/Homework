@@ -1,0 +1,95 @@
+html,
+body,
+header,
+main,
+h1,
+div,
+input {
+    margin: 0;
+    padding: 0;
+}
+
+.wrap {
+    width: 425px;
+    margin: 10px;
+    padding: 12px;
+    background-color: #EEEEEE;
+    border-radius: 7px;
+    box-sizing: border-box;
+}
+
+header h1 {
+    font-family: 'Arial Narrow', sans-serif;
+    font-weight: normal;
+    font-size: 1.2em;
+}
+
+.cat-box {
+    display: block;
+    width: 400px;
+    height: 120px;
+    box-sizing: border-box;
+    border: 1px solid grey;
+    background-color: white;
+    margin: 37px 0;
+    padding: 15px;
+    position: relative;
+}
+
+img {
+    width: 135px;
+    border: 1px solid grey;
+    display: inline-block;
+    margin-right: 10px;
+    position: absolute;
+}
+
+p {
+    margin: 0;
+    width: 205px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 13px;
+    max-height: 70px;
+    display: inline-block;
+    position: absolute;
+    left: 165px;
+    line-height: 1.1em;
+}
+
+input {
+    position: absolute;
+    top: 80px;
+    color: white;
+    height: 25px;
+    font-size: 12px;
+    box-sizing: border-box;
+    border: none;
+    font-weight: lighter;
+}
+
+input[value="Listen"] {
+    left: 240px;
+    background-image: url("Btn-Big.png");
+    width: 76px;
+}
+
+input[value="Add"] {
+    left: 320px;
+    background-image: url("Btn-Sml.png");
+    width: 60px;
+}
+
+
+/*#b1 {
+    display: inline-block;
+    position: absolute;
+    left: 50px;
+    top: 30px;
+}
+
+#b2 {
+    display: inline-block;
+    position: absolute;
+    left: 100px;
+    top: 30px;
+}*/

@@ -1,24 +1,97 @@
-body div ul li h1 img {
+body,
+div,
+ul,
+li,
+h1,
+img {
     margin: 0;
     padding: 0;
 }
+
 ul {
     list-style-type: none;
 }
+
 a {
     text-decoration: none;
 }
+
+#root {
+    margin: 20px auto;
+    width: 1024px;
+}
+
 #site-header {
     text-align: center;
     background-color: lightgray;
+    background-image: url("../imgs/logo.png");
+    background-size: 65px 25px;
+    background-repeat: no-repeat;
+    background-position: 338px 24px;
     color: white;
+    font-size: 2em;
+    text-shadow: 3px 3px 2px black;
+    padding: 15px 0;
 }
+
+.superheroes {
+    display: flex;
+    justify-content: center;
+    margin-top: -17px;
+}
+
+.superheroes:hover {
+    margin-top: 17px;
+}
+
 .superheroes li {
     display: inline-block;
+    width: 174px;
+    height: 174px;
+    border-radius: 15px;
+    margin: 0 2px;
 }
+
+.superheroes li:hover {
+    width: 205px;
+    height: 205px;
+    position: relative;
+    top: -31px;
+}
+
 .superheroes img {
-    width: 200px;
-    height: 200px;
-    float: left;
-    border-radius:30px;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+}
+
+.superheroes li strong {
+    display: inline-block;
+    border-radius: 15px 15px 0 0;
+    background-color: rgba(85, 85, 85, 0.75);
+    opacity: 0.5;
+    text-align: center;
+    width: inherit;
+    padding: 12px 0 18px 0;
+    color: white;
+    position: relative;
+    top: 52px;
+    font-size: 1.2em;
+}
+
+.superheroes li:hover strong {
+    opacity: 1;
+}
+
+.superheroes li a {
+    color: white;
+    background-color: rgb(99, 99, 99);
+    width: inherit;
+    text-align: center;
+    padding: 12px 0;
+    display: none;
+}
+
+.superheroes li:hover a {
+    display: inline-block;
 }

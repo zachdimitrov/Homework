@@ -1,0 +1,30 @@
+body,
+ul,
+li,
+a {
+    color: black;
+}
+
+ul {
+    list-style: none;
+    padding-left: 15px;
+}
+
+ul.main ul {
+    display: none;
+    opacity: 0.75;
+}
+
+a {
+    text-decoration: none;
+}
+
+li:hover>a {
+    text-decoration: underline;
+    font-weight: bold;
+    cursor: default;
+}
+
+li:hover>ul {
+    display: block;
+}
