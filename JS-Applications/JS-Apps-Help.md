@@ -93,8 +93,25 @@ function* fibonacci() {
 var sequence = fibonacci();
 sequence.next(true).value;
 ```
+#### URL 
+- Uniform resource locator
+- www.yoursite.com:8080/path/index.php?id=5&lang=en
+ - Name of server or IP
+ - Parh
+ - Parameters
 
-### HTTP and AJAX
+##### HTML 
+Hyper-Text Markup Language
+##### XML
+Like HTML but with any tags
+##### RSS
+XML with special rules
+##### JSON
+Javascript Object Notation
+
+### HTTP
+
+Hyper Text Transfer Protocol
 
 - izvikvane na web prez konzolata
 ```
