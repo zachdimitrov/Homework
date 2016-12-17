@@ -7,7 +7,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceRoot}/06.ConditionalStatements/04_Sort3Numbers.js",
+            "program": "${workspaceRoot}/06.ConditionalStatements/07_BiggestOfFive.js",
             "cwd": "${workspaceRoot}"
         },
         {
