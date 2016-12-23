@@ -5,3 +5,13 @@ function solve(args) {
 
     console.log(result);
 }
+
+// old es
+
+function solve(args) {
+    var mask = 1 << 3,
+        bit = +args[0] & mask,
+        result = bit >> 3;
+
+    console.log(result);
+}

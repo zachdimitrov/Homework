@@ -1,3 +1,5 @@
+// with nested ifs
+
 function solve(args) {
     var a = +args[0],
         b = +args[1],
@@ -104,7 +106,12 @@ AB
                 DE < 
                      E
 */
+
+// With recursion
+
 function solveR(args) {
+    var index = args.length - 1;
+
     function getMax(a, i) {
         if (i === 0) return +a[0];
         if (i > 0) {
@@ -115,9 +122,19 @@ function solveR(args) {
             }
         }
     }
-
-    return getMax(args, 4);
+    return getMax(args, index);
 }
 
-console.log(solveR(['0', '-2.5', '0', '5', '5']));
-console.log(solve(['0', '-2.5', '0', '5', '5']));
+// Tests
+
+console.log(solveR(['5', '2', '2', '4', '1'], 4) == 5);
+console.log(solveR(['-2', '-22', '1', '0', '0'], 4) == 1);
+console.log(solveR(['-2', '4', '3', '2', '0'], 4) == 4);
+console.log(solveR(['0', '-2.5', '0', '5', '5'], 4) == 5);
+console.log(solveR(['-3', '-0.5', '-1.1', '-2', '-0.1'], 4) == -0.1);
+console.log("-----------------------")
+console.log(solve(['5', '2', '2', '4', '1']) == 5);
+console.log(solve(['-2', '-22', '1', '0', '0']) == 1);
+console.log(solve(['-2', '4', '3', '2', '0']) == 4);
+console.log(solve(['0', '-2.5', '0', '5', '5']) == 5);
+console.log(solve(['-3', '-0.5', '-1.1', '-2', '-0.1']) == -0.1);
