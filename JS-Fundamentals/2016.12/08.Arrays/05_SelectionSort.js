@@ -1,14 +1,20 @@
 function solve(args) {
     let n = +args[0],
-        arr = args.slice(1),
-        small = Number.MIN_SAFE_INTEGER,
-        sorted = [];
+        arr = args.slice(1);
 
-    for (var i = 0; i < n; i++) {
-        let e = arr[i];
-
+    for (var i = 0; i < n - 1; i++) {
+        for (var j = i + 1; j < n; j++) {
+            if (+arr[i] >= +arr[j]) {
+                let t = arr[i];
+                arr[i] = arr[j];
+                arr[j] = t;
+            }
+        }
     }
+
+    console.log(arr.join("\n"));
 }
+
 
 // tests
 
