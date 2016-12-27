@@ -7,7 +7,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceRoot}/08.Arrays/07_BinarySearch.js",
+            "program": "${workspaceRoot}/08.Arrays/08_SubsetSum.js",
             "cwd": "${workspaceRoot}"
         },
         {
