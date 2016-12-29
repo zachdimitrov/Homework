@@ -7,7 +7,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceRoot}/08.Arrays/08_SubsetSum.js",
+            "program": "${workspaceRoot}/08.Arrays/09_Permutations.js",
             "cwd": "${workspaceRoot}"
         },
         {
