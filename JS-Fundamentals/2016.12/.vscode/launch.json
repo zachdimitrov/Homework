@@ -7,7 +7,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceRoot}/08.Arrays/09_Permutations.js",
+            "program": "${workspaceRoot}/10.Objects/01_planarCoord.js",
             "cwd": "${workspaceRoot}"
         },
         {
