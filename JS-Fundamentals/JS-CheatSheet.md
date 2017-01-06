@@ -513,21 +513,21 @@ const constructorRegex = new RegExp('^T', 'g'); // function constructor syntax
   It returns the index of the match, or -1 if the search fails  
 
 **special characters** - [complete List](https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions#Using_special_characters)
-- **\*** – The preceding character/group is matched 0 or more times
-- **\+** – Almost the same behaviour as * - the preceding character/group is matched 1 or more times
-- **?** – The preceding character/group is matched 0 or 1 times
-- **.(dot)** – matches any single character except the newline character
-- **|** – Matches one pattern or the other
-- **[xyz]** – Character set - Matches any of the characters
-- **[x-z]** – Character set - Matches any one between the characters range
-- **[^xyz]** – Inverted characters set - Matches all other characters
-- **{N}** – matches exactly N occurrences of the preceding character/group
-- **{N, M}** – matches at least N and at most M occurrences of the preceding character/group
-- **^** - matches the start of the string
-- **$** matches the end of the string
-- **\s** – matches a single white space character, including space, tab, form feed, line feed
-- **\S** – matches a single character other than white space
-- **\d** – matches a digit character - Equivalent to **[0-9]**
-- **\D** – matches any non-digit character - Equivalent to [^0-9]
-- **\w** – matches any alphanumeric character including the underscore
-- **\W** – matches any non-alphanumeric or underscore character
+- ```\*``` – The preceding character/group is matched 0 or more times
+- ```\+``` – Almost the same behaviour as * - the preceding character/group is matched 1 or more times
+- ```?``` – The preceding character/group is matched 0 or 1 times
+- ```.(dot)``` – matches any single character except the newline character
+- ```|``` – Matches one pattern or the other
+- ```[xyz]``` – Character set - Matches any of the characters
+- ```[x-z]``` – Character set - Matches any one between the characters range
+- ```[^xyz]``` – Inverted characters set - Matches all other characters
+- ```{N}``` – matches exactly N occurrences of the preceding character/group
+- ```{N, M}``` – matches at least N and at most M occurrences of the preceding character/group
+- ```^``` - matches the start of the string
+- ```$``` - matches the end of the string
+- ```\s``` – matches a single white space character, including space, tab, form feed, line feed
+- ```\S``` – matches a single character other than white space
+- ```\d``` – matches a digit character - Equivalent to **[0-9]**
+- ```\D``` – matches any non-digit character - Equivalent to [^0-9]
+- ```\w``` – matches any alphanumeric character including the underscore
+- ```\W``` – matches any non-alphanumeric or underscore character
