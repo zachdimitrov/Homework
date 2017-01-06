@@ -542,14 +542,14 @@ const constructorRegex = new RegExp('^T', 'g'); // function constructor syntax
 ```[a-g]``` - character between a & g  
 **Anchors**  
 ```^abc$``` - start / end of the string  
-```\b \B``` - word, not-word boundary  
+```\\b \\B``` - word, not-word boundary  
 ```**Escaped characters**  
-```\. \* \\``` - escaped special characters  
-```\t \n \r``` - tab, linefeed, carriage return  
+```\\. \\* \\``` - escaped special characters  
+```\\t \\n \\r``` - tab, linefeed, carriage return  
 ```\u00A9``` - unicode escaped ©  
 **Groups & Lookaround**  
 ```(abc)``` - capture group  
-```\1```	backreference to group #1  
+```\\1```	backreference to group #1  
 ```(?:abc)``` - non-capturing group  
 ```(?=abc)``` - positive lookahead  
 ```(?!abc)``` - negative lookahead  
