@@ -1,4 +1,5 @@
-function solveR(args) {
+/*
+function solve1(args) {
     var text = args[0],
         symb = args[0].split(''),
         res = [],
@@ -96,12 +97,11 @@ function solveR(args) {
 
 // Solution 2
 
-function solveS(args) {
+function solve2(args) {
     var text = args[0],
         arr = text.split(/[<>]/);
 
     arr = arr.filter(x => x !== '');
-    console.log(arr);
     for (let i = 0, len = arr.length; i < len; i += 1) {
         if (arr[i] === 'orgcase' || arr[i] === '/orgcase') {
             arr.splice(i, 1);
@@ -150,7 +150,7 @@ function solveS(args) {
 
 // Solution 3
 
-function solve(args) {
+function solve3(args) {
     var text = args[0],
         len = text.length,
         res = '';
@@ -163,25 +163,27 @@ function solve(args) {
                     res += text[i].toUpperCase();
                     i++;
                 }
-                if (text[i + 1] === '/') {
+                if (text[i + 1] === '/' && text[i + 2] === 'u') {
                     i += 8;
                 }
-            } else if (text[i + 1] === 'l') {
+            }
+            if (text[i + 1] === 'l') {
                 i += 9;
                 while (text[i] !== '<') {
                     res += text[i].toLowerCase();
                     i++;
                 }
-                if (text[i + 1] === '/') {
+                if (text[i + 1] === '/' && text[i + 2] === 'l') {
                     i += 9;
                 }
-            } else if (text[i + 1] === 'o') {
+            }
+            if (text[i + 1] === 'o') {
                 i += 9;
                 while (text[i] !== '<') {
                     res += text[i];
                     i++;
                 }
-                if (text[i + 1] === '/') {
+                if (text[i + 1] === '/' && text[i + 2] === 'o') {
                     i += 9;
                 }
             }
@@ -191,8 +193,55 @@ function solve(args) {
     }
     console.log(res);
 }
+*/
+
+// Solution 4 WORKING
+
+function solve(args) {
+    var t = args[0],
+        res = '',
+        oper = [];
+
+    for (let i = 0, len = t.length; i < len; i += 1) {
+        if (t[i] === '<') {
+            if (t[i + 1] === 'o') {
+                oper.push('o');
+                i += 8;
+            } else if (t[i + 1] === 'u') {
+                oper.push('u');
+                i += 7;
+            } else if (t[i + 1] === 'l') {
+                oper.push('l');
+                i += 8;
+            } else if (t[i + 1] === '/' && t[i + 2] === 'o') {
+                oper.pop();
+                i += 9;
+            } else if (t[i + 1] === '/' && t[i + 2] === 'u') {
+                oper.pop();
+                i += 8;
+            } else if (t[i + 1] === '/' && t[i + 2] === 'l') {
+                oper.pop();
+                i += 9;
+            }
+
+        } else {
+            let o = oper[oper.length - 1];
+            if (o === 'u') {
+                res += t[i].toUpperCase();
+            } else if (o === 'l') {
+                res += t[i].toLowerCase();
+            } else if (o === 'o') {
+                res += t[i];
+            } else {
+                res += t[i];
+            }
+        }
+    }
+    console.log(res);
+}
+
 // test
 
 solve(['We are <orgcase>liViNg</orgcase> in a <upcase>yellow submarine</upcase>. We <orgcase>doN\'t</orgcase> have <lowcase>anything</lowcase> else.']);
 
-solve(['Hello <orgcase>this is just a <upcase>test for the <lowcase>prGGGram</lowcase> i wrote</upcase> NoW </orgcase>']);
+solve(['Hello <lowcase>this is just a <upcase>test for the <orgcase>prGGGram</orgcase> i wrote</upcase> NoW </lowcase>']);
