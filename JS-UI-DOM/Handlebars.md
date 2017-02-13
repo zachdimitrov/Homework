@@ -1,10 +1,46 @@
 ###Handlebars.js
 
-Handlebars usage
+Simple notation (if we have oproperty title in the object)
 ```HTML
 <h1>{{title}}</h1>   - Simple expression placeholder, we need JS object with property *title*
-<h1>{{article.title}}</h1> - Dot seperated expression
+```
 
+Dot seperated expression (for article property that has tutle sub-property)
+```HTML
+<h1>{{article.title}}</h1>
+```
+
+Iterating an array (iterates over each item of array)
+```HTML
+{{#each}}
+  <div>
+    {{body}}
+  </div>
+{{/each}}
+```
+
+Iterating an object (iterates over each property)
+```HTML
+{{#each objectName}}
+  <div>
+    {{body}}
+  </div>
+{{/each}}
+```
+
+Segment-Literal Iteration Notation (same as ```articles[10]['#comments']``` in JS)
+```HTML
+{{#each articles.[10].[#comments]}}
+  <h1>{{subject}}</h1>
+  <div>
+    {{body}}
+  </div>
+{{/each}}
+```
+
+
+Wrap template in the HTML file
+```HTML
 <script id="entry-template" type="text/x-handlebars-template">  - use this to wrap templates in HTML file
 {{{body}}} - if we don't want to escape html symbols - this returns working html
 new Handlebars.SafeString(result) - another way to not escape HTML
