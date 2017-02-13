@@ -1,6 +1,6 @@
-## Handlebars.js
+# Handlebars.js
 
-### Syntax and usage of built-in functionality
+## Syntax and usage of built-in functionality
 
 #### Simple notation (if we have oproperty title in the object)
 ```HTML
@@ -44,23 +44,13 @@
 ```JS
 {{#if isActive}}
   <img src="star.gif" alt="Active">
-{{else}} // this is optional
+{{else}}           // this is optional can be changed with {{^}}
   <img src="cry.gif" alt="Inactive">
 {{/if}}
 ```
 
-#### Using **with** helper
-```JS
-Handlebars.registerHelper('with', function(context, options) {
-  return options.fn(context);
-});
-{{#with story}}
-    <div class="intro">{{{intro}}}</div>
-    <div class="body">{{{body}}}</div>
-{{/with}}
-```
 
-### How to create and use templates 
+## How to create and use templates 
 
 #### Wrap template in the HTML file
 ```HTML
@@ -75,6 +65,26 @@ var template = Handlebars.compile(source);  //compiling
 var context = {title: "My New Post", body: "This is my first post!"}; //getting the info object
 var html = template(context); //display the info wrapped in the template
 ```
+
+## Subexpressions
+
+#### Remove whitespaces on desired side of helper
+```HTML
+{{~ property}} // omits whitespaces to the left of helper
+{{helper ~}}   // or to the right
+{{~ other ~}}  // and both sides
+```
+
+#### Other expressions
+```
+{{../parent}}  // calls the parent property
+{{this.name}}  // use the name property in current context
+{{!-- comment --}}  // comment - does not render
+{{agree_button "My Text" class="my-class" visible=true counter=4}} // literals of helpers (parameter is a literal)
+```
+
+## Custom helpers
+
 #### Generating new helper
 ```JS
 Handlebars.registerHelper('link', function(obj) {
@@ -106,4 +116,15 @@ Handlebars.registerHelper('bold', function(options) {
 });
 // use it like this
 {{#bold}}{{body}}{{/bold}}
+```
+
+#### Using **with** helper
+```JS
+Handlebars.registerHelper('with', function(context, options) {
+  return options.fn(context);
+});
+{{#with story}}
+    <div class="intro">{{{intro}}}</div>
+    <div class="body">{{{body}}}</div>
+{{/with}}
 ```
