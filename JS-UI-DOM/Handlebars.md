@@ -44,6 +44,13 @@
 {{/each}}
 ```
 
+#### Block parameters
+```HTML
+{{#each users as |user userId|}}
+  Id: {{userId}} Name: {{user.name}}
+{{/each}}
+```
+
 #### Segment-Literal Iteration Notation (same as ```articles[10]['#comments']``` in JS)
 ```HTML
 {{#each articles.[10].[#comments]}}
@@ -55,7 +62,7 @@
 ```
 
 #### Using **if** statement
-```JS
+```HTML
 {{#if isActive}}
   <img src="star.gif" alt="Active">
 {{else}}           // this is optional can be changed with {{^}}
@@ -81,7 +88,7 @@
 new Handlebars.SafeString(result) - another way to not escape HTML
 ``` 
 #### Handlebars compilation
-```js
+```HTML
 var source = $("#entry-template").html(); //getting the template objec
 var template = Handlebars.compile(source);  //compiling
 var context = {title: "My New Post", body: "This is my first post!"}; //getting the info object
@@ -98,7 +105,7 @@ var html = template(context); //display the info wrapped in the template
 ```
 
 #### Other expressions
-```
+```HTML
 {{../parent}}  // calls the parent property
 {{this.name}}  // use the name property in current context
 {{!-- comment --}}  // comment - does not render
@@ -108,7 +115,7 @@ var html = template(context); //display the info wrapped in the template
 ## Custom helpers
 
 #### Generating new helper
-```JS
+```HTML
 Handlebars.registerHelper('link', function(obj) {
   text = Handlebars.Utils.escapeExpression(this.text); // escape manually
   url  = Handlebars.Utils.escapeExpression(this.url);  // because the result does not escape HTML
@@ -129,7 +136,7 @@ Handlebars.registerHelper('link', function(obj) {
 {{/if}}
 ```
 #### Using **options.fn** to create a helper - takes this as a regular template and uses it in the helper
-```JS
+```HTML
 Handlebars.registerHelper('bold', function(options) {
   return new Handlebars.SafeString(
       '<div class="mybold">'
@@ -141,7 +148,7 @@ Handlebars.registerHelper('bold', function(options) {
 ```
 
 #### Using **with** helper
-```JS
+```HTML
 Handlebars.registerHelper('with', function(context, options) {
   return options.fn(context);
 });
