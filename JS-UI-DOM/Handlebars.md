@@ -25,8 +25,22 @@
 ```HTML
 {{#each objectName}}
   <div>
-    {{body}}
+    {{this}} // this is the current element
   </div>
+{{/each}}
+```
+
+#### Using current Index
+```HTML
+{{#each array}}
+  {{@index}}: {{this}}
+{{/each}}
+```
+
+#### Using current Object Key
+```HTML
+{{#each array}}
+  {{@key}}: {{this}}
 {{/each}}
 ```
 
@@ -35,7 +49,7 @@
 {{#each articles.[10].[#comments]}}
   <h1>{{subject}}</h1>
   <div>
-    {{body}}
+    {{this.body}}
   </div>
 {{/each}}
 ```
@@ -49,6 +63,14 @@
 {{/if}}
 ```
 
+#### Unless Statement (inverse of if)
+```HTML
+<div class="entry">
+  {{#unless license}}
+  <h3 class="warning">WARNING: This entry does not have a license!</h3>
+  {{/unless}}
+</div>
+```
 
 ## How to create and use templates 
 
@@ -127,4 +149,35 @@ Handlebars.registerHelper('with', function(context, options) {
     <div class="intro">{{{intro}}}</div>
     <div class="body">{{{body}}}</div>
 {{/with}}
+```
+
+## Partials
+
+#### Basic usage
+
+```HTML
+Handlebars.registerPartial('myPartial', '{{name}}');
+{{> myPartial }}   // same as {{name}}
+```
+
+#### More complex partials
+```HTML
+{{> (whichPartial) }}  // used as parameter which must be a functions that defines the partial to use
+
+{{> myPartial myOtherContext }}  //  execute in other context
+
+{{> myPartial parameter=value }}
+
+{{#> layout }}
+  My Content
+{{/layout}}
+
+{{> @partial-block }}
+
+{{#*inline "myPartial"}}
+  My Content
+{{/inline}}
+{{#each children}}
+  {{> myPartial}}
+{{/each
 ```
