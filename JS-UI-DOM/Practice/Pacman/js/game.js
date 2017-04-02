@@ -1,21 +1,21 @@
-/* globals window document console */
+/* globals window, document, console */
 "use strict";
 "esversion: 6";
 
 //three.js biblioteka za webGL
 const maze = [
-    "**** ****************** **********",
-    "*    **             *** *        *",
-    "* ** ** *********** *** * ****** *",
-    "*                       *        *",
-    "******* ** *** **** ****** *** ***",
-    "        ** ***    * ****** ***    ",
-    "**** ** ** ****** *         **** *",
-    "*    **           * *** ***      *",
-    "* ** ** ****** **** *** ******** *",
-    "*    **             ***          *",
-    "**** ****************** **********",
-],
+        "**** ****************** **********",
+        "*    **             *** *        *",
+        "* ** ** *********** *** * ****** *",
+        "*                       *        *",
+        "******* ** *** **** ****** *** ***",
+        "        ** ***    * ****** ***    ",
+        "**** ** ** ****** *         **** *",
+        "*    **           * *** ***      *",
+        "* ** ** ****** **** *** ******** *",
+        "*    **             ***          *",
+        "**** ****************** **********",
+    ],
     ballChar = " ",
     wallChar = "*";
 
@@ -43,15 +43,15 @@ function createGame(pacmanSelector, mazeSelector) {
             "x": +1,
             "y": 0
         }, {
-                "x": 0,
-                "y": +1
-            }, {
-                "x": -1,
-                "y": 0
-            }, {
-                "x": 0,
-                "y": -1
-            }],
+            "x": 0,
+            "y": +1
+        }, {
+            "x": -1,
+            "y": 0
+        }, {
+            "x": 0,
+            "y": -1
+        }],
         rows = maze.length,
         columns = maze[0].length;
 
@@ -72,7 +72,7 @@ function createGame(pacmanSelector, mazeSelector) {
             isMouthOpen = !isMouthOpen;
         }
         var index;
-        balls.forEach(function (ball, index) {
+        balls.forEach(function(ball, index) {
             if (areColliding(ball, pacman)) {
                 ctxMaze.clearRect(ball.x, ball.y, ball.size, ball.size);
                 // ball = {
@@ -96,23 +96,23 @@ function createGame(pacmanSelector, mazeSelector) {
     }
 
     function isItColliding() {
-            var isItColiding = false;
-            var futurePosition = {
-                "x": pacman.x + dirDeltas[dir].x + 1,
-                "y": pacman.y + dirDeltas[dir].y + 1,
-                "size": pacman.size
-            };
+        var isItColiding = false;
+        var futurePosition = {
+            "x": pacman.x + dirDeltas[dir].x + 1,
+            "y": pacman.y + dirDeltas[dir].y + 1,
+            "size": pacman.size
+        };
 
-            for (var index = 0; index < walls.length; index += 1) {
-                var wall = walls[index]; {
-                    if (areColliding(wall, futurePosition) || areColliding(futurePosition, wall)) {
-                        isItColiding = true;
-                    }
-                    // drawBall(ball, "Green", ctxMaze); 
+        for (var index = 0; index < walls.length; index += 1) {
+            var wall = walls[index]; {
+                if (areColliding(wall, futurePosition) || areColliding(futurePosition, wall)) {
+                    isItColiding = true;
                 }
+                // drawBall(ball, "Green", ctxMaze); 
             }
-            return isItColiding;
         }
+        return isItColiding;
+    }
 
     function positionToBound(obj) {
         var sizes = {
@@ -136,7 +136,7 @@ function createGame(pacmanSelector, mazeSelector) {
         var sizes1 = positionToBound(obj1);
         var sizes2 = positionToBound(obj2);
         return (isBetween(sizes2.left, sizes1.left, sizes1.right) ||
-            isBetween(sizes2.right, sizes1.left, sizes1.right)) &&
+                isBetween(sizes2.right, sizes1.left, sizes1.right)) &&
             (isBetween(sizes2.top, sizes1.top, sizes1.bottom) ||
                 isBetween(sizes2.bottom, sizes1.top, sizes1.bottom));
         /* return ((sizes1.left <= sizes2.left && sizes2.left <= sizes1.right) ||
@@ -188,13 +188,13 @@ function createGame(pacmanSelector, mazeSelector) {
         return false;
     }
 
-    document.body.addEventListener("keydown", function (ev) {
+    document.body.addEventListener("keydown", function(ev) {
         console.log(ev.keyCode);
         if (!keyCodeToDir.hasOwnProperty(ev.keyCode)) {
             return;
         }
         if (!isItColliding) {
-            
+
         }
         dir = keyCodeToDir[ev.keyCode];
         console.log(dir);
@@ -239,7 +239,7 @@ function createGame(pacmanSelector, mazeSelector) {
     }
 
     return {
-        "start": function () {
+        "start": function() {
             [balls, walls] = drawMazeAndGetBalls(ctxMaze, maze, 20);
             gameLoop();
         }

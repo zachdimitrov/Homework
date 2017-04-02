@@ -3,7 +3,7 @@
     var myPromise = new Promise((resolve, reject) => {
             navigator.geolocation.getCurrentPosition((position) => {
                 resolve(position);
-            })
+            });
         }),
         obj = {};
     // tova sa funkciite, koito se polzvat
@@ -23,7 +23,7 @@
         obj.img = document.createElement('img');
         obj.head.innerHTML = `<h1>KARTINKA NA KOORDINATI</h1>
         <p>${obj.pos.lat}</p>
-        <p>${obj.pos.lng}</p>`
+        <p>${obj.pos.lng}</p>`;
         obj.img.setAttribute('src', obj.src);
         obj.div.appendChild(obj.img);
 

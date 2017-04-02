@@ -1,3 +1,4 @@
+// paste in console
 (function() {
     console.log('start');
     var delay = 2000;
@@ -14,3 +15,4 @@
         }, delay);
     }, delay);
 }());
+// pyramid of death
