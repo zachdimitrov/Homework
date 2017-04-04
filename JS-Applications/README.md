@@ -114,12 +114,14 @@ Javascript Object Notation
 Hyper Text Transfer Protocol
 
 - izvikvane na web prez konzolata
+
 ```
 curl http://www.website.com
 ```
-*GET*
-```html
-GET /hello.htm HTTP/1.1
+*GET* 
+
+```js
+GET /hello.html HTTP/1.1
 User-Agent: Mozilla/4.0 (compatible; MSIE5.01; Windows NT)
 Host: www.tutorialspoint.com
 Accept-Language: en-us
@@ -127,7 +129,8 @@ Accept-Encoding: gzip, deflate
 Connection: Keep-Alive
 ``` 
 *PUT*
-```html
+
+```js
 POST /cgi-bin/process.cgi HTTP/1.1
 User-Agent: Mozilla/4.0 (compatible; MSIE5.01; Windows NT)
 Host: www.tutorialspoint.com
@@ -139,12 +142,16 @@ Connection: Keep-Alive
 
 licenseID=string&content=string&/paramsXML=string
 ```
+
 *Conditional HTTP GET headers*
-```html
+
+```js
 If-Modified-Since: date
 ```
+
 *Response messages*
-```html
+
+```js
 HTTP/1.1 200 OK
 Date: Mon, 27 Jul 2009 12:28:53 GMT
 Server: Apache/2.2.14 (Win32)
