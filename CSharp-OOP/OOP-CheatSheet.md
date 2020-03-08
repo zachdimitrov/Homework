@@ -67,7 +67,7 @@ public enum CatColor  // syzdavane na enumeraciq, moje da se zadade stoinost, ak
 ```
 
 ##### structures
-- vinagi imat default constructor, izpolzva se kogato ne iskame da promenqme obekta, stava value type
+- vinagi imat default constructor, izpolzva se kogato ne iskame da promenqme obekta, stava value type, t.e. pazi se po stoinost a ne po referenciq
 - ```ref``` moje da se izpolzva i taka strukturata sht ese dyrji kato class
 - ```out``` podava se v kraq na metoda
 
@@ -85,7 +85,7 @@ where T : struct // ogranichenie na tipa koito moje da se izpolzva, izbroqvat se
 ```C#
 public void walk<T>(T units)
 {
-	Console.WriteLine($"Walking {units.GetType().Name}); // tipa danni e neopredelen (izkarva imeto na tipa)
+	Console.WriteLine($"Walking {units.GetType().Name}); // tipa danni e neopredelen (izkarva imeto na tipa);
 }
 ```
 
